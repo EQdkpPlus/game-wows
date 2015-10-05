@@ -1,62 +1,224 @@
-
-
-		<div align="center">
-		<div class="profile_header">
-		<div class="sw-charname"><p>&nbsp;<p>{CHARDATA_NAME}</div>
-		<div class="sw-guilde">{DATA_GUILD} @ {DATA_SERVERNAME}</div>
+	<div id="wows-profil_main">
+		<div id="wows-profil_header">
+		<br />
+			<div align="center"><h1>{CHARDATA_NAME}</h1></div>
 		</div>
-	<table class="sw-tab" width="800" height="215">
-		<tr>
-			<td width="160">
-			<p align="center">
-			<img class="swtor-faction-icon" src="{SW_FACTION}.png">
-			</td>
-			<td width="200">	
-				<table class="table fullwidth">
-					<tr>
-						<th colspan="2" align="center" >{DATA_FACTION}</div></th>
-					</tr>
-					<tr class="row2 profession-row">
-						<td><span class="profession-name">{L_level} {DATA_LEVEL}</span></td>
-					</tr>
-					<tr class="row2 profession-row">
-						<td><span class="profession-name">{DATA_CLASSNAME}</span></td>
-					</tr>
-					<tr class="row2 profession-row">
-						<td><span class="profession-name">{DATA_SKILL}</span></td>
-					</tr>
+		<div id="wows-profil_body">
+			<div align="center" id="wows-profil_data">
+				<div class="wows-fleet"><h2>{GL_uc_profil}</h2></div>
+				<table height="200">
+					<tr><td><img id="wows-nation-flag" src="{NATION}.png"/></td></tr>
+					<tr><td><img class="gameicon" src="{LEVEL}"/></td></tr>
 				</table>
-			</td>
-			<td width="400">
-				<table class="table fullwidth">
-					<tr>
-						<th colspan="2" align="center" >{GL_uc_prof_professions}</th>
-					</tr>
-					<!-- BEGIN professions -->
-					<tr class="row2 profession-row">
-						<td><span><img class="profession-icon" src="{professions.ICON}" alt="" /></span><span class="profession-name">{professions.NAME}</span></td>
-						<td width="60%">{professions.BAR}</td>
-					</tr>
-					<!-- END professions -->
-				</table>
-			</td>
-		</tr>
-		<tr class="sw-tab">
-			<td colspan="3" align="center"><div class="sw-picture">{CHARDATA_PICTURE}</div></td>
-		</tr>
-	</table>
-	
-		<p>&nbsp;</p>
-	
-<div class="tableHeader">
-	<h2>{L_DKP_NAME}</h2>
-</div>
+			</div>
+			<div id="wows-profil_premium">
+				<div align="center" class="wows-fleet"><h2>{GL_uc_achievement}</h2></div>
+				<div align="center" class="wows-achievement">
+		<!-- BEGIN achievements -->
+					<a href="#" class="wowstooltip3">
+						<img class="gameicon" src="{achievements.ICON}"alt=""/>
+						<span>
+						<strong>{achievements.NAME}</strong><br />
+						{achievements.VALUE} X
+						</span>
+					</a>
+		<!-- END achievements -->
+				</div>
+			</div>
+		</div>
+		<div id="wows-profil_pic">
+			<div align="center" class="gameicon wows-chardata_picture">{CHARDATA_PICTURE}</div> 
+		</div>
+		<div id="wows-profil_fleet">
+			<div align="center" class="wows-fleet"><h1>{GL_uc_myfleet}</h1></div>
+			<div align="center" class="wows-ship_fleet">
+				<!-- BEGIN uspremiums -->
+				<a href="#" class="wowstooltip2">
+					<img class="gameicon" src="{uspremiums.ICON}"alt=""/>
+					<span>
+						<font color="#cece00" size="2em">{uspremiums.NAME}</font><br />
+						<div class="tool"><img class="gameicon" src="{CLASS5ICON}"alt=""/></div>
+						<div class="tool"><img class="gameicon" align="center" src="{uspremiums.NAT}"alt=""/></div>
+						<div class="toolleft" align="right">{GL_uc_bar1}</div>
+						<div class="toolmid">{uspremiums.BAR1V}</div>
+						<div class="toolright" align="left">{uspremiums.BAR1}</div>
+						<div class="toolleft" align="right">{GL_uc_bar2}</div>
+						<div class="toolmid">{uspremiums.BAR2V}</div>
+						<div class="toolright" align="left">{uspremiums.BAR2}</div>
+						<div class="toolleft" align="right">{GL_uc_bar3}</div>
+						<div class="toolmid">{uspremiums.BAR3V}</div>
+						<div class="toolright" align="left">{uspremiums.BAR3}</div>
+						<div class="toolleft" align="right">{GL_uc_bar4}</div>
+						<div class="toolmid">{uspremiums.BAR4V}</div>
+						<div class="toolright" align="left">{uspremiums.BAR4}</div>
+						<div class="toolleft" align="right">{GL_uc_bar5}</div>
+						<div class="toolmid">{uspremiums.BAR5V}</div>
+						<div class="toolright" align="left">{uspremiums.BAR5}</div>
+						<div class="toolleft"align="right">{GL_uc_bar6}</div>
+						<div class="toolmid">{uspremiums.BAR6V}</div>
+						<div class="toolright" align="left">{uspremiums.BAR6}</div>
+						<div class="toolleft"align="right">{GL_uc_bar7}</div>
+						<div class="toolmid">{uspremiums.BAR7V}</div>
+						<div class="toolright" align="left">{uspremiums.BAR7}</div>
+					</span>
+				</a>
+				<!-- END uspremiums -->
+				<!-- BEGIN jpnpremiums -->
+					<a href="#" class="wowstooltip">
+						<img class="gameicon" src="{jpnpremiums.ICON}"alt=""/>
+						<span>
+						<strong>Name</strong><br/>
+						Daten
+						</span>
+					</a>
+				<!-- END jpnpremiums -->
+				<!-- BEGIN usdestroyers -->
+				<a href="#" class="wowstooltip">
+					<img class="gameicon" src="{usdestroyers.ICON}"alt=""/>
+					<span>
+						<font color="#cece00" size="2em">{usdestroyers.NAME}</font><br />
+						<div class="tool"><img class="gameicon" src="{CLASS1ICON}"alt=""/></div>
+						<div class="tool"><img class="gameicon" align="center" src="{usdestroyers.NAT}"alt=""/></div>
+						<div class="toolleft" align="right">{GL_uc_bar1}</div>
+						<div class="toolmid">{usdestroyers.BAR1V}</div>
+						<div class="toolright" align="left">{usdestroyers.BAR1}</div>
+						<div class="toolleft" align="right">{GL_uc_bar2}</div>
+						<div class="toolmid">{usdestroyers.BAR2V}</div>
+						<div class="toolright" align="left">{usdestroyers.BAR2}</div>
+						<div class="toolleft" align="right">{GL_uc_bar3}</div>
+						<div class="toolmid">{usdestroyers.BAR3V}</div>
+						<div class="toolright" align="left">{usdestroyers.BAR3}</div>
+						<div class="toolleft" align="right">{GL_uc_bar4}</div>
+						<div class="toolmid">{usdestroyers.BAR4V}</div>
+						<div class="toolright" align="left">{usdestroyers.BAR4}</div>
+						<div class="toolleft" align="right">{GL_uc_bar5}</div>
+						<div class="toolmid">{usdestroyers.BAR5V}</div>
+						<div class="toolright" align="left">{usdestroyers.BAR5}</div>
+						<div class="toolleft"align="right">{GL_uc_bar6}</div>
+						<div class="toolmid">{usdestroyers.BAR6V}</div>
+						<div class="toolright" align="left">{usdestroyers.BAR6}</div>
+					</span>
+				</a>
+				<!-- END usdestroyers -->
+
+				<!-- BEGIN uscruisers -->
+				<a href="#" class="wowstooltip">
+					<img class="gameicon" src="{uscruisers.ICON}"alt=""/>
+					<span>
+						<font color="#cece00" size="2em">{uscruisers.NAME}</font><br />
+						<div class="tool"><img class="gameicon" src="{CLASS2ICON}"alt=""/></div>
+						<div class="tool"><img class="gameicon" align="center" src="{uscruisers.NAT}"alt=""/></div>
+						<div class="toolleft" align="right">{GL_uc_bar1}</div>
+						<div class="toolmid">{uscruisers.BAR1V}</div>
+						<div class="toolright" align="left">{uscruisers.BAR1}</div>
+						<div class="toolleft" align="right">{GL_uc_bar2}</div>
+						<div class="toolmid">{uscruisers.BAR2V}</div>
+						<div class="toolright" align="left">{uscruisers.BAR2}</div>
+						<div class="toolleft" align="right">{GL_uc_bar3}</div>
+						<div class="toolmid">{uscruisers.BAR3V}</div>
+						<div class="toolright" align="left">{uscruisers.BAR3}</div>
+						<div class="toolleft" align="right">{GL_uc_bar4}</div>
+						<div class="toolmid">{uscruisers.BAR4V}</div>
+						<div class="toolright" align="left">{uscruisers.BAR4}</div>
+						<div class="toolleft" align="right">{GL_uc_bar5}</div>
+						<div class="toolmid">{uscruisers.BAR5V}</div>
+						<div class="toolright" align="left">{uscruisers.BAR5}</div>
+						<div class="toolleft"align="right">{GL_uc_bar6}</div>
+						<div class="toolmid">{uscruisers.BAR6V}</div>
+						<div class="toolright" align="left">{uscruisers.BAR6}</div>
+					</span>
+				</a>
+				<!-- END uscruisers -->
+
+				<!-- BEGIN usbattleships -->
+				<a href="#" class="wowstooltip">
+					<img class="gameicon" src="{usbattleships.ICON}"alt=""/>
+					<span>
+						<font color="#cece00" size="2em">{usbattleships.NAME}</font><br />
+						<div class="tool"><img class="gameicon" src="{CLASS3ICON}"alt=""/></div>
+						<div class="tool"><img class="gameicon" align="center" src="{usbattleships.NAT}"alt=""/></div>
+						<div class="toolleft" align="right">{GL_uc_bar1}</div>
+						<div class="toolmid">{usbattleships.BAR1V}</div>
+						<div class="toolright" align="left">{usbattleships.BAR1}</div>
+						<div class="toolleft" align="right">{GL_uc_bar2}</div>
+						<div class="toolmid">{usbattleships.BAR2V}</div>
+						<div class="toolright" align="left">{usbattleships.BAR2}</div>
+
+						<div class="toolleft" align="right">{GL_uc_bar4}</div>
+						<div class="toolmid">{usbattleships.BAR4V}</div>
+						<div class="toolright" align="left">{usbattleships.BAR4}</div>
+						<div class="toolleft" align="right">{GL_uc_bar5}</div>
+						<div class="toolmid">{usbattleships.BAR5V}</div>
+						<div class="toolright" align="left">{usbattleships.BAR5}</div>
+						<div class="toolleft"align="right">{GL_uc_bar6}</div>
+						<div class="toolmid">{usbattleships.BAR6V}</div>
+						<div class="toolright" align="left">{usbattleships.BAR6}</div>
+					</span>
+				</a>
+				<!-- END usbattleships -->				
+
+				<!-- BEGIN uscarriers -->
+				<a href="#" class="wowstooltip">
+					<img class="gameicon" src="{uscarriers.ICON}"alt=""/>
+					<span>
+						<font color="#cece00" size="2em">{uscarriers.NAME}</font><br />
+						<div class="tool"><img class="gameicon" src="{CLASS4ICON}"alt=""/></div>
+						<div class="tool"><img class="gameicon" align="center" src="{uscarriers.NAT}"alt=""/></div>
+						<div class="toolleft" align="right">{GL_uc_bar1}</div>
+						<div class="toolmid">{uscarriers.BAR1V}</div>
+						<div class="toolright" align="left">{uscarriers.BAR1}</div>
+						<div class="toolleft" align="right">{GL_uc_bar2}</div>
+						<div class="toolmid">{uscarriers.BAR2V}</div>
+						<div class="toolright" align="left">{uscarriers.BAR2}</div>
+
+						<div class="toolleft" align="right">{GL_uc_bar4}</div>
+						<div class="toolmid">{uscarriers.BAR4V}</div>
+						<div class="toolright" align="left">{uscarriers.BAR4}</div>
+						<div class="toolleft" align="right">{GL_uc_bar5}</div>
+						<div class="toolmid">{uscarriers.BAR5V}</div>
+						<div class="toolright" align="left">{uscarriers.BAR5}</div>
+						<div class="toolleft"align="right">{GL_uc_bar6}</div>
+						<div class="toolmid">{uscarriers.BAR6V}</div>
+						<div class="toolright" align="left">{uscarriers.BAR6}</div>
+						<div class="toolleft"align="right">{GL_uc_bar7}</div>
+						<div class="toolmid">{uscarriers.BAR7V}</div>
+						<div class="toolright" align="left">{uscarriers.BAR7}</div>
+					</span>
+				</a>
+				<!-- END uscarrierss -->				
+
+				<!-- BEGIN jpndestroyers -->
+				<img class="gameicon" src="{jpndestroyers.ICON}"alt=""/>
+				<!-- END jpndestroyers -->
+
+				<!-- BEGIN jpncruisers -->
+				<img class="gameicon" src="{jpncruisers.ICON}"alt=""/>
+				<!-- END jpncruisers -->
+
+				<!-- BEGIN jpnbattleships -->
+				<img class="gameicon" src="{jpnbattleships.ICON}"alt=""/>
+				<!-- END jpnbattleships -->				
+
+				<!-- BEGIN jpncarriers -->
+				<img class="gameicon" src="{jpncarriers.ICON}"alt=""/>
+				<!-- END jpncarrierss -->		
+			</div>
+			<BR>
+		</div>
+	</div>
+	<div class="tableHeader">
+		<h2>{L_DKP_NAME}</h2>
+	</div>
 <input type="checkbox" onchange="window.location='{SID}&with_twinks='+ ((this.checked) ? 0 : 1)" name="with_twinks" value="1" <!-- IF not S_WITH_TWINK_DKP -->checked="checked"<!-- ENDIF -->/> {L_points_for_this_char}
 <br /><br />
 <table class="table fullwidth hptt colorswitch scrollable-x borderless">
 	{MEMBER_POINTS}
 </table>
-<br />
+<br/>
+
+
+
+
 <div id='profile_information'>
 	<ul>
 		<!-- IF CUSTOM_FIELDS --><li><a href='#fragment-2-0'><span>{L_tab_customfields}</span></a></li><!-- ENDIF -->
@@ -127,23 +289,6 @@
 	<div id="fragment-2-4">
 		<table class="table fullwidth hptt colorswitch scrollable-x">
 		{EVENT_ATT_OUT}
-		</table>
-	</div>
-	
-	<div id="fragment-2-5">
-		<table width="100%" border="0" cellspacing="1" cellpadding="2" class="hptt colorswitch scrollable-x">
-			<tr>
-				<th width="5%">{GL_ruflevel}</th>
-				<th width="20%">{GL_head_reputation_name}</th>
-				<th width="75%">{GL_head_reputation_perc}</th>
-			</tr>
-			<!-- BEGIN reputation -->
-			<tr>
-				<td><img src="{reputation.REPUTATIONICON}" title="{reputation.TOOL}" class="swtor-reputation-icon"></td>
-				<td>{reputation.NAME}</td>
-				<td>{reputation.BAR}</td>
-			</tr>
-			<!-- END reputation -->
 		</table>
 	</div>
 </div>

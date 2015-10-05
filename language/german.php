@@ -1,6 +1,6 @@
 <?php
 /*	Project:	EQdkp-Plus
- *	Package:	Star Wars - The Old Republic game package
+ *	Package:	World of Warships game package
  *	Link:		http://eqdkp-plus.eu
  *
  *	Copyright (C) 2006-2015 EQdkp-Plus Developer Team
@@ -22,239 +22,292 @@
 if ( !defined('EQDKP_INC') ){
 	header('HTTP/1.0 404 Not Found');exit;
 }
-$german_array = array(
+$german_array =  array(
 	'factions' => array(
-		'' => 'Wähle Fraktion', //use "" or "_select" as key for selection entries - nothing else!
-		'republic'	=> 'Republik',
-		'imperial'	=> 'Imperium'
-	),
-	'classes' => array(
-		0	=> 'Wähle Klasse',
-
-		#republic
-		1	=> 'Frontkämpfer',
-		2	=> 'Kommando',
-		3	=> 'Schurke',
-		4	=> 'Revolverheld',
-		5	=> 'Gelehrter',
-		6	=> 'Schatten',
-		7	=> 'Wächter',
-		8	=> 'Hüter',
-
-		#imperium
-		9	=> 'Powertech',
-		10	=> 'Söldner',
-		11	=> 'Saboteur',
-		12	=> 'Scharfschütze',
-		13	=> 'Hexer',
-		14	=> 'Attentäter',
-		15	=> 'Marodeur',
-		16	=> 'Juggernaut',
-	),
-	'races' => array(
-		0	=> 'Wähle Rasse',
-		1	=> 'Mensch',
-		2	=> 'Rattataki',
-		3	=> 'Twi\'lek',
-		4	=> 'Chiss',
-		5	=> 'Reinblut Sith',
-		6	=> 'Miraluka',
-		7	=> 'Mirialan',
-		8	=> 'Zabrak',
-		9	=> 'Cyborg',
-		10	=> 'Cathar',
-		11	=> 'Togruta',
-	),
-	'skills'=> array(
-		0 	=> 'Schildspezialist', 	//Frontkaempfer
-		1 	=> 'Taktiker',			//Frontkaempfer
-		2 	=> 'Angriffsspezialist',//Kommando
-		3 	=> 'Gefechtssanitäter', //Kommando
-		4 	=> 'Artillerist',		//Kommando
-		5 	=> 'Seher',				//Gelehrter
-		6 	=> 'Telekinese',		//Gelehrter
-		7 	=> 'Gleichgewicht',		//Gelehrter
-		8 	=> 'Kinetikkampf',		//Schatten
-		9 	=> 'Infiltration',		//Schatten
-		10 	=> 'Wachmann',			//Wächter
-		11 	=> 'Kampf',				//Wächter
-		12 	=> 'Konzentration',		//Wächter
-		13 	=> 'Verteidigung',		//Hüter
-		14 	=> 'Wachsamkeit',		//Hüter
-		15 	=> 'Knochenflicker',	//Schurke
-		16 	=> 'Schläger',			//Schurke
-		17 	=> 'Fieser Kämpfer',	//Revolverheld
-		18 	=> 'Meisterschütze',	//Revolverheld
-		19 	=> 'Sabotage',			//Revolverheld
-		20  => 'Wähle Klasse',		//platzhalter
-		21  => 'Leibwache',			//Soeldner
-		22  => 'Arsenal',			//Soeldner
-		23  => 'Pyrotech',			//Powertech
-		24  => 'Schildtechnologie',	//Powertech
-		25  => 'Spezialprototyp',	//Powertech
-		26  => 'Vernichtung',		//Marodeur
-		27  => 'Blutbad',			//Marodeur
-		28  => 'Raserei',			//Marodeur
-		29  => 'Unstreblich',		//Juggernaut
-		30  => 'Korrumpierung',		//Hexer
-		31  => 'Blitzschlag',		//Hexer
-		32  => 'Wahnsinn',			//Hexer
-		33  => 'Dunkelheit',		//Attentaeter
-		34  => 'Täuschung',			//Attentaeter
-		35  => 'Treffsicherheit',	//Scharfschuetze
-		36  => 'Ingenieur',			//Scharfschuetze
-		37  => 'Tödlichkeit',		//Saboteur
-		38  => 'Medizin',			//Saboteur
-		39  => 'Verborgenheit',		//Saboteur
-		40  => 'Vergeltung',		//Juggernaut
-		41	=> 'Wut',				//juggernaut
-		42	=> 'Fokus',				//Hüter
-		43	=> 'Gelassenheit',		//Schatten
-		44	=> 'Hass',				//Attentäter
-		45	=> 'Grobian',			//Schurke
-		46	=> 'Giftigkeit',		//Scharfschuetze
-		47	=> 'Innovative Bewaffnung', //Söldner
-		48 	=> 'Plasmatech', 		//Frontkaempfer
-		
-		
+		'us'	=> 'Vereinigte Staaten',	
+		'jpn'	=> 'Japan',					
+		'ger'=> 'Deutschland',			
+		'gb'	=> 'Groß Britanien',			
+		'udssr'	=> 'Sowjetunion',
 	),
 	'roles' => array(
-		1	=> 'Heiler',
-		2	=> 'Tank',
-		3	=> 'Schaden',
-		4	=> 'PVP',
+		1	=> 'Zerstörer',
+		2	=> 'Kreuzer',
+		3	=> 'Schlachtschiff',
+		4	=> 'Flugzeugträger',
 	),
-	'professions' => array(
-		'0'								=> 'Unbekannt',
-		'biochem'						=> 'Biochemie', //
-		'cybertech'						=> 'Cybertech', //
-		'artifice'						=> 'Kunstfertigkeit', //
-		'armormech'						=> 'Rüstungsbau',
-		'armstech'						=> 'Waffenbau',
-		'synthweaving'					=> 'Synth-Fertigung', //
-		'bioanalysis'					=> 'Bioanalyse', //
-		'scavenging'					=> 'Plündern', //
-		'archaeolgy'					=> 'Archäologie', //
-		'diplomacy'						=> 'Diplomatie', //
-		'underworldtrading'				=> 'Unterwelthandel', //
-		'slicing'						=> 'Hacken', //
-		'investigation'					=> 'Ermittlung', //
-		'treasurehunting'				=> 'Schatzsuche', //
+	'classes' => array(
+		1	=> 'Zerstörer',
+		2	=> 'Kreuzer',
+		3	=> 'Schlachtschiff',
+		4	=> 'Flugzeugträger',
+		5	=> 'Premium',
 	),
 
-	'lang' => array(
-		'swtor'						=> 'Star Wars: The Old Republic',
-		//Reputation
-		'uc_cat_reputation'			=> 'Ruf',
-		'reputation'				=> 'Ruf',
-		'head_reputation_perc'		=> 'Wert',
-		'head_reputation_name'		=> 'Fraktion',
-		'tab_reputation'			=> 'Ruf',
-		'ruflevel'					=> 'Stufe',
-		'repuname0'					=> 'Ohne',
-		'repuname1'					=> 'Fremndling',
-		'repuname2'					=> 'Neuling',
-		'repuname3'					=> 'Freund',
-		'repuname4'					=> 'Held',
-		'repuname5'					=> 'Streiter',
-		'repuname6'					=> 'Legende',
+/* Schiffsnummer zusammengesetzt:   Rasse : Premium : Klasse : Stufe */
 
-		'ruf1'	=> 'D.H.O.R.N.',
-		'ruf2'	=> 'Die Gree-Enklave',
-		'ruf3'	=> 'Die Schmugglerwaren-Wiederverkaufsgesellschaft',
-		'ruf4'	=> 'Die Schreckenshenker',
-		'ruf5'	=> 'Die Voss',
-		'ruf6'	=> 'Doppelstern-Immobilien',
-		'ruf7'	=> 'Galactic Solutions Industries',
-		'ruf8'	=> 'Imperiale Garde auf Belsavis',
-		'ruf9'	=> 'Imperiale Streitkräfte auf Makeb',
-		'ruf10'	=> 'Imperiales Frontkommando',
-		'ruf11'	=> 'Kopfgeld-Vermittlungsgesellschaft',
-		'ruf12'	=> 'Kopfgeld-Versorgungsunternehmen',
-		'ruf13'	=> 'Waffensicherheitskorps',
-		'ruf14'	=> '1. imperiale Flotte',
-		'ruf15'	=> 'Interplanetare Komponentenbörse',
-		'ruf16'	=> 'Stoßtrupp Oricon', 
-		'ruf17' => 'Republikanische Hyperraum-Armada', 
-		'ruf18'	=> 'Koalitionstruppen auf Yavin 4',
-		'ruf19'	=> 'Freibeuter-Gewerkschaft',
-		'ruf20'	=> 'Bewohner von Rishi',
+	'ships' => array(
+		0			=> 'Wähle Schiff',
+		// Zerstörer
+		//US
+		10100		=>	'-',
+		10101		=>	'-',
+		10102		=>	'II Sampson',
+		10103		=>	'III Wickes',
+		10104		=>	'IV Clemson',
+		10105		=>	'V Nicholas',
+		10105		=>	'VI Farragut',
+		10107		=>	'VII Mahan',
+		10108		=>	'VIII Benson',
+		10109		=>	'IX Fletcher',
+		10110		=>	'X Gearing',
+		//Japan
+		20100		=>	'-',
+		20101		=>	'-',
+		20102		=>	'II Umikaze',
+		20103		=>	'III Wakatake',
+		20104		=>	'IV Isokaze',
+		20105		=>	'V Minekaze',
+		20106		=>	'VI Mutsuki',
+		20107		=>	'VII Hatsuharu',
+		20108		=>	'VIII Fubuki',
+		20109		=>	'IX Kagero',
+		20110		=>	'X Shimakaze',
 
-		//Admin Settings
-		'core_sett_fs_gamesettings'	=> 'SWToR Einstellungen',
-		'uc_one_faction'			=> 'Klassenauswahl auf bestimmte Fraktion einschränken?',
-		'uc_faction'				=> 'Fraktion',
-		'uc_faction_help'			=> 'Die Klassen der gegnerischen Fraktion können nicht mehr ausgewählt werden.',
-
-		// Profile information
-		'uc_gender'					=> 'Geschlecht',
-		'uc_male'					=> 'Männlich',
-		'uc_female'					=> 'Weiblich',
-		'uc_guild'					=> 'Gilde',
-		'uc_race'					=> 'Rasse',
-		'uc_class'					=> 'Klasse',
-		'uc_skill'		  			=> 'Skillung',
-		'uc_servername'				=> 'Realm',
-		'uc_prof1_value'			=> 'Stufe',
-		'uc_prof1_name'				=> 'Hauptberuf',
-		'uc_prof2_value'			=> 'Stufe',
-		'uc_prof2_name'				=> 'Sekundärberuf',
-		'uc_prof3_value'			=> 'Stufe',
-		'uc_prof3_name'				=> 'Sekundärberuf',
-		'uc_prof_professions'		=> 'Berufe',
-		'uc_level'					=> 'Stufe',
+		//PremiumSchiffe
+		51105		=>	'V Gremjaschtschi',
 		
-		//Operation
-		'sm_ewigekammer'					=> 'Ewige Kammer (Story)',
-		'hc_ewigekammer'					=> 'Ewige Kammer (Schwer)',
-		'nm_ewigekammer'					=> 'Ewige Kammer (Alptraum)',
-		'sm_karaggaspalast'					=> 'Karaggas Palast (Story)',
-		'hc_karaggaspalast'					=> 'Karaggas Palast (Schwer)',
-		'nm_karaggaspalast'					=> 'Karaggas Palast (Alptraum)',
-		'sm_explosivkonflikt'				=> 'Explosiv Konflikt (Story)',
-		'hc_explosivkonflikt'				=> 'Explosiv Konflikt (Schwer)',
-		'nm_explosivkonflikt'				=> 'Explosiv Konflikt (Alptraum)',
-		'sm_abschaum'						=> 'Abschaum und Verkommenheit (Story)',
-		'hc_abschaum'						=> 'Abschaum und Verkommenheit (Schwer)',
-		'nm_abschaum'						=> 'Abschaum und Verkommenheit (Alptraum)',
-		'sm_schrecken'						=> 'Schrecken aus der Tiefe (Story)',
-		'hc_schrecken'						=> 'Schrecken aus der Tiefe (Schwer)',
-		'nm_schrecken'						=> 'Schrecken aus der Tiefe (Alptraum)',
-		'sm_s_festung'						=> 'Schreckensfestung (Story)',
-		'hc_s_festung'						=> 'Schreckensfestung (Schwer)',
-		'nm_s_festung'						=> 'Schreckensfestung (Alptraum)',
-		'sm_s_palast'						=> 'Schreckenspalast (Story)',
-		'hc_s_palast'						=> 'Schreckenspalast (Schwer)',
-		'nm_s_palast'						=> 'Schreckenspalast (Alptraum)',
-		'sm_tbh'							=> 'Toborro\'s Hof (Story)',
-		'hc_tbh'							=> 'Toborro\'s Hof (Schwer)',
-		'nm_tbh'							=> 'Toborro\'s Hof (Alptraum)',
-		'sm_wueter'							=> 'Die Wüter (Story)',
-		'hc_wueter'							=> 'Die Wüter (Schwer)',
-		'nm_wueter'							=> 'Die Wüter (Alptraum)',
-		'sm_tempel'							=> 'Tempel des Opfers (Story)',
-		'hc_tempel'							=> 'Tempel des Opfers (Schwer)',
-		'nm_tempel'							=> 'Tempel des Opfers (Alptraum)',
+	//Kreuzer
+		//US
+		10200		=>	'-',
+		10201		=>	'I Erie',
+		10202		=>	'II Chester',
+		10203		=>	'III St. Louis',
+		10204		=>	'IV Phoenix',
+		10205		=>	'V Omaha',
+		10206		=>	'VI Cleveland',
+		10207		=>	'VII Pensacola',
+		10208		=>	'VIII New Orleans',
+		10209		=>	'IX Baltimore',
+		10210		=>	'X Des Moines',
+		//Japan
+		20200		=>	'-',
+		20201		=>	'I Katori',
+		20202		=>	'II Chikuma',
+		20203		=>	'III Tenryu',
+		20204		=>	'IV Kuma',
+		20205		=>	'V Furutaka',
+		20206		=>	'VI Aoba',
+		20207		=>	'VII Myoko',
+		20208		=>	'VIII Mogami',
+		20209		=>	'IX Ibuki',
+		20210		=>	'X Zao',
 
-		//realms
+		//PremiumSchiffe
+		11202		=>	'II Albany',
+		11207		=>	'VII Atlanta',
+		21208		=>	'VIII Katikami',
+		51203		=>	'III Aurora',
+		51205		=>	'V Murmansk',
+		
+	//Schalchtschiffe
+		//US
+		10300		=>	'-',
+		10301		=>	'-',
+		10302		=>	'-',
+		10303		=>	'III South Carolina',
+		10304		=>	'IV Wyoming',
+		10305		=>	'V New York',
+		10306		=>	'VI New Mexico',
+		10307		=>	'VII Colorado',
+		10308		=>	'VIII North Carolina',
+		10309		=>	'IX Iowa',
+		10310		=>	'X Montana',
+		//Japan
+		20300		=>	'-',
+		20301		=>	'-',
+		20302		=>	'-',
+		20303		=>	'III Kawachi',
+		20304		=>	'IV Myogi',
+		20305		=>	'V Kongo',
+		20306		=>	'VI Fuso',
+		20307		=>	'VII Nagato',
+		20308		=>	'VIII Amagi',
+		20309		=>	'IX Izumo',
+		20310		=>	'X Yamato',
+
+		//PremiumSchiffe
+		41306		=>	'VI Warspite',
+
+	//Flugzeugträger
+		//US
+		10400		=>	'-',
+		10401		=>	'-',
+		10402		=>	'-',
+		10403		=>	'-',
+		10404		=>	'IV Langley',
+		10405		=>	'V Bogue',
+		10406		=>	'VI Independence',
+		10407		=>	'VII Ranger',
+		10408		=>	'VIII Lexington',
+		10409		=>	'IX Essex',
+		10410		=>	'',
+		//Japan
+		20400		=>	'-',
+		20401		=>	'-',
+		20402		=>	'-',
+		20403		=>	'-',
+		20404		=>	'IV Hosho',
+		20405		=>	'V Zuiho',
+		20406		=>	'VI Ryujo',
+		20407		=>	'VII Shokaku',
+		20408		=>	'-',
+		20409		=>	'-',
+		20410		=>	'-',
+
 	),
-		'realmlist' => array(
-		'T3-M4','Darth Nihilus',
-		'Tomb of Freedon Nadd',
-		'Jar\'Kai Sword',
-		'The Progenitor',
-		'Vanjervalis Chain',
-		'Battle Meditation',
-		'Mantle of the Force',
-		'The Red Eclipse',
-		'The Bastion',
-		'Begeren Colony',
-		'The Harbinger',
-		'The Shadowlands',
-		'Jung Ma',
-		'The Ebon Hawk',
-		'Prophecy of the Five',
-		'Jedi Covenant'),
+	'usdestroyer' => array(
+		2		=>	'II Sampson',
+		3		=>	'III Wickes',
+		4		=>	'IV Clemson',
+		5		=>	'V Nicholas',
+		6		=>	'VI Farragut',
+		7		=>	'VII Mahan',
+		8		=>	'VIII Benson',
+		9		=>	'IX Fletcher',
+		10		=>	'X Gearing',
+		),
+	'uscruiser' => array(
+		1		=>	'I Erie',
+		2		=>	'II Chester',
+		3		=>	'III St. Louis',
+		4		=>	'IV Phoenix',
+		5		=>	'V Omaha',
+		6		=>	'VI Cleveland',
+		7		=>	'VII Pensacola',
+		8		=>	'VIII New Orleans',
+		9		=>	'IX Baltimore',
+		10		=>	'X Des Moines',
+		),
+	'usbattleship'	=> array(
+		3		=>	'III South Carolina',
+		4		=>	'IV Wyoming',
+		5		=>	'V New York',
+		6		=>	'VI New Mexico',
+		7		=>	'VII Colorado',
+		8		=>	'VIII North Carolina',
+		9		=>	'IX Iowa',
+		10		=>	'X Montana',
+		),
+	'uscarrier'	=>array(
+		4		=>	'IV Langley',
+		5		=>	'V Bogue',
+		6		=>	'VI Independence',
+		7		=>	'VII Ranger',
+		8		=>	'VIII Lexington',
+		9		=>	'IX Essex',
+		10		=>	'X Midway',
+		),
+
+	'uspremium'	=>array(
+	//	2		=>	'II Albany',
+		7		=>	'VII Atlanta',
+		),	
+		
+		
+	'jpndestroyer'	=> array(
+		2		=>	'II Umikaze',
+		3		=>	'III Wakatake',
+		4		=>	'IV Isokaze',
+		5		=>	'V Minekaze',
+		6		=>	'VI Mutsuki',
+		7		=>	'VII Hatsuharu',
+		8		=>	'VIII Fubuki',
+		9		=>	'IX Kagero',
+		10		=>	'X Shimakaze',
+		),
+	'jpncruiser'	=> array(
+		1		=>	'I Katori',
+		2		=>	'II Chikuma',
+		3		=>	'III Tenryu',
+		4		=>	'IV Kuma',
+		5		=>	'V Furutaka',
+		6		=>	'VI Aoba',
+		7		=>	'VII Myoko',
+		8		=>	'VIII Mogami',
+		9		=>	'IX Ibuki',
+		10		=>	'X Zao',
+		),
+	'jpnbattleship'	=>array(
+		3		=>	'III Kawachi',
+		4		=>	'IV Myogi',
+		5		=>	'V Kongo',
+		6		=>	'VI Fuso',
+		7		=>	'VII Nagato',
+		8		=>	'VIII Amagi',
+		9		=>	'IX Izumo',
+		10		=>	'X Yamato',
+		),
+	'jpncarrier'	=>array(
+		4		=>	'IV Hosho',
+		5		=>	'V Zuiho',
+		6		=>	'VI Ryujo',
+		7		=>	'VII Hiryu',
+		8		=>	'VIII Shokaku',
+		9		=>	'IX Taiho',
+		10		=>	'X Hakuryu',
+		),
+	'jpnpremium'	=>array(
+		4		=>	'IV Hosho',
+		5		=>	'V Zuiho',
+		6		=>	'VI Ryujo',
+		7		=>	'VII Shokaku',
+		),
+	
+	
+	'lang' => array(
+		'wows'				=> 'World of Warships',
+		'uc_cat_usa'		=> 'USA',
+		'uc_cat_jpn'		=> 'JAPAN',
+		'uc_cat_achievement'	=> 'Auszeichnung',
+		'uc_destroyer'		=> 'Zerstörer',
+		'uc_cruiser'		=> 'Kreuzer',
+		'uc_battleship'		=> 'Schlachtschiff',
+		'uc_carrier'		=> 'Flugzeugträger',
+		'uc_premium'		=> 'Premiumschiffe',
+		'uc_myfleet'		=> 'Meine Flotte',
+		'uc_faction'		=> 'Bevorzugte Nation',
+		'uc_class'			=> 'Bevorzugte Schiffsklasse',
+		'uc_profil'			=> 'Profil',
+		'uc_level'			=> 'Wehrpass Stufe',
+		//Bar
+		'uc_bar1'			=>	'Überleben',
+		'uc_bar2'			=>	'Artillerie',
+		'uc_bar3'			=>	'Torpedos',
+		'uc_bar4'			=>	'Flaks',
+		'uc_bar5'			=>	'Manövrierbarkeit',
+		'uc_bar6'			=>	'Verborgenheit',
+		'uc_bar7'			=>	'Flugzeuge',
+		//Auszeichnung
+		'uc_achievement'		=> 'Auszeichnung',
+		'uc_achievement1'	=>	'Brandstifter',
+		'uc_achievement2'	=>	'Nahkampfexperte',
+		'uc_achievement3'	=>	'Vernichter',
+		'uc_achievement4'	=>	'Klarer Himmel',
+		'uc_achievement5'	=>	'Unsinkbar',
+		'uc_achievement6'	=>	'Detonation',
+		'uc_achievement7'	=>	'Doppelschlag',
+		'uc_achievement8'	=>	'Dreadnought',
+		'uc_achievement9'	=>	'Feuerfest',
+		'uc_achievement10'	=>	'Erstes Blut',
+		'uc_achievement11'	=>	'Sturkopf',
+		'uc_achievement12'	=>	'Vernichtender Schlag',
+		'uc_achievement13'	=>	'Abwickler',
+		'uc_achievement14'	=>	'Großkaliber',
+		'uc_achievement15'	=>	'Einzelkämpfer',
+		'uc_achievement16'	=>	'Das ist nur ein Kratzer!',
+		'uc_achievement17'	=>	'Unterstützer',
+	),
 );
 
 ?>
