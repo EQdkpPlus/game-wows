@@ -84,12 +84,33 @@ if(!class_exists('wows')) {
 			$this->load_type('uscruiser', array($this->lang));
 			$this->load_type('usbattleship', array($this->lang));
 			$this->load_type('uscarrier', array($this->lang));
-			$this->load_type('uspremium', array($this->lang));
+//			$this->load_type('uspremium', array($this->lang));
 			$this->load_type('jpndestroyer', array($this->lang));
 			$this->load_type('jpncruiser', array($this->lang));
 			$this->load_type('jpnbattleship', array($this->lang));
 			$this->load_type('jpncarrier', array($this->lang));
-			$this->load_type('jpnpremium', array($this->lang));
+//			$this->load_type('jpnpremium', array($this->lang));
+			$this->load_type('gerdestroyer', array($this->lang));
+			$this->load_type('gercruiser', array($this->lang));
+			$this->load_type('gerbattleship', array($this->lang));
+			$this->load_type('gercarrier', array($this->lang));
+//			$this->load_type('gerpremium', array($this->lang));
+			$this->load_type('gbdestroyer', array($this->lang));
+			$this->load_type('gbcruiser', array($this->lang));
+			$this->load_type('gbbattleship', array($this->lang));
+			$this->load_type('gbcarrier', array($this->lang));
+//			$this->load_type('gbpremium', array($this->lang));
+			$this->load_type('udssrdestroyer', array($this->lang));
+			$this->load_type('udssrcruiser', array($this->lang));
+			$this->load_type('udssrbattleship', array($this->lang));
+			$this->load_type('udssrcarrier', array($this->lang));
+//			$this->load_type('udssrpremium', array($this->lang));
+
+
+
+
+
+
 			$fields = array(
 				'level'	=> array(
 					'type'			=> 'spinner',
@@ -100,6 +121,7 @@ if(!class_exists('wows')) {
 					'undeletable'	=> true,
 					'sort'			=> 1,
 				),
+// Auswahl us Schiffe
 				'usdestroyer'	=> array(
 					'type'			=> 'multiselect',
 					'category'		=> 'usa',
@@ -136,7 +158,7 @@ if(!class_exists('wows')) {
 					'options'		=> $this->uscarrier[$this->lang],
 					'sort'			=> 4,
 				),
-				'uspremium'	=> array(
+/*				'uspremium'	=> array(
 					'type'			=> 'multiselect',
 					'category'		=> 'usa',
 					'lang'			=> 'uc_premium',
@@ -145,6 +167,8 @@ if(!class_exists('wows')) {
 					'options'		=> $this->uspremium[$this->lang],
 					'sort'			=> 5,
 				),
+*/
+// Auswahl japanische Schiffe
 				'jpndestroyer'	=> array(
 					'type'			=> 'multiselect',
 					'category'		=> 'jpn',
@@ -181,7 +205,7 @@ if(!class_exists('wows')) {
 					'options'		=> $this->jpncarrier[$this->lang],
 					'sort'			=> 4,
 				),
-				'jpnpremium'	=> array(
+/*				'jpnpremium'	=> array(
 					'type'			=> 'multiselect',
 					'category'		=> 'jpn',
 					'lang'			=> 'uc_premium',
@@ -190,6 +214,152 @@ if(!class_exists('wows')) {
 					'options'		=> $this->jpnpremium[$this->lang],
 					'sort'			=> 5,
 				),
+*/
+// Auswahl deutsche Schiffe
+				'gerdestroyer'	=> array(
+					'type'			=> 'multiselect',
+					'category'		=> 'ger',
+					'lang'			=> 'uc_destroyer',
+					'undeletable'	=> true,
+					'visible'		=> true,
+					'options'		=> $this->gerdestroyer[$this->lang],
+					'sort'			=> 1,
+				),
+				'gercruiser'	=> array(
+					'type'			=> 'multiselect',
+					'category'		=> 'ger',
+					'lang'			=> 'uc_cruiser',
+					'undeletable'	=> true,
+					'visible'		=> true,
+					'options'		=> $this->gercruiser[$this->lang],
+					'sort'			=> 2,
+				),
+				'gerbattleship'	=> array(
+					'type'			=> 'multiselect',
+					'category'		=> 'ger',
+					'lang'			=> 'uc_battleship',
+					'undeletable'	=> true,
+					'visible'		=> true,
+					'options'		=> $this->gerbattleship[$this->lang],
+					'sort'			=> 3,
+				),
+				'gercarrier'	=> array(
+					'type'			=> 'multiselect',
+					'category'		=> 'ger',
+					'lang'			=> 'uc_carrier',
+					'undeletable'	=> true,
+					'visible'		=> true,
+					'options'		=> $this->gercarrier[$this->lang],
+					'sort'			=> 4,
+				),
+/*				'gerpremium'	=> array(
+					'type'			=> 'multiselect',
+					'category'		=> 'ger',
+					'lang'			=> 'uc_premium',
+					'undeletable'	=> true,
+					'visible'		=> true,
+					'options'		=> $this->gerpremium[$this->lang],
+					'sort'			=> 5,
+				),
+*/
+// Auswahl britische Schiffe
+				'gbdestroyer'	=> array(
+					'type'			=> 'multiselect',
+					'category'		=> 'gb',
+					'lang'			=> 'uc_destroyer',
+					'undeletable'	=> true,
+					'visible'		=> true,
+					'options'		=> $this->gbdestroyer[$this->lang],
+					'sort'			=> 1,
+				),
+				'gbcruiser'	=> array(
+					'type'			=> 'multiselect',
+					'category'		=> 'gb',
+					'lang'			=> 'uc_cruiser',
+					'undeletable'	=> true,
+					'visible'		=> true,
+					'options'		=> $this->gbcruiser[$this->lang],
+					'sort'			=> 2,
+				),
+				'gbbattleship'	=> array(
+					'type'			=> 'multiselect',
+					'category'		=> 'gb',
+					'lang'			=> 'uc_battleship',
+					'undeletable'	=> true,
+					'visible'		=> true,
+					'options'		=> $this->gbbattleship[$this->lang],
+					'sort'			=> 3,
+				),
+				'gbcarrier'	=> array(
+					'type'			=> 'multiselect',
+					'category'		=> 'gb',
+					'lang'			=> 'uc_carrier',
+					'undeletable'	=> true,
+					'visible'		=> true,
+					'options'		=> $this->gbcarrier[$this->lang],
+					'sort'			=> 4,
+				),
+/*				'gbpremium'	=> array(
+					'type'			=> 'multiselect',
+					'category'		=> 'gb',
+					'lang'			=> 'uc_premium',
+					'undeletable'	=> true,
+					'visible'		=> true,
+					'options'		=> $this->gbpremium[$this->lang],
+					'sort'			=> 5,
+				),
+*/
+// Auswahl russische Schiffe
+				'udssrdestroyer'	=> array(
+					'type'			=> 'multiselect',
+					'category'		=> 'udssr',
+					'lang'			=> 'uc_destroyer',
+					'undeletable'	=> true,
+					'visible'		=> true,
+					'options'		=> $this->udssrdestroyer[$this->lang],
+					'sort'			=> 1,
+				),
+				'udssrcruiser'	=> array(
+					'type'			=> 'multiselect',
+					'category'		=> 'udssr',
+					'lang'			=> 'uc_cruiser',
+					'undeletable'	=> true,
+					'visible'		=> true,
+					'options'		=> $this->udssrcruiser[$this->lang],
+					'sort'			=> 2,
+				),
+				'udssrbattleship'	=> array(
+					'type'			=> 'multiselect',
+					'category'		=> 'udssr',
+					'lang'			=> 'uc_battleship',
+					'undeletable'	=> true,
+					'visible'		=> true,
+					'options'		=> $this->udssrbattleship[$this->lang],
+					'sort'			=> 3,
+				),
+				'udssrcarrier'	=> array(
+					'type'			=> 'multiselect',
+					'category'		=> 'udssr',
+					'lang'			=> 'uc_carrier',
+					'undeletable'	=> true,
+					'visible'		=> true,
+					'options'		=> $this->udssrcarrier[$this->lang],
+					'sort'			=> 4,
+				),
+/*				'udssrpremium'	=> array(
+					'type'			=> 'multiselect',
+					'category'		=> 'udssr',
+					'lang'			=> 'uc_premium',
+					'undeletable'	=> true,
+					'visible'		=> true,
+					'options'		=> $this->udssrpremium[$this->lang],
+					'sort'			=> 5,
+				),
+*/
+
+
+// ERFOLGE
+
 				'achievements1'		=> array(
 					'type'			=> 'int',
 					'category'		=> 'achievement',

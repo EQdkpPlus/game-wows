@@ -115,8 +115,8 @@ if ( !defined('EQDKP_INC') ){
 		9 => array(	1 	=> '70', 2 	=> '6', 4  	=> '49', 5 	=> '51', 6 	=> '29', 7 	=> '45'),
 		10 => array(	1 	=> '87', 2 	=> '7', 4  	=> '71', 5 	=> '52', 6 	=> '5', 7 	=> '74'),
 	);
-	$uspremiumname =  array( // Namen i.o.
-	//	2		=>	'Albany',
+/*	$uspremiumname =  array( // Namen i.o.
+		2		=>	'Albany',
 		7		=>	'Atlanta',
 		);
 	$uspremiumdata =  array( //Daten i.o.
@@ -132,4 +132,5 @@ if ( !defined('EQDKP_INC') ){
 		9 => array(	1	=> '0',2	=> '0',3	=> '0',4	=> '0',5	=> '0',6	=> '0',7 	=> '0'),
 		10 => array(1	=> '0',2	=> '0',3	=> '0',4	=> '0',5	=> '0',6	=> '0',7 	=> '0'),
 	);
+*/
  ?>
