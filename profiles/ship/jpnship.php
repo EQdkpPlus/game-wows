@@ -55,7 +55,7 @@ if ( !defined('EQDKP_INC') ){
 		7		=>	'Myoko',
 		8		=>	'Mogami',
 		9		=>	'Ibuki',
-		10		=>	'Khabarowsk',
+		10		=>	'Khabarovsk',
 		);
 	$jpncruiserdata =  array( //Daten n.i.o.
 		0 => array(	1 	=> '0',	2 	=> '0',	3 	=> '0', 4 	=> '0', 5 	=> '0', 6 	=> '0',7 	=> '0'),
@@ -100,7 +100,7 @@ if ( !defined('EQDKP_INC') ){
 		7		=>	'Hiryu',
 		8		=>	'Shokaku',
 		9		=>	'Taiho',
-		10		=>	'Hakuryo',
+		10		=>	'Hakuryu',
 		);
 	$jpncarrierdata =  array( //Daten n.i.o.
 		0 => array(	1 	=> '0',	2 	=> '0',	3 	=> '0', 4 	=> '0', 5 	=> '0', 6 	=> '0',7 	=> '0'),

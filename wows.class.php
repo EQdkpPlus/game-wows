@@ -121,6 +121,15 @@ if(!class_exists('wows')) {
 					'undeletable'	=> true,
 					'sort'			=> 1,
 				),
+				'accountid'	=> array(
+					'type'			=> 'text',
+					'category'		=> 'character',
+					'lang'			=> 'uc_accountid',
+					'size'			=> 32,
+					'undeletable'	=> true,
+					'visible'		=> true,
+					'sort'			=> 4,
+				),
 // Auswahl us Schiffe
 				'usdestroyer'	=> array(
 					'type'			=> 'multiselect',

@@ -400,6 +400,7 @@ $german_array =  array(
 */
 	'lang' => array(
 		'wows'				=> 'World of Warships',
+		'uc_accountid'		=> 'Wargaming AccountID',
 		'uc_cat_usa'		=> 'USA',
 		'uc_cat_jpn'		=> 'JAPAN',
 		'uc_cat_ger'		=> 'DEUTSCHLAND',
