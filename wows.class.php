@@ -26,7 +26,7 @@ if ( !defined('EQDKP_INC') ){
 if(!class_exists('wows')) {
 	class wows extends game_generic {
 		protected static $apiLevel	= 20;
-		public $version				= '0.4.1';
+		public $version				= '0.5.8.1';
 		protected $this_game		= 'wows';
 		protected $types			= array('factions','classes','roles');
 		protected $classes			= array();
@@ -80,31 +80,33 @@ if(!class_exists('wows')) {
 		public $lang			= false;
 		
 		public function profilefields(){
+		
+		// Laden der Schiffsnamen aus der Sprachdatei für Dropdownmenü
 			$this->load_type('usdestroyer', array($this->lang));
 			$this->load_type('uscruiser', array($this->lang));
 			$this->load_type('usbattleship', array($this->lang));
 			$this->load_type('uscarrier', array($this->lang));
-//			$this->load_type('uspremium', array($this->lang));
+			$this->load_type('uspremium', array($this->lang));
 			$this->load_type('jpndestroyer', array($this->lang));
 			$this->load_type('jpncruiser', array($this->lang));
 			$this->load_type('jpnbattleship', array($this->lang));
 			$this->load_type('jpncarrier', array($this->lang));
-//			$this->load_type('jpnpremium', array($this->lang));
+			$this->load_type('jpnpremium', array($this->lang));
 			$this->load_type('gerdestroyer', array($this->lang));
 			$this->load_type('gercruiser', array($this->lang));
 			$this->load_type('gerbattleship', array($this->lang));
 			$this->load_type('gercarrier', array($this->lang));
-//			$this->load_type('gerpremium', array($this->lang));
+			$this->load_type('gerpremium', array($this->lang));
 			$this->load_type('gbdestroyer', array($this->lang));
 			$this->load_type('gbcruiser', array($this->lang));
 			$this->load_type('gbbattleship', array($this->lang));
 			$this->load_type('gbcarrier', array($this->lang));
-//			$this->load_type('gbpremium', array($this->lang));
+			$this->load_type('gbpremium', array($this->lang));
 			$this->load_type('udssrdestroyer', array($this->lang));
 			$this->load_type('udssrcruiser', array($this->lang));
 			$this->load_type('udssrbattleship', array($this->lang));
 			$this->load_type('udssrcarrier', array($this->lang));
-//			$this->load_type('udssrpremium', array($this->lang));
+			$this->load_type('udssrpremium', array($this->lang));
 
 
 
@@ -121,7 +123,9 @@ if(!class_exists('wows')) {
 					'undeletable'	=> true,
 					'sort'			=> 1,
 				),
-				'accountid'	=> array(
+				
+//Vorbereitung für Wargaming-API
+/*				'accountid'	=> array(
 					'type'			=> 'text',
 					'category'		=> 'character',
 					'lang'			=> 'uc_accountid',
@@ -130,6 +134,7 @@ if(!class_exists('wows')) {
 					'visible'		=> true,
 					'sort'			=> 4,
 				),
+*/
 // Auswahl us Schiffe
 				'usdestroyer'	=> array(
 					'type'			=> 'multiselect',
@@ -225,7 +230,7 @@ if(!class_exists('wows')) {
 				),
 */
 // Auswahl deutsche Schiffe
-				'gerdestroyer'	=> array(
+/*				'gerdestroyer'	=> array(
 					'type'			=> 'multiselect',
 					'category'		=> 'ger',
 					'lang'			=> 'uc_destroyer',
@@ -234,6 +239,7 @@ if(!class_exists('wows')) {
 					'options'		=> $this->gerdestroyer[$this->lang],
 					'sort'			=> 1,
 				),
+*/
 				'gercruiser'	=> array(
 					'type'			=> 'multiselect',
 					'category'		=> 'ger',
@@ -243,6 +249,7 @@ if(!class_exists('wows')) {
 					'options'		=> $this->gercruiser[$this->lang],
 					'sort'			=> 2,
 				),
+/*
 				'gerbattleship'	=> array(
 					'type'			=> 'multiselect',
 					'category'		=> 'ger',
@@ -261,7 +268,7 @@ if(!class_exists('wows')) {
 					'options'		=> $this->gercarrier[$this->lang],
 					'sort'			=> 4,
 				),
-/*				'gerpremium'	=> array(
+				'gerpremium'	=> array(
 					'type'			=> 'multiselect',
 					'category'		=> 'ger',
 					'lang'			=> 'uc_premium',
@@ -271,7 +278,7 @@ if(!class_exists('wows')) {
 					'sort'			=> 5,
 				),
 */
-// Auswahl britische Schiffe
+/* Auswahl britische Schiffe
 				'gbdestroyer'	=> array(
 					'type'			=> 'multiselect',
 					'category'		=> 'gb',
@@ -308,7 +315,7 @@ if(!class_exists('wows')) {
 					'options'		=> $this->gbcarrier[$this->lang],
 					'sort'			=> 4,
 				),
-/*				'gbpremium'	=> array(
+				'gbpremium'	=> array(
 					'type'			=> 'multiselect',
 					'category'		=> 'gb',
 					'lang'			=> 'uc_premium',
@@ -337,7 +344,7 @@ if(!class_exists('wows')) {
 					'options'		=> $this->udssrcruiser[$this->lang],
 					'sort'			=> 2,
 				),
-				'udssrbattleship'	=> array(
+/*				'udssrbattleship'	=> array(
 					'type'			=> 'multiselect',
 					'category'		=> 'udssr',
 					'lang'			=> 'uc_battleship',
@@ -355,7 +362,7 @@ if(!class_exists('wows')) {
 					'options'		=> $this->udssrcarrier[$this->lang],
 					'sort'			=> 4,
 				),
-/*				'udssrpremium'	=> array(
+				'udssrpremium'	=> array(
 					'type'			=> 'multiselect',
 					'category'		=> 'udssr',
 					'lang'			=> 'uc_premium',
