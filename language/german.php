@@ -329,7 +329,14 @@ $german_array =  array(
 		10		=>	'X Hindenburg',
 		),
 	'gerbattleship'	=> array(
-		0		=>	'-----',
+		3		=>	'III Nassau',
+		4		=>	'IV Kaiser',
+		5		=>	'V König Albert',
+		6		=>	'VI Bayern',
+		7		=>	'VII Gneisenau',
+		8		=>	'VIII Bismarck',
+		9		=>	'IX Friedrich der Große',
+		10		=>	'X Großer Kurfürst',
 
 		),
 	'gercarrier'	=>array(
