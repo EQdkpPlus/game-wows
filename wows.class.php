@@ -374,7 +374,7 @@ if(!class_exists('wows')) {
 */
 
 
-// ERFOLGE
+// Abfrage der Erfolge
 
 				'achievements1'		=> array(
 					'type'			=> 'int',
