@@ -75,7 +75,14 @@ if ( !defined('EQDKP_INC') ){
 	);
 
 	$gerbattleshipname =  array( // Namen i.o.
-
+		3		=>	'Nassau',
+		4		=>	'Kaiser',
+		5		=>	'König Albert',
+		6		=>	'Bayern',
+		7		=>	'Gneisenau',
+		8		=>	'Bismarck',
+		9		=>	'Friedrich der Große',
+		10		=>	'Großer Kurfürst',
 		);
 	$gerbattleshipdata =  array( //Daten n.i.o.
 		0 => array(	1 	=> '0',	2 	=> '0',	3 	=> '0', 4 	=> '0', 5 	=> '0', 6 	=> '0',7 	=> '0'),
