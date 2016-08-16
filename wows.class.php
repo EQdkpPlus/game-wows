@@ -114,27 +114,16 @@ if(!class_exists('wows')) {
 
 
 			$fields = array(
-				'level'	=> array(
-					'type'			=> 'spinner',
+				'wID'	=> array(
+					'type'			=> 'int',
 					'category'		=> 'character',
-					'lang'			=> 'uc_level',
-					'max'			=> 22,
-					'min'			=> 1,
+					'lang'			=> 'account_id',
+					'size'			=> 9,
 					'undeletable'	=> true,
 					'sort'			=> 1,
 				),
 				
-//Vorbereitung für Wargaming-API
-/*				'accountid'	=> array(
-					'type'			=> 'text',
-					'category'		=> 'character',
-					'lang'			=> 'uc_accountid',
-					'size'			=> 32,
-					'undeletable'	=> true,
-					'visible'		=> true,
-					'sort'			=> 4,
-				),
-*/
+
 // Auswahl us Schiffe
 				'usdestroyer'	=> array(
 					'type'			=> 'multiselect',
@@ -373,145 +362,6 @@ if(!class_exists('wows')) {
 				),
 */
 
-
-// Abfrage der Erfolge
-
-				'achievements1'		=> array(
-					'type'			=> 'int',
-					'category'		=> 'achievement',
-					'lang'			=> 'uc_achievement1',
-					'size'			=> 4,
-					'undeletable'	=> true,
-					'sort'			=> 1,
-				),
-				'achievements2'		=> array(
-					'type'			=> 'int',
-					'category'		=> 'achievement',
-					'lang'			=> 'uc_achievement2',
-					'size'			=> 4,
-					'undeletable'	=> true,
-					'sort'			=> 2,
-				),
-				'achievements3'		=> array(
-					'type'			=> 'int',
-					'category'		=> 'achievement',
-					'lang'			=> 'uc_achievement3',
-					'size'			=> 4,
-					'undeletable'	=> true,
-					'sort'			=> 3,
-				),
-				'achievements4'		=> array(
-					'type'			=> 'int',
-					'category'		=> 'achievement',
-					'lang'			=> 'uc_achievement4',
-					'size'			=> 4,
-					'undeletable'	=> true,
-					'sort'			=> 4,
-				),
-				'achievements5'		=> array(
-					'type'			=> 'int',
-					'category'		=> 'achievement',
-					'lang'			=> 'uc_achievement5',
-					'size'			=> 4,
-					'undeletable'	=> true,
-					'sort'			=> 5,
-				),
-				'achievements6'		=> array(
-					'type'			=> 'int',
-					'category'		=> 'achievement',
-					'lang'			=> 'uc_achievement6',
-					'size'			=> 4,
-					'undeletable'	=> true,
-					'sort'			=> 6,
-				),
-				'achievements7'		=> array(
-					'type'			=> 'int',
-					'category'		=> 'achievement',
-					'lang'			=> 'uc_achievement7',
-					'size'			=> 4,
-					'undeletable'	=> true,
-					'sort'			=> 7,
-				),
-				'achievements8'		=> array(
-					'type'			=> 'int',
-					'category'		=> 'achievement',
-					'lang'			=> 'uc_achievement8',
-					'size'			=> 4,
-					'undeletable'	=> true,
-					'sort'			=> 8,
-				),
-				'achievements9'		=> array(
-					'type'			=> 'int',
-					'category'		=> 'achievement',
-					'lang'			=> 'uc_achievement9',
-					'size'			=> 4,
-					'undeletable'	=> true,
-					'sort'			=> 9,
-				),
-				'achievements10'		=> array(
-					'type'			=> 'int',
-					'category'		=> 'achievement',
-					'lang'			=> 'uc_achievement10',
-					'size'			=> 4,
-					'undeletable'	=> true,
-					'sort'			=> 10,
-				),
-				'achievements11'		=> array(
-					'type'			=> 'int',
-					'category'		=> 'achievement',
-					'lang'			=> 'uc_achievement11',
-					'size'			=> 4,
-					'undeletable'	=> true,
-					'sort'			=> 11,
-				),
-				'achievements12'		=> array(
-					'type'			=> 'int',
-					'category'		=> 'achievement',
-					'lang'			=> 'uc_achievement12',
-					'size'			=> 4,
-					'undeletable'	=> true,
-					'sort'			=> 12,
-				),
-				'achievements13'		=> array(
-					'type'			=> 'int',
-					'category'		=> 'achievement',
-					'lang'			=> 'uc_achievement13',
-					'size'			=> 4,
-					'undeletable'	=> true,
-					'sort'			=> 13,
-				),
-				'achievements14'		=> array(
-					'type'			=> 'int',
-					'category'		=> 'achievement',
-					'lang'			=> 'uc_achievement14',
-					'size'			=> 4,
-					'undeletable'	=> true,
-					'sort'			=> 14,
-				),
-				'achievements15'		=> array(
-					'type'			=> 'int',
-					'category'		=> 'achievement',
-					'lang'			=> 'uc_achievement15',
-					'size'			=> 4,
-					'undeletable'	=> true,
-					'sort'			=> 15,
-				),
-				'achievements16'		=> array(
-					'type'			=> 'int',
-					'category'		=> 'achievement',
-					'lang'			=> 'uc_achievement16',
-					'size'			=> 4,
-					'undeletable'	=> true,
-					'sort'			=> 16,
-				),
-				'achievements17'		=> array(
-					'type'			=> 'int',
-					'category'		=> 'achievement',
-					'lang'			=> 'uc_achievement17',
-					'size'			=> 4,
-					'undeletable'	=> true,
-					'sort'			=> 17,
-				),
 			);
 			return $fields;
 		}

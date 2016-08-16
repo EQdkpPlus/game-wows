@@ -178,12 +178,48 @@
 			box-shadow: 0px 0px 8px 4px #666;
 			/*opacity: 0.8;*/
 		}
+.achievement-block {
+	float: left;
+	position: relative;
+	width: 80px;
+	height: 80px;
+	margin: 0 20px 20px 0;
 
+}
+.achievement{
+	position: relative;
+	z-index: 1;
+	width: 100%;
+	height: 0;
+	padding-bottom: 100%;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: 50%;
+	align: center;
+}
+.avalue {
+	position: absolute;
+	z-index: 2;
+	left: 50%;
+	bottom: 0;
+	margin-left: -1em;
+	width: 2em;
+	background-color: #eee;
+	border: 1px solid #434343;
+	text-align: center;
+	font-size: 11px;
+	font-size: .6875rem;
+	color: #000;
+}
 	");
+
+	$wargamingID = $this->pdh->get('member', 'profile_field', array($this->url_id, 'wID'));
 	$this->tpl->assign_vars(array(
 		'CHARDATA_NAME'			=> $chardata['name'],
+		'WARGAMING_ID'			=>	$wargamingID,
 	));
-
+	
+	
 	//Flags
 	$nationflag = $this->pdh->get('member', 'profile_field', array($this->url_id, 'faction'));
 	$levelicon = $this->pdh->get('member', 'profile_field', array($this->url_id, 'level'));

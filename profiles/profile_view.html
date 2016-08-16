@@ -2,6 +2,7 @@
 		<div id="wows-profil_header">
 		<br />
 			<div align="center"><h1>{CHARDATA_NAME}</h1></div>
+			<div align="center"><h2>{WARGAMING_ID}</h2></div>
 		</div>
 		<div id="wows-profil_body">
 			<div align="center" id="wows-profil_data">
@@ -13,16 +14,9 @@
 			</div>
 			<div id="wows-profil_premium">
 				<div align="center" class="wows-fleet"><h2>{GL_uc_achievement}</h2></div>
-				<div align="center" class="wows-achievement">
-		<!-- BEGIN achievements -->
-					<a href="#" class="wowstooltip3">
-						<img class="gameicon" src="{achievements.ICON}"alt=""/>
-						<span>
-						<strong>{achievements.NAME}</strong><br />
-						{achievements.VALUE} X
-						</span>
-					</a>
-		<!-- END achievements -->
+				<div id="achievement">
+
+				
 				</div>
 			</div>
 		</div>
@@ -735,3 +729,26 @@
 		</table>
 	</div>
 </div>
+<script>
+$(document).ready(function (){
+	var wID = "{WARGAMING_ID|jsencode}";
+	var $achievement = $('#achievement');
+		var $aURL ='achievement/';
+	var $wURL = 'https://api.worldofwarships.';
+	var $wREALM = 'eu';
+	var $wGAME = 'wows';
+	var $iconURL = 'http://api.worldofwarships.eu/static/1.8.3/wows/encyclopedia/achievements/icon_achievement_';
+	$.ajax({
+		type: 'GET',
+		url: $wURL + $wREALM +'/'+ $wGAME + '/account/achievements/?application_id=demo&account_id='+wID,
+		success: function(achievement) {
+			$.each(achievement.data[wID].battle, function (i,avalue){
+				$achievement.append(
+				'<div class="achievement-block"><div class="achievement" style="background-image: url('+$iconURL+i+'.png);"></div><div class="avalue">'+avalue+'</div></div>'
+				);
+			});
+		}
+	});
+});
+
+</script>
