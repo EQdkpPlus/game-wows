@@ -122,16 +122,16 @@ if(!class_exists('wows')) {
 					'undeletable'	=> true,
 					'sort'			=> 1,
 				),
-				'realm'	=> array(
+				'wrealm'	=> array(
 					'type'			=> 'dropdown',
 					'category'		=> 'character',
 					'lang'			=> 'uc_realm',
 					'options'		=> array(
-										1	=> 'DE',
-										2	=> 'EN',
-										3	=> 'RU',
-										4	=> 'ES',
-										5	=> 'FR',
+										'eu'	=> 'EU',
+										'ru'	=> 'RU',
+										'com'	=> 'NA',
+										'kr'	=> 'KR',
+										'asia'	=>	'ASIA',
 										),
 					'tolang'		=> true,
 					'undeletable'	=> true,

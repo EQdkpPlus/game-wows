@@ -3,6 +3,7 @@
 		<br />
 			<div align="center"><h1>{CHARDATA_NAME}</h1></div>
 			<div align="center" class="wargamingID" id="{WARGAMING_ID}"><h2>{WARGAMING_ID}</h2></div>
+			<div align="center" class="wargamingREALM" id="{WARGAMING_REALM}"><h2>{WARGAMING_REALM}</h2></div>
 		</div>
 		<div id="wows-profil_body">
 			<div align="center" id="wows-profil_data">
@@ -354,18 +355,21 @@
 		</table>
 	</div>
 </div>
+
+
 <script>
 $(document).ready(function (){
 	var wID = $('.wargamingID').attr('id');
+	var $wREALM = $('.wargamingREALM').attr('id');
+	var $appID = 'de24bebff2c9d2ceebbc1cde9d0b6b1f';
 	var $achievement = $('#achievement');
 	var $aURL ='achievement/';
 	var $wURL = 'https://api.worldofwarships.';
-	var $wREALM = 'eu';
 	var $wGAME = 'wows';
 	var $iconURL = 'http://api.worldofwarships.eu/static/1.8.3/wows/encyclopedia/achievements/icon_achievement_';
 	$.ajax({
 		type: 'GET',
-		url: $wURL + $wREALM +'/'+ $wGAME + '/account/achievements/?application_id=demo&account_id='+wID,
+		url: $wURL + $wREALM +'/'+ $wGAME + '/account/achievements/?application_id='+ $appID +'&account_id='+wID,
 		success: function(achievement) {
 			$.each(achievement.data[wID].battle, function (i,avalue){
 				$achievement.append(

@@ -214,9 +214,11 @@
 	");
 
 	$wargamingID = $this->pdh->get('member', 'profile_field', array($this->url_id, 'wID'));
+	$wREALM = $this->pdh->get('member', 'profile_field', array($this->url_id, 'wrealm'));
 	$this->tpl->assign_vars(array(
 		'CHARDATA_NAME'			=> $chardata['name'],
 		'WARGAMING_ID'			=>	$wargamingID,
+		'WARGAMING_REALM'		=>	$wREALM,
 	));
 	
 	
@@ -251,18 +253,6 @@
 					'NAT'	=> $usship,
 					'ID'	=> $usdestroyer[$i],
 					'NAME'	=> $usdestroyername[$usdestroyer[$i]],
-					'BAR1'	=> $this->jquery->progressbar('us_des_bar1_'.$i, 0, array('completed' => $usdestroyerdata[$usdestroyer[$i]][1], 'total' => 100, 'text' => '%progress%')),
-					'BAR1V'	=> $usdestroyerdata[$usdestroyer[$i]][1],
-					'BAR2'	=> $this->jquery->progressbar('us_des_bar2_'.$i, 0, array('completed' => $usdestroyerdata[$usdestroyer[$i]][2], 'total' => 100, 'text' => '%progress%')),
-					'BAR2V'	=> $usdestroyerdata[$usdestroyer[$i]][2],
-					'BAR3'	=> $this->jquery->progressbar('us_des_bar3_'.$i, 0, array('completed' => $usdestroyerdata[$usdestroyer[$i]][3], 'total' => 100, 'text' => '%progress%')),
-					'BAR3V'	=> $usdestroyerdata[$usdestroyer[$i]][3],
-					'BAR4'	=> $this->jquery->progressbar('us_des_bar4_'.$i, 0, array('completed' => $usdestroyerdata[$usdestroyer[$i]][4], 'total' => 100, 'text' => '%progress%')),
-					'BAR4V'	=> $usdestroyerdata[$usdestroyer[$i]][4],
-					'BAR5'	=> $this->jquery->progressbar('us_des_bar5_'.$i, 0, array('completed' => $usdestroyerdata[$usdestroyer[$i]][5], 'total' => 100, 'text' => '%progress%')),
-					'BAR5V'	=> $usdestroyerdata[$usdestroyer[$i]][5],
-					'BAR6'	=> $this->jquery->progressbar('us_des_bar6_'.$i, 0, array('completed' => $usdestroyerdata[$usdestroyer[$i]][6], 'total' => 100, 'text' => '%progress%')),
-					'BAR6V'	=> $usdestroyerdata[$usdestroyer[$i]][6],
 			)
 		);	
 	}
@@ -278,18 +268,6 @@
 					'NAT'	=> $usship,
 					'ID'	=> $uscruiser[$i],
 					'NAME'	=> $uscruisername[$uscruiser[$i]],
-					'BAR1'	=> $this->jquery->progressbar('us_cru_bar1_'.$i, 0, array('completed' => $uscruiserdata[$uscruiser[$i]][1], 'total' => 100, 'text' => '%progress%')),
-					'BAR1V'	=> $uscruiserdata[$uscruiser[$i]][1],
-					'BAR2'	=> $this->jquery->progressbar('us_cru_bar2_'.$i, 0, array('completed' => $uscruiserdata[$uscruiser[$i]][2], 'total' => 100, 'text' => '%progress%')),
-					'BAR2V'	=> $uscruiserdata[$uscruiser[$i]][2],
-					'BAR3'	=> $this->jquery->progressbar('us_cru_bar3_'.$i, 0, array('completed' => $uscruiserdata[$uscruiser[$i]][3], 'total' => 100, 'text' => '%progress%')),
-					'BAR3V'	=> $uscruiserdata[$uscruiser[$i]][3],
-					'BAR4'	=> $this->jquery->progressbar('us_cru_bar4_'.$i, 0, array('completed' => $uscruiserdata[$uscruiser[$i]][4], 'total' => 100, 'text' => '%progress%')),
-					'BAR4V'	=> $uscruiserdata[$uscruiser[$i]][4],
-					'BAR5'	=> $this->jquery->progressbar('us_cru_bar5_'.$i, 0, array('completed' => $uscruiserdata[$uscruiser[$i]][5], 'total' => 100, 'text' => '%progress%')),
-					'BAR5V'	=> $uscruiserdata[$uscruiser[$i]][5],
-					'BAR6'	=> $this->jquery->progressbar('us_cru_bar6_'.$i, 0, array('completed' => $uscruiserdata[$uscruiser[$i]][6], 'total' => 100, 'text' => '%progress%')),
-					'BAR6V'	=> $uscruiserdata[$uscruiser[$i]][6],
 					)
 		);
 	}
@@ -304,17 +282,6 @@
 					'NAT'	=> $usship,
 					'ID'	=> $usbattleship[$i],
 					'NAME'	=> $usbattleshipname[$usbattleship[$i]],
-					'BAR1'	=> $this->jquery->progressbar('us_bat_bar1_'.$i, 0, array('completed' => $usbattleshipdata[$usbattleship[$i]][1], 'total' => 100, 'text' => '%progress%')),
-					'BAR1V'	=> $usbattleshipdata[$usbattleship[$i]][1],
-					'BAR2'	=> $this->jquery->progressbar('us_bat_bar2_'.$i, 0, array('completed' => $usbattleshipdata[$usbattleship[$i]][2], 'total' => 100, 'text' => '%progress%')),
-					'BAR2V'	=> $usbattleshipdata[$usbattleship[$i]][2],
-
-					'BAR4'	=> $this->jquery->progressbar('us_bat_bar4_'.$i, 0, array('completed' => $usbattleshipdata[$usbattleship[$i]][4], 'total' => 100, 'text' => '%progress%')),
-					'BAR4V'	=> $usbattleshipdata[$usbattleship[$i]][4],
-					'BAR5'	=> $this->jquery->progressbar('us_bat_bar5_'.$i, 0, array('completed' => $usbattleshipdata[$usbattleship[$i]][5], 'total' => 100, 'text' => '%progress%')),
-					'BAR5V'	=> $usbattleshipdata[$usbattleship[$i]][5],
-					'BAR6'	=> $this->jquery->progressbar('us_bat_bar6_'.$i, 0, array('completed' => $usbattleshipdata[$usbattleship[$i]][6], 'total' => 100, 'text' => '%progress%')),
-					'BAR6V'	=> $usbattleshipdata[$usbattleship[$i]][6],
 					)
 		);
 	}
@@ -329,19 +296,6 @@
 					'NAT'	=> $usship,
 					'ID'	=> $uscarrier[$i],
 					'NAME'	=> $uscarriername[$uscarrier[$i]],
-					'BAR1'	=> $this->jquery->progressbar('us_car_bar1_'.$i, 0, array('completed' => $uscarrierdata[$uscarrier[$i]][1], 'total' => 100, 'text' => '%progress%')),
-					'BAR1V'	=> $uscarrierdata[$uscarrier[$i]][1],
-					'BAR2'	=> $this->jquery->progressbar('us_car_bar2_'.$i, 0, array('completed' => $uscarrierdata[$uscarrier[$i]][2], 'total' => 100, 'text' => '%progress%')),
-					'BAR2V'	=> $uscarrierdata[$uscarrier[$i]][2],
-
-					'BAR4'	=> $this->jquery->progressbar('us_car_bar4_'.$i, 0, array('completed' => $uscarrierdata[$uscarrier[$i]][4], 'total' => 100, 'text' => '%progress%')),
-					'BAR4V'	=> $uscarrierdata[$uscarrier[$i]][4],
-					'BAR5'	=> $this->jquery->progressbar('us_car_bar5_'.$i, 0, array('completed' => $uscarrierdata[$uscarrier[$i]][5], 'total' => 100, 'text' => '%progress%')),
-					'BAR5V'	=> $uscarrierdata[$uscarrier[$i]][5],
-					'BAR6'	=> $this->jquery->progressbar('us_car_bar6_'.$i, 0, array('completed' => $uscarrierdata[$uscarrier[$i]][6], 'total' => 100, 'text' => '%progress%')),
-					'BAR6V'	=> $uscarrierdata[$uscarrier[$i]][6],
-					'BAR7'	=> $this->jquery->progressbar('us_car_bar7_'.$i, 0, array('completed' => $uscarrierdata[$uscarrier[$i]][7], 'total' => 100, 'text' => '%progress%')),
-					'BAR7V'	=> $uscarrierdata[$uscarrier[$i]][7],
 					)
 		);
 	}
@@ -356,20 +310,6 @@
 					'NAT'	=> $usship,
 					'ID'	=> $uspremium[$i],
 					'NAME'	=> $uspremiumname[$uspremium[$i]],
-					'BAR1'	=> $this->jquery->progressbar('us_pre_bar1_'.$i, 0, array('completed' => $uspremiumdata[$uspremium[$i]][1], 'total' => 100, 'text' => '%progress%')),
-					'BAR1V'	=> $uspremiumdata[$uspremium[$i]][1],
-					'BAR2'	=> $this->jquery->progressbar('us_pre_bar2_'.$i, 0, array('completed' => $uspremiumdata[$uspremium[$i]][2], 'total' => 100, 'text' => '%progress%')),
-					'BAR2V'	=> $uspremiumdata[$uspremium[$i]][2],
-					'BAR3'	=> $this->jquery->progressbar('us_pre_bar3_'.$i, 0, array('completed' => $uspremiumdata[$uspremium[$i]][3], 'total' => 100, 'text' => '%progress%')),
-					'BAR3V'	=> $uspremiumdata[$uspremium[$i]][3],
-					'BAR4'	=> $this->jquery->progressbar('us_pre_bar4_'.$i, 0, array('completed' => $uspremiumdata[$uspremium[$i]][4], 'total' => 100, 'text' => '%progress%')),
-					'BAR4V'	=> $uspremiumdata[$uspremium[$i]][4],
-					'BAR5'	=> $this->jquery->progressbar('us_pre_bar5_'.$i, 0, array('completed' => $uspremiumdata[$uspremium[$i]][5], 'total' => 100, 'text' => '%progress%')),
-					'BAR5V'	=> $uspremiumdata[$uspremium[$i]][5],
-					'BAR6'	=> $this->jquery->progressbar('us_pre_bar6_'.$i, 0, array('completed' => $uspremiumdata[$uspremium[$i]][6], 'total' => 100, 'text' => '%progress%')),
-					'BAR6V'	=> $uspremiumdata[$uspremium[$i]][6],
-					'BAR7'	=> $this->jquery->progressbar('us_pre_bar7_'.$i, 0, array('completed' => $uspremiumdata[$uspremium[$i]][7], 'total' => 100, 'text' => '%progress%')),
-					'BAR7V'	=> $uspremiumdata[$uspremium[$i]][7],
 					)
 		);
 	}
@@ -384,18 +324,6 @@
 					'NAT'	=> $jpnship,
 					'ID'	=> $jpndestroyer[$i],
 					'NAME'	=> $jpndestroyername[$jpndestroyer[$i]],
-					'BAR1'	=> $this->jquery->progressbar('jpn_des_bar1_'.$i, 0, array('completed' => $jpndestroyerdata[$jpndestroyer[$i]][1], 'total' => 100, 'text' => '%progress%')),
-					'BAR1V'	=> $jpndestroyerdata[$jpndestroyer[$i]][1],
-					'BAR2'	=> $this->jquery->progressbar('jpn_des_bar2_'.$i, 0, array('completed' => $jpndestroyerdata[$jpndestroyer[$i]][2], 'total' => 100, 'text' => '%progress%')),
-					'BAR2V'	=> $jpndestroyerdata[$jpndestroyer[$i]][2],
-					'BAR3'	=> $this->jquery->progressbar('jpn_des_bar3_'.$i, 0, array('completed' => $jpndestroyerdata[$jpndestroyer[$i]][3], 'total' => 100, 'text' => '%progress%')),
-					'BAR3V'	=> $jpndestroyerdata[$jpndestroyer[$i]][3],
-					'BAR4'	=> $this->jquery->progressbar('jpn_des_bar4_'.$i, 0, array('completed' => $jpndestroyerdata[$jpndestroyer[$i]][4], 'total' => 100, 'text' => '%progress%')),
-					'BAR4V'	=> $jpndestroyerdata[$jpndestroyer[$i]][4],
-					'BAR5'	=> $this->jquery->progressbar('jpn_des_bar5_'.$i, 0, array('completed' => $jpndestroyerdata[$jpndestroyer[$i]][5], 'total' => 100, 'text' => '%progress%')),
-					'BAR5V'	=> $jpndestroyerdata[$jpndestroyer[$i]][5],
-					'BAR6'	=> $this->jquery->progressbar('jpn_des_bar6_'.$i, 0, array('completed' => $jpndestroyerdata[$jpndestroyer[$i]][6], 'total' => 100, 'text' => '%progress%')),
-					'BAR6V'	=> $jpndestroyerdata[$jpndestroyer[$i]][6],
 			)
 		);	
 	}
@@ -411,18 +339,6 @@
 					'NAT'	=> $jpnship,
 					'ID'	=> $jpncruiser[$i],
 					'NAME'	=> $jpncruisername[$jpncruiser[$i]],
-					'BAR1'	=> $this->jquery->progressbar('jpn_cru_bar1_'.$i, 0, array('completed' => $jpncruiserdata[$jpncruiser[$i]][1], 'total' => 100, 'text' => '%progress%')),
-					'BAR1V'	=> $jpncruiserdata[$jpncruiser[$i]][1],
-					'BAR2'	=> $this->jquery->progressbar('jpn_cru_bar2_'.$i, 0, array('completed' => $jpncruiserdata[$jpncruiser[$i]][2], 'total' => 100, 'text' => '%progress%')),
-					'BAR2V'	=> $jpncruiserdata[$jpncruiser[$i]][2],
-					'BAR3'	=> $this->jquery->progressbar('jpn_cru_bar3_'.$i, 0, array('completed' => $jpncruiserdata[$jpncruiser[$i]][3], 'total' => 100, 'text' => '%progress%')),
-					'BAR3V'	=> $jpncruiserdata[$jpncruiser[$i]][3],
-					'BAR4'	=> $this->jquery->progressbar('jpn_cru_bar4_'.$i, 0, array('completed' => $jpncruiserdata[$jpncruiser[$i]][4], 'total' => 100, 'text' => '%progress%')),
-					'BAR4V'	=> $jpncruiserdata[$jpncruiser[$i]][4],
-					'BAR5'	=> $this->jquery->progressbar('jpn_cru_bar5_'.$i, 0, array('completed' => $jpncruiserdata[$jpncruiser[$i]][5], 'total' => 100, 'text' => '%progress%')),
-					'BAR5V'	=> $jpncruiserdata[$jpncruiser[$i]][5],
-					'BAR6'	=> $this->jquery->progressbar('jpn_cru_bar6_'.$i, 0, array('completed' => $jpncruiserdata[$jpncruiser[$i]][6], 'total' => 100, 'text' => '%progress%')),
-					'BAR6V'	=> $jpncruiserdata[$jpncruiser[$i]][6],
 					)
 		);
 	}
@@ -437,17 +353,6 @@
 					'NAT'	=> $jpnship,
 					'ID'	=> $jpnbattleship[$i],
 					'NAME'	=> $jpnbattleshipname[$jpnbattleship[$i]],
-					'BAR1'	=> $this->jquery->progressbar('jpn_bat_bar1_'.$i, 0, array('completed' => $jpnbattleshipdata[$jpnbattleship[$i]][1], 'total' => 100, 'text' => '%progress%')),
-					'BAR1V'	=> $jpnbattleshipdata[$jpnbattleship[$i]][1],
-					'BAR2'	=> $this->jquery->progressbar('jpn_bat_bar2_'.$i, 0, array('completed' => $jpnbattleshipdata[$jpnbattleship[$i]][2], 'total' => 100, 'text' => '%progress%')),
-					'BAR2V'	=> $jpnbattleshipdata[$jpnbattleship[$i]][2],
-
-					'BAR4'	=> $this->jquery->progressbar('jpn_bat_bar4_'.$i, 0, array('completed' => $jpnbattleshipdata[$jpnbattleship[$i]][4], 'total' => 100, 'text' => '%progress%')),
-					'BAR4V'	=> $jpnbattleshipdata[$jpnbattleship[$i]][4],
-					'BAR5'	=> $this->jquery->progressbar('jpn_bat_bar5_'.$i, 0, array('completed' => $jpnbattleshipdata[$jpnbattleship[$i]][5], 'total' => 100, 'text' => '%progress%')),
-					'BAR5V'	=> $jpnbattleshipdata[$jpnbattleship[$i]][5],
-					'BAR6'	=> $this->jquery->progressbar('jpn_bat_bar6_'.$i, 0, array('completed' => $jpnbattleshipdata[$jpnbattleship[$i]][6], 'total' => 100, 'text' => '%progress%')),
-					'BAR6V'	=> $jpnbattleshipdata[$jpnbattleship[$i]][6],
 					)
 		);
 	}
@@ -462,19 +367,6 @@
 					'NAT'	=> $jpnship,
 					'ID'	=> $jpncarrier[$i],
 					'NAME'	=> $jpncarriername[$jpncarrier[$i]],
-					'BAR1'	=> $this->jquery->progressbar('jpn_car_bar1_'.$i, 0, array('completed' => $jpncarrierdata[$jpncarrier[$i]][1], 'total' => 100, 'text' => '%progress%')),
-					'BAR1V'	=> $jpncarrierdata[$jpncarrier[$i]][1],
-					'BAR2'	=> $this->jquery->progressbar('jpn_car_bar2_'.$i, 0, array('completed' => $jpncarrierdata[$jpncarrier[$i]][2], 'total' => 100, 'text' => '%progress%')),
-					'BAR2V'	=> $jpncarrierdata[$jpncarrier[$i]][2],
-
-					'BAR4'	=> $this->jquery->progressbar('jpn_car_bar4_'.$i, 0, array('completed' => $jpncarrierdata[$jpncarrier[$i]][4], 'total' => 100, 'text' => '%progress%')),
-					'BAR4V'	=> $jpncarrierdata[$jpncarrier[$i]][4],
-					'BAR5'	=> $this->jquery->progressbar('jpn_car_bar5_'.$i, 0, array('completed' => $jpncarrierdata[$jpncarrier[$i]][5], 'total' => 100, 'text' => '%progress%')),
-					'BAR5V'	=> $jpncarrierdata[$jpncarrier[$i]][5],
-					'BAR6'	=> $this->jquery->progressbar('jpn_car_bar6_'.$i, 0, array('completed' => $jpncarrierdata[$jpncarrier[$i]][6], 'total' => 100, 'text' => '%progress%')),
-					'BAR6V'	=> $jpncarrierdata[$jpncarrier[$i]][6],
-					'BAR7'	=> $this->jquery->progressbar('jpn_car_bar7_'.$i, 0, array('completed' => $jpncarrierdata[$jpncarrier[$i]][7], 'total' => 100, 'text' => '%progress%')),
-					'BAR7V'	=> $jpncarrierdata[$jpncarrier[$i]][7],
 					)
 		);
 	}
@@ -489,20 +381,6 @@
 					'NAT'	=> $jpnship,
 					'ID'	=> $jpnpremium[$i],
 					'NAME'	=> $jpnpremiumname[$jpnpremium[$i]],
-					'BAR1'	=> $this->jquery->progressbar('jpn_pre_bar1_'.$i, 0, array('completed' => $jpnpremiumdata[$jpnpremium[$i]][1], 'total' => 100, 'text' => '%progress%')),
-					'BAR1V'	=> $jpnpremiumdata[$jpnpremium[$i]][1],
-					'BAR2'	=> $this->jquery->progressbar('jpn_pre_bar2_'.$i, 0, array('completed' => $jpnpremiumdata[$jpnpremium[$i]][2], 'total' => 100, 'text' => '%progress%')),
-					'BAR2V'	=> $jpnpremiumdata[$jpnpremium[$i]][2],
-					'BAR3'	=> $this->jquery->progressbar('jpn_pre_bar3_'.$i, 0, array('completed' => $jpnpremiumdata[$jpnpremium[$i]][3], 'total' => 100, 'text' => '%progress%')),
-					'BAR3V'	=> $jpnpremiumdata[$jpnpremium[$i]][3],
-					'BAR4'	=> $this->jquery->progressbar('jpn_pre_bar4_'.$i, 0, array('completed' => $jpnpremiumdata[$jpnpremium[$i]][4], 'total' => 100, 'text' => '%progress%')),
-					'BAR4V'	=> $jpnpremiumdata[$jpnpremium[$i]][4],
-					'BAR5'	=> $this->jquery->progressbar('jpn_pre_bar5_'.$i, 0, array('completed' => $jpnpremiumdata[$jpnpremium[$i]][5], 'total' => 100, 'text' => '%progress%')),
-					'BAR5V'	=> $jpnpremiumdata[$jpnpremium[$i]][5],
-					'BAR6'	=> $this->jquery->progressbar('jpn_pre_bar6_'.$i, 0, array('completed' => $jpnpremiumdata[$jpnpremium[$i]][6], 'total' => 100, 'text' => '%progress%')),
-					'BAR6V'	=> $jpnpremiumdata[$jpnpremium[$i]][6],
-					'BAR7'	=> $this->jquery->progressbar('jpn_pre_bar7_'.$i, 0, array('completed' => $jpnpremiumdata[$jpnpremium[$i]][7], 'total' => 100, 'text' => '%progress%')),
-					'BAR7V'	=> $jpnpremiumdata[$jpnpremium[$i]][7],
 					)
 		);
 	}
@@ -517,18 +395,6 @@
 					'NAT'	=> $gership,
 					'ID'	=> $gerdestroyer[$i],
 					'NAME'	=> $gerdestroyername[$gerdestroyer[$i]],
-					'BAR1'	=> $this->jquery->progressbar('ger_des_bar1_'.$i, 0, array('completed' => $gerdestroyerdata[$gerdestroyer[$i]][1], 'total' => 100, 'text' => '%progress%')),
-					'BAR1V'	=> $gerdestroyerdata[$gerdestroyer[$i]][1],
-					'BAR2'	=> $this->jquery->progressbar('ger_des_bar2_'.$i, 0, array('completed' => $gerdestroyerdata[$gerdestroyer[$i]][2], 'total' => 100, 'text' => '%progress%')),
-					'BAR2V'	=> $gerdestroyerdata[$gerdestroyer[$i]][2],
-					'BAR3'	=> $this->jquery->progressbar('ger_des_bar3_'.$i, 0, array('completed' => $gerdestroyerdata[$gerdestroyer[$i]][3], 'total' => 100, 'text' => '%progress%')),
-					'BAR3V'	=> $gerdestroyerdata[$gerdestroyer[$i]][3],
-					'BAR4'	=> $this->jquery->progressbar('ger_des_bar4_'.$i, 0, array('completed' => $gerdestroyerdata[$gerdestroyer[$i]][4], 'total' => 100, 'text' => '%progress%')),
-					'BAR4V'	=> $gerdestroyerdata[$gerdestroyer[$i]][4],
-					'BAR5'	=> $this->jquery->progressbar('ger_des_bar5_'.$i, 0, array('completed' => $gerdestroyerdata[$gerdestroyer[$i]][5], 'total' => 100, 'text' => '%progress%')),
-					'BAR5V'	=> $gerdestroyerdata[$gerdestroyer[$i]][5],
-					'BAR6'	=> $this->jquery->progressbar('ger_des_bar6_'.$i, 0, array('completed' => $gerdestroyerdata[$gerdestroyer[$i]][6], 'total' => 100, 'text' => '%progress%')),
-					'BAR6V'	=> $gerdestroyerdata[$gerdestroyer[$i]][6],
 			)
 		);	
 	}
@@ -544,18 +410,6 @@
 					'NAT'	=> $gership,
 					'ID'	=> $gercruiser[$i],
 					'NAME'	=> $gercruisername[$gercruiser[$i]],
-					'BAR1'	=> $this->jquery->progressbar('ger_cru_bar1_'.$i, 0, array('completed' => $gercruiserdata[$gercruiser[$i]][1], 'total' => 100, 'text' => '%progress%')),
-					'BAR1V'	=> $gercruiserdata[$gercruiser[$i]][1],
-					'BAR2'	=> $this->jquery->progressbar('ger_cru_bar2_'.$i, 0, array('completed' => $gercruiserdata[$gercruiser[$i]][2], 'total' => 100, 'text' => '%progress%')),
-					'BAR2V'	=> $gercruiserdata[$gercruiser[$i]][2],
-					'BAR3'	=> $this->jquery->progressbar('ger_cru_bar3_'.$i, 0, array('completed' => $gercruiserdata[$gercruiser[$i]][3], 'total' => 100, 'text' => '%progress%')),
-					'BAR3V'	=> $gercruiserdata[$gercruiser[$i]][3],
-					'BAR4'	=> $this->jquery->progressbar('ger_cru_bar4_'.$i, 0, array('completed' => $gercruiserdata[$gercruiser[$i]][4], 'total' => 100, 'text' => '%progress%')),
-					'BAR4V'	=> $gercruiserdata[$gercruiser[$i]][4],
-					'BAR5'	=> $this->jquery->progressbar('ger_cru_bar5_'.$i, 0, array('completed' => $gercruiserdata[$gercruiser[$i]][5], 'total' => 100, 'text' => '%progress%')),
-					'BAR5V'	=> $gercruiserdata[$gercruiser[$i]][5],
-					'BAR6'	=> $this->jquery->progressbar('ger_cru_bar6_'.$i, 0, array('completed' => $gercruiserdata[$gercruiser[$i]][6], 'total' => 100, 'text' => '%progress%')),
-					'BAR6V'	=> $gercruiserdata[$gercruiser[$i]][6],
 					)
 		);
 	}
@@ -570,17 +424,6 @@
 					'NAT'	=> $gership,
 					'ID'	=> $gerbattleship[$i],
 					'NAME'	=> $gerbattleshipname[$gerbattleship[$i]],
-					'BAR1'	=> $this->jquery->progressbar('ger_bat_bar1_'.$i, 0, array('completed' => $gerbattleshipdata[$gerbattleship[$i]][1], 'total' => 100, 'text' => '%progress%')),
-					'BAR1V'	=> $gerbattleshipdata[$gerbattleship[$i]][1],
-					'BAR2'	=> $this->jquery->progressbar('ger_bat_bar2_'.$i, 0, array('completed' => $gerbattleshipdata[$gerbattleship[$i]][2], 'total' => 100, 'text' => '%progress%')),
-					'BAR2V'	=> $gerbattleshipdata[$gerbattleship[$i]][2],
-
-					'BAR4'	=> $this->jquery->progressbar('ger_bat_bar4_'.$i, 0, array('completed' => $gerbattleshipdata[$gerbattleship[$i]][4], 'total' => 100, 'text' => '%progress%')),
-					'BAR4V'	=> $gerbattleshipdata[$gerbattleship[$i]][4],
-					'BAR5'	=> $this->jquery->progressbar('ger_bat_bar5_'.$i, 0, array('completed' => $gerbattleshipdata[$gerbattleship[$i]][5], 'total' => 100, 'text' => '%progress%')),
-					'BAR5V'	=> $gerbattleshipdata[$gerbattleship[$i]][5],
-					'BAR6'	=> $this->jquery->progressbar('ger_bat_bar6_'.$i, 0, array('completed' => $gerbattleshipdata[$gerbattleship[$i]][6], 'total' => 100, 'text' => '%progress%')),
-					'BAR6V'	=> $gerbattleshipdata[$gerbattleship[$i]][6],
 					)
 		);
 	}
@@ -595,19 +438,6 @@
 					'NAT'	=> $gership,
 					'ID'	=> $gercarrier[$i],
 					'NAME'	=> $gercarriername[$gercarrier[$i]],
-					'BAR1'	=> $this->jquery->progressbar('ger_car_bar1_'.$i, 0, array('completed' => $gercarrierdata[$gercarrier[$i]][1], 'total' => 100, 'text' => '%progress%')),
-					'BAR1V'	=> $gercarrierdata[$gercarrier[$i]][1],
-					'BAR2'	=> $this->jquery->progressbar('ger_car_bar2_'.$i, 0, array('completed' => $gercarrierdata[$gercarrier[$i]][2], 'total' => 100, 'text' => '%progress%')),
-					'BAR2V'	=> $gercarrierdata[$gercarrier[$i]][2],
-
-					'BAR4'	=> $this->jquery->progressbar('ger_car_bar4_'.$i, 0, array('completed' => $gercarrierdata[$gercarrier[$i]][4], 'total' => 100, 'text' => '%progress%')),
-					'BAR4V'	=> $gercarrierdata[$gercarrier[$i]][4],
-					'BAR5'	=> $this->jquery->progressbar('ger_car_bar5_'.$i, 0, array('completed' => $gercarrierdata[$gercarrier[$i]][5], 'total' => 100, 'text' => '%progress%')),
-					'BAR5V'	=> $gercarrierdata[$gercarrier[$i]][5],
-					'BAR6'	=> $this->jquery->progressbar('ger_car_bar6_'.$i, 0, array('completed' => $gercarrierdata[$gercarrier[$i]][6], 'total' => 100, 'text' => '%progress%')),
-					'BAR6V'	=> $gercarrierdata[$gercarrier[$i]][6],
-					'BAR7'	=> $this->jquery->progressbar('ger_car_bar7_'.$i, 0, array('completed' => $gercarrierdata[$gercarrier[$i]][7], 'total' => 100, 'text' => '%progress%')),
-					'BAR7V'	=> $gercarrierdata[$gercarrier[$i]][7],
 					)
 		);
 	}
@@ -622,20 +452,6 @@
 					'NAT'	=> $gership,
 					'ID'	=> $gerpremium[$i],
 					'NAME'	=> $gerpremiumname[$gerpremium[$i]],
-					'BAR1'	=> $this->jquery->progressbar('ger_pre_bar1_'.$i, 0, array('completed' => $gerpremiumdata[$gerpremium[$i]][1], 'total' => 100, 'text' => '%progress%')),
-					'BAR1V'	=> $gerpremiumdata[$gerpremium[$i]][1],
-					'BAR2'	=> $this->jquery->progressbar('ger_pre_bar2_'.$i, 0, array('completed' => $gerpremiumdata[$gerpremium[$i]][2], 'total' => 100, 'text' => '%progress%')),
-					'BAR2V'	=> $gerpremiumdata[$gerpremium[$i]][2],
-					'BAR3'	=> $this->jquery->progressbar('ger_pre_bar3_'.$i, 0, array('completed' => $gerpremiumdata[$gerpremium[$i]][3], 'total' => 100, 'text' => '%progress%')),
-					'BAR3V'	=> $gerpremiumdata[$gerpremium[$i]][3],
-					'BAR4'	=> $this->jquery->progressbar('ger_pre_bar4_'.$i, 0, array('completed' => $gerpremiumdata[$gerpremium[$i]][4], 'total' => 100, 'text' => '%progress%')),
-					'BAR4V'	=> $gerpremiumdata[$gerpremium[$i]][4],
-					'BAR5'	=> $this->jquery->progressbar('ger_pre_bar5_'.$i, 0, array('completed' => $gerpremiumdata[$gerpremium[$i]][5], 'total' => 100, 'text' => '%progress%')),
-					'BAR5V'	=> $gerpremiumdata[$gerpremium[$i]][5],
-					'BAR6'	=> $this->jquery->progressbar('ger_pre_bar6_'.$i, 0, array('completed' => $gerpremiumdata[$gerpremium[$i]][6], 'total' => 100, 'text' => '%progress%')),
-					'BAR6V'	=> $gerpremiumdata[$gerpremium[$i]][6],
-					'BAR7'	=> $this->jquery->progressbar('ger_pre_bar7_'.$i, 0, array('completed' => $gerpremiumdata[$gerpremium[$i]][7], 'total' => 100, 'text' => '%progress%')),
-					'BAR7V'	=> $gerpremiumdata[$gerpremium[$i]][7],
 					)
 		);
 	}
@@ -650,18 +466,6 @@
 					'NAT'	=> $udssrship,
 					'ID'	=> $udssrdestroyer[$i],
 					'NAME'	=> $udssrdestroyername[$udssrdestroyer[$i]],
-					'BAR1'	=> $this->jquery->progressbar('udssr_des_bar1_'.$i, 0, array('completed' => $udssrdestroyerdata[$udssrdestroyer[$i]][1], 'total' => 100, 'text' => '%progress%')),
-					'BAR1V'	=> $udssrdestroyerdata[$udssrdestroyer[$i]][1],
-					'BAR2'	=> $this->jquery->progressbar('udssr_des_bar2_'.$i, 0, array('completed' => $udssrdestroyerdata[$udssrdestroyer[$i]][2], 'total' => 100, 'text' => '%progress%')),
-					'BAR2V'	=> $udssrdestroyerdata[$udssrdestroyer[$i]][2],
-					'BAR3'	=> $this->jquery->progressbar('udssr_des_bar3_'.$i, 0, array('completed' => $udssrdestroyerdata[$udssrdestroyer[$i]][3], 'total' => 100, 'text' => '%progress%')),
-					'BAR3V'	=> $udssrdestroyerdata[$udssrdestroyer[$i]][3],
-					'BAR4'	=> $this->jquery->progressbar('udssr_des_bar4_'.$i, 0, array('completed' => $udssrdestroyerdata[$udssrdestroyer[$i]][4], 'total' => 100, 'text' => '%progress%')),
-					'BAR4V'	=> $udssrdestroyerdata[$udssrdestroyer[$i]][4],
-					'BAR5'	=> $this->jquery->progressbar('udssr_des_bar5_'.$i, 0, array('completed' => $udssrdestroyerdata[$udssrdestroyer[$i]][5], 'total' => 100, 'text' => '%progress%')),
-					'BAR5V'	=> $udssrdestroyerdata[$udssrdestroyer[$i]][5],
-					'BAR6'	=> $this->jquery->progressbar('udssr_des_bar6_'.$i, 0, array('completed' => $udssrdestroyerdata[$udssrdestroyer[$i]][6], 'total' => 100, 'text' => '%progress%')),
-					'BAR6V'	=> $udssrdestroyerdata[$udssrdestroyer[$i]][6],
 			)
 		);	
 	}
@@ -677,18 +481,6 @@
 					'NAT'	=> $udssrship,
 					'ID'	=> $udssrcruiser[$i],
 					'NAME'	=> $udssrcruisername[$udssrcruiser[$i]],
-					'BAR1'	=> $this->jquery->progressbar('udssr_cru_bar1_'.$i, 0, array('completed' => $udssrcruiserdata[$udssrcruiser[$i]][1], 'total' => 100, 'text' => '%progress%')),
-					'BAR1V'	=> $udssrcruiserdata[$udssrcruiser[$i]][1],
-					'BAR2'	=> $this->jquery->progressbar('udssr_cru_bar2_'.$i, 0, array('completed' => $udssrcruiserdata[$udssrcruiser[$i]][2], 'total' => 100, 'text' => '%progress%')),
-					'BAR2V'	=> $udssrcruiserdata[$udssrcruiser[$i]][2],
-					'BAR3'	=> $this->jquery->progressbar('udssr_cru_bar3_'.$i, 0, array('completed' => $udssrcruiserdata[$udssrcruiser[$i]][3], 'total' => 100, 'text' => '%progress%')),
-					'BAR3V'	=> $udssrcruiserdata[$udssrcruiser[$i]][3],
-					'BAR4'	=> $this->jquery->progressbar('udssr_cru_bar4_'.$i, 0, array('completed' => $udssrcruiserdata[$udssrcruiser[$i]][4], 'total' => 100, 'text' => '%progress%')),
-					'BAR4V'	=> $udssrcruiserdata[$udssrcruiser[$i]][4],
-					'BAR5'	=> $this->jquery->progressbar('udssr_cru_bar5_'.$i, 0, array('completed' => $udssrcruiserdata[$udssrcruiser[$i]][5], 'total' => 100, 'text' => '%progress%')),
-					'BAR5V'	=> $udssrcruiserdata[$udssrcruiser[$i]][5],
-					'BAR6'	=> $this->jquery->progressbar('udssr_cru_bar6_'.$i, 0, array('completed' => $udssrcruiserdata[$udssrcruiser[$i]][6], 'total' => 100, 'text' => '%progress%')),
-					'BAR6V'	=> $udssrcruiserdata[$udssrcruiser[$i]][6],
 					)
 		);
 	}
@@ -703,17 +495,6 @@
 					'NAT'	=> $udssrship,
 					'ID'	=> $udssrbattleship[$i],
 					'NAME'	=> $udssrbattleshipname[$udssrbattleship[$i]],
-					'BAR1'	=> $this->jquery->progressbar('udssr_bat_bar1_'.$i, 0, array('completed' => $udssrbattleshipdata[$udssrbattleship[$i]][1], 'total' => 100, 'text' => '%progress%')),
-					'BAR1V'	=> $udssrbattleshipdata[$udssrbattleship[$i]][1],
-					'BAR2'	=> $this->jquery->progressbar('udssr_bat_bar2_'.$i, 0, array('completed' => $udssrbattleshipdata[$udssrbattleship[$i]][2], 'total' => 100, 'text' => '%progress%')),
-					'BAR2V'	=> $udssrbattleshipdata[$udssrbattleship[$i]][2],
-
-					'BAR4'	=> $this->jquery->progressbar('udssr_bat_bar4_'.$i, 0, array('completed' => $udssrbattleshipdata[$udssrbattleship[$i]][4], 'total' => 100, 'text' => '%progress%')),
-					'BAR4V'	=> $udssrbattleshipdata[$udssrbattleship[$i]][4],
-					'BAR5'	=> $this->jquery->progressbar('udssr_bat_bar5_'.$i, 0, array('completed' => $udssrbattleshipdata[$udssrbattleship[$i]][5], 'total' => 100, 'text' => '%progress%')),
-					'BAR5V'	=> $udssrbattleshipdata[$udssrbattleship[$i]][5],
-					'BAR6'	=> $this->jquery->progressbar('udssr_bat_bar6_'.$i, 0, array('completed' => $udssrbattleshipdata[$udssrbattleship[$i]][6], 'total' => 100, 'text' => '%progress%')),
-					'BAR6V'	=> $udssrbattleshipdata[$udssrbattleship[$i]][6],
 					)
 		);
 	}
@@ -728,19 +509,6 @@
 					'NAT'	=> $udssrship,
 					'ID'	=> $udssrcarrier[$i],
 					'NAME'	=> $udssrcarriername[$udssrcarrier[$i]],
-					'BAR1'	=> $this->jquery->progressbar('udssr_car_bar1_'.$i, 0, array('completed' => $udssrcarrierdata[$udssrcarrier[$i]][1], 'total' => 100, 'text' => '%progress%')),
-					'BAR1V'	=> $udssrcarrierdata[$udssrcarrier[$i]][1],
-					'BAR2'	=> $this->jquery->progressbar('udssr_car_bar2_'.$i, 0, array('completed' => $udssrcarrierdata[$udssrcarrier[$i]][2], 'total' => 100, 'text' => '%progress%')),
-					'BAR2V'	=> $udssrcarrierdata[$udssrcarrier[$i]][2],
-
-					'BAR4'	=> $this->jquery->progressbar('udssr_car_bar4_'.$i, 0, array('completed' => $udssrcarrierdata[$udssrcarrier[$i]][4], 'total' => 100, 'text' => '%progress%')),
-					'BAR4V'	=> $udssrcarrierdata[$udssrcarrier[$i]][4],
-					'BAR5'	=> $this->jquery->progressbar('udssr_car_bar5_'.$i, 0, array('completed' => $udssrcarrierdata[$udssrcarrier[$i]][5], 'total' => 100, 'text' => '%progress%')),
-					'BAR5V'	=> $udssrcarrierdata[$udssrcarrier[$i]][5],
-					'BAR6'	=> $this->jquery->progressbar('udssr_car_bar6_'.$i, 0, array('completed' => $udssrcarrierdata[$udssrcarrier[$i]][6], 'total' => 100, 'text' => '%progress%')),
-					'BAR6V'	=> $udssrcarrierdata[$udssrcarrier[$i]][6],
-					'BAR7'	=> $this->jquery->progressbar('udssr_car_bar7_'.$i, 0, array('completed' => $udssrcarrierdata[$udssrcarrier[$i]][7], 'total' => 100, 'text' => '%progress%')),
-					'BAR7V'	=> $udssrcarrierdata[$udssrcarrier[$i]][7],
 					)
 		);
 	}
@@ -755,20 +523,6 @@
 					'NAT'	=> $udssrship,
 					'ID'	=> $udssrpremium[$i],
 					'NAME'	=> $udssrpremiumname[$udssrpremium[$i]],
-					'BAR1'	=> $this->jquery->progressbar('udssr_pre_bar1_'.$i, 0, array('completed' => $udssrpremiumdata[$udssrpremium[$i]][1], 'total' => 100, 'text' => '%progress%')),
-					'BAR1V'	=> $udssrpremiumdata[$udssrpremium[$i]][1],
-					'BAR2'	=> $this->jquery->progressbar('udssr_pre_bar2_'.$i, 0, array('completed' => $udssrpremiumdata[$udssrpremium[$i]][2], 'total' => 100, 'text' => '%progress%')),
-					'BAR2V'	=> $udssrpremiumdata[$udssrpremium[$i]][2],
-					'BAR3'	=> $this->jquery->progressbar('udssr_pre_bar3_'.$i, 0, array('completed' => $udssrpremiumdata[$udssrpremium[$i]][3], 'total' => 100, 'text' => '%progress%')),
-					'BAR3V'	=> $udssrpremiumdata[$udssrpremium[$i]][3],
-					'BAR4'	=> $this->jquery->progressbar('udssr_pre_bar4_'.$i, 0, array('completed' => $udssrpremiumdata[$udssrpremium[$i]][4], 'total' => 100, 'text' => '%progress%')),
-					'BAR4V'	=> $udssrpremiumdata[$udssrpremium[$i]][4],
-					'BAR5'	=> $this->jquery->progressbar('udssr_pre_bar5_'.$i, 0, array('completed' => $udssrpremiumdata[$udssrpremium[$i]][5], 'total' => 100, 'text' => '%progress%')),
-					'BAR5V'	=> $udssrpremiumdata[$udssrpremium[$i]][5],
-					'BAR6'	=> $this->jquery->progressbar('udssr_pre_bar6_'.$i, 0, array('completed' => $udssrpremiumdata[$udssrpremium[$i]][6], 'total' => 100, 'text' => '%progress%')),
-					'BAR6V'	=> $udssrpremiumdata[$udssrpremium[$i]][6],
-					'BAR7'	=> $this->jquery->progressbar('udssr_pre_bar7_'.$i, 0, array('completed' => $udssrpremiumdata[$udssrpremium[$i]][7], 'total' => 100, 'text' => '%progress%')),
-					'BAR7V'	=> $udssrpremiumdata[$udssrpremium[$i]][7],
 					)
 		);
 	}
@@ -783,18 +537,6 @@
 					'NAT'	=> $gbship,
 					'ID'	=> $gbdestroyer[$i],
 					'NAME'	=> $gbdestroyername[$gbdestroyer[$i]],
-					'BAR1'	=> $this->jquery->progressbar('gb_des_bar1_'.$i, 0, array('completed' => $gbdestroyerdata[$gbdestroyer[$i]][1], 'total' => 100, 'text' => '%progress%')),
-					'BAR1V'	=> $gbdestroyerdata[$gbdestroyer[$i]][1],
-					'BAR2'	=> $this->jquery->progressbar('gb_des_bar2_'.$i, 0, array('completed' => $gbdestroyerdata[$gbdestroyer[$i]][2], 'total' => 100, 'text' => '%progress%')),
-					'BAR2V'	=> $gbdestroyerdata[$gbdestroyer[$i]][2],
-					'BAR3'	=> $this->jquery->progressbar('gb_des_bar3_'.$i, 0, array('completed' => $gbdestroyerdata[$gbdestroyer[$i]][3], 'total' => 100, 'text' => '%progress%')),
-					'BAR3V'	=> $gbdestroyerdata[$gbdestroyer[$i]][3],
-					'BAR4'	=> $this->jquery->progressbar('gb_des_bar4_'.$i, 0, array('completed' => $gbdestroyerdata[$gbdestroyer[$i]][4], 'total' => 100, 'text' => '%progress%')),
-					'BAR4V'	=> $gbdestroyerdata[$gbdestroyer[$i]][4],
-					'BAR5'	=> $this->jquery->progressbar('gb_des_bar5_'.$i, 0, array('completed' => $gbdestroyerdata[$gbdestroyer[$i]][5], 'total' => 100, 'text' => '%progress%')),
-					'BAR5V'	=> $gbdestroyerdata[$gbdestroyer[$i]][5],
-					'BAR6'	=> $this->jquery->progressbar('gb_des_bar6_'.$i, 0, array('completed' => $gbdestroyerdata[$gbdestroyer[$i]][6], 'total' => 100, 'text' => '%progress%')),
-					'BAR6V'	=> $gbdestroyerdata[$gbdestroyer[$i]][6],
 			)
 		);	
 	}
@@ -810,18 +552,6 @@
 					'NAT'	=> $gbship,
 					'ID'	=> $gbcruiser[$i],
 					'NAME'	=> $gbcruisername[$gbcruiser[$i]],
-					'BAR1'	=> $this->jquery->progressbar('gb_cru_bar1_'.$i, 0, array('completed' => $gbcruiserdata[$gbcruiser[$i]][1], 'total' => 100, 'text' => '%progress%')),
-					'BAR1V'	=> $gbcruiserdata[$gbcruiser[$i]][1],
-					'BAR2'	=> $this->jquery->progressbar('gb_cru_bar2_'.$i, 0, array('completed' => $gbcruiserdata[$gbcruiser[$i]][2], 'total' => 100, 'text' => '%progress%')),
-					'BAR2V'	=> $gbcruiserdata[$gbcruiser[$i]][2],
-					'BAR3'	=> $this->jquery->progressbar('gb_cru_bar3_'.$i, 0, array('completed' => $gbcruiserdata[$gbcruiser[$i]][3], 'total' => 100, 'text' => '%progress%')),
-					'BAR3V'	=> $gbcruiserdata[$gbcruiser[$i]][3],
-					'BAR4'	=> $this->jquery->progressbar('gb_cru_bar4_'.$i, 0, array('completed' => $gbcruiserdata[$gbcruiser[$i]][4], 'total' => 100, 'text' => '%progress%')),
-					'BAR4V'	=> $gbcruiserdata[$gbcruiser[$i]][4],
-					'BAR5'	=> $this->jquery->progressbar('gb_cru_bar5_'.$i, 0, array('completed' => $gbcruiserdata[$gbcruiser[$i]][5], 'total' => 100, 'text' => '%progress%')),
-					'BAR5V'	=> $gbcruiserdata[$gbcruiser[$i]][5],
-					'BAR6'	=> $this->jquery->progressbar('gb_cru_bar6_'.$i, 0, array('completed' => $gbcruiserdata[$gbcruiser[$i]][6], 'total' => 100, 'text' => '%progress%')),
-					'BAR6V'	=> $gbcruiserdata[$gbcruiser[$i]][6],
 					)
 		);
 	}
@@ -836,17 +566,6 @@
 					'NAT'	=> $gbship,
 					'ID'	=> $gbbattleship[$i],
 					'NAME'	=> $gbbattleshipname[$gbbattleship[$i]],
-					'BAR1'	=> $this->jquery->progressbar('gb_bat_bar1_'.$i, 0, array('completed' => $gbbattleshipdata[$gbbattleship[$i]][1], 'total' => 100, 'text' => '%progress%')),
-					'BAR1V'	=> $gbbattleshipdata[$gbbattleship[$i]][1],
-					'BAR2'	=> $this->jquery->progressbar('gb_bat_bar2_'.$i, 0, array('completed' => $gbbattleshipdata[$gbbattleship[$i]][2], 'total' => 100, 'text' => '%progress%')),
-					'BAR2V'	=> $gbbattleshipdata[$gbbattleship[$i]][2],
-
-					'BAR4'	=> $this->jquery->progressbar('gb_bat_bar4_'.$i, 0, array('completed' => $gbbattleshipdata[$gbbattleship[$i]][4], 'total' => 100, 'text' => '%progress%')),
-					'BAR4V'	=> $gbbattleshipdata[$gbbattleship[$i]][4],
-					'BAR5'	=> $this->jquery->progressbar('gb_bat_bar5_'.$i, 0, array('completed' => $gbbattleshipdata[$gbbattleship[$i]][5], 'total' => 100, 'text' => '%progress%')),
-					'BAR5V'	=> $gbbattleshipdata[$gbbattleship[$i]][5],
-					'BAR6'	=> $this->jquery->progressbar('gb_bat_bar6_'.$i, 0, array('completed' => $gbbattleshipdata[$gbbattleship[$i]][6], 'total' => 100, 'text' => '%progress%')),
-					'BAR6V'	=> $gbbattleshipdata[$gbbattleship[$i]][6],
 					)
 		);
 	}
@@ -861,19 +580,6 @@
 					'NAT'	=> $gbship,
 					'ID'	=> $gbcarrier[$i],
 					'NAME'	=> $gbcarriername[$gbcarrier[$i]],
-					'BAR1'	=> $this->jquery->progressbar('gb_car_bar1_'.$i, 0, array('completed' => $gbcarrierdata[$gbcarrier[$i]][1], 'total' => 100, 'text' => '%progress%')),
-					'BAR1V'	=> $gbcarrierdata[$gbcarrier[$i]][1],
-					'BAR2'	=> $this->jquery->progressbar('gb_car_bar2_'.$i, 0, array('completed' => $gbcarrierdata[$gbcarrier[$i]][2], 'total' => 100, 'text' => '%progress%')),
-					'BAR2V'	=> $gbcarrierdata[$gbcarrier[$i]][2],
-
-					'BAR4'	=> $this->jquery->progressbar('gb_car_bar4_'.$i, 0, array('completed' => $gbcarrierdata[$gbcarrier[$i]][4], 'total' => 100, 'text' => '%progress%')),
-					'BAR4V'	=> $gbcarrierdata[$gbcarrier[$i]][4],
-					'BAR5'	=> $this->jquery->progressbar('gb_car_bar5_'.$i, 0, array('completed' => $gbcarrierdata[$gbcarrier[$i]][5], 'total' => 100, 'text' => '%progress%')),
-					'BAR5V'	=> $gbcarrierdata[$gbcarrier[$i]][5],
-					'BAR6'	=> $this->jquery->progressbar('gb_car_bar6_'.$i, 0, array('completed' => $gbcarrierdata[$gbcarrier[$i]][6], 'total' => 100, 'text' => '%progress%')),
-					'BAR6V'	=> $gbcarrierdata[$gbcarrier[$i]][6],
-					'BAR7'	=> $this->jquery->progressbar('gb_car_bar7_'.$i, 0, array('completed' => $gbcarrierdata[$gbcarrier[$i]][7], 'total' => 100, 'text' => '%progress%')),
-					'BAR7V'	=> $gbcarrierdata[$gbcarrier[$i]][7],
 					)
 		);
 	}
@@ -888,20 +594,6 @@
 					'NAT'	=> $gbship,
 					'ID'	=> $gbpremium[$i],
 					'NAME'	=> $gbpremiumname[$gbpremium[$i]],
-					'BAR1'	=> $this->jquery->progressbar('gb_pre_bar1_'.$i, 0, array('completed' => $gbpremiumdata[$gbpremium[$i]][1], 'total' => 100, 'text' => '%progress%')),
-					'BAR1V'	=> $gbpremiumdata[$gbpremium[$i]][1],
-					'BAR2'	=> $this->jquery->progressbar('gb_pre_bar2_'.$i, 0, array('completed' => $gbpremiumdata[$gbpremium[$i]][2], 'total' => 100, 'text' => '%progress%')),
-					'BAR2V'	=> $gbpremiumdata[$gbpremium[$i]][2],
-					'BAR3'	=> $this->jquery->progressbar('gb_pre_bar3_'.$i, 0, array('completed' => $gbpremiumdata[$gbpremium[$i]][3], 'total' => 100, 'text' => '%progress%')),
-					'BAR3V'	=> $gbpremiumdata[$gbpremium[$i]][3],
-					'BAR4'	=> $this->jquery->progressbar('gb_pre_bar4_'.$i, 0, array('completed' => $gbpremiumdata[$gbpremium[$i]][4], 'total' => 100, 'text' => '%progress%')),
-					'BAR4V'	=> $gbpremiumdata[$gbpremium[$i]][4],
-					'BAR5'	=> $this->jquery->progressbar('gb_pre_bar5_'.$i, 0, array('completed' => $gbpremiumdata[$gbpremium[$i]][5], 'total' => 100, 'text' => '%progress%')),
-					'BAR5V'	=> $gbpremiumdata[$gbpremium[$i]][5],
-					'BAR6'	=> $this->jquery->progressbar('gb_pre_bar6_'.$i, 0, array('completed' => $gbpremiumdata[$gbpremium[$i]][6], 'total' => 100, 'text' => '%progress%')),
-					'BAR6V'	=> $gbpremiumdata[$gbpremium[$i]][6],
-					'BAR7'	=> $this->jquery->progressbar('gb_pre_bar7_'.$i, 0, array('completed' => $gbpremiumdata[$gbpremium[$i]][7], 'total' => 100, 'text' => '%progress%')),
-					'BAR7V'	=> $gbpremiumdata[$gbpremium[$i]][7],
 					)
 		);
 	}
