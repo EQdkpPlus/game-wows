@@ -2,300 +2,296 @@
 		<div id="wows-profil_header">
 		<br />
 			<div align="center"><h1>{CHARDATA_NAME}</h1></div>
-			<div align="center" class="wargamingID" id="{WARGAMING_ID}"><h2>{WARGAMING_ID}</h2></div>
-			<div align="center" class="wargamingREALM" id="{WARGAMING_REALM}"><h2>{WARGAMING_REALM}</h2></div>
+			<div class="non-display" align="center" id="wargamingID" data-wargamingid="{WARGAMING_ID}"></div>
+			<div class="non-display" align="center" id="wargamingREALM" data-wargamingrealm="{WARGAMING_REALM}"></div>
 		</div>
 		<div id="wows-profil_body">
 			<div align="center" id="wows-profil_data">
-				<div class="wows-fleet"><h2>{GL_uc_profil}</h2></div>
+				<div class="wows-profil-data-header"><h2>{GL_uc_profil}</h2></div>
 				<table height="200">
 					<tr><td><img id="wows-nation-flag" src="{NATION}.png"/></td></tr>
-					<tr><td><img class="gameicon" src="{LEVEL}"/></td></tr>
+					<tr><td><img id="wargaming-lvl-tier" class="gameicon" src=""/></td></tr>
 				</table>
 			</div>
-			<div id="wows-profil_premium">
-				<div align="center" class="wows-fleet"><h2>{GL_uc_achievement}</h2></div>
+			<div id="wows-profil-achievement">
+				<div align="center" class="wows-profil-data-header"><h2>{GL_uc_achievement}</h2></div>
 				<div id="achievement">
 
 				
 				</div>
 			</div>
 		</div>
-		<div id="wows-profil_pic">
-			<div align="center" class="gameicon wows-chardata_picture">{CHARDATA_PICTURE}</div> 
+		<div id="wows-profil-pic">
+			<div align="center" class="wows-chardata_picture">{CHARDATA_PICTURE}</div> 
 		</div>
-		<div id="wows-profil_fleet">
-			<div align="center" class="wows-fleet"><h1>{GL_uc_myfleet}</h1></div>
-			<div align="center" class="wows-ship_fleet">
-				<!-- BEGIN uspremiums -->
-				<a href="#" class="wowstooltip2">
-					<img class="gameicon" src="{uspremiums.ICON}"alt=""/>
-					<span>
-						<font color="#cece00" size="2em">{uspremiums.NAME}</font><br />
-						<div class="tool"><img class="gameicon" src="{CLASS5ICON}"alt=""/></div>
-						<div class="tool"><img class="gameicon" align="center" src="{uspremiums.NAT}"alt=""/></div>
-					</span>
-				</a>
-				<!-- END uspremiums -->
-				<!-- BEGIN jpnpremiums -->
-					<a href="#" class="wowstooltip">
-						<img class="gameicon" src="{jpnpremiums.ICON}"alt=""/>
-						<span>
-						<strong>Name</strong><br/>
-						Daten
-						</span>
-					</a>
-				<!-- END jpnpremiums -->
-				<!-- BEGIN usdestroyers -->
-				<a href="#" class="wowstooltip">
-					<img class="gameicon" src="{usdestroyers.ICON}"alt=""/>
-					<span>
-						<font color="#cece00" size="2em">{usdestroyers.NAME}</font><br />
-						<div class="tool"><img class="gameicon" src="{CLASS1ICON}"alt=""/></div>
-						<div class="tool"><img class="gameicon" align="center" src="{usdestroyers.NAT}"alt=""/></div>
-					</span>
-				</a>
-				<!-- END usdestroyers -->
 
-				<!-- BEGIN uscruisers -->
-				<a href="#" class="wowstooltip">
-					<img class="gameicon" src="{uscruisers.ICON}"alt=""/>
-					<span>
-						<font color="#cece00" size="2em">{uscruisers.NAME}</font><br />
-						<div class="tool"><img class="gameicon" src="{CLASS2ICON}"alt=""/></div>
-						<div class="tool"><img class="gameicon" align="center" src="{uscruisers.NAT}"alt=""/></div>
-					</span>
-				</a>
-				<!-- END uscruisers -->
-
-				<!-- BEGIN usbattleships -->
-				<a href="#" class="wowstooltip">
-					<img class="gameicon" src="{usbattleships.ICON}"alt=""/>
-					<span>
-						<font color="#cece00" size="2em">{usbattleships.NAME}</font><br />
-						<div class="tool"><img class="gameicon" src="{CLASS3ICON}"alt=""/></div>
-						<div class="tool"><img class="gameicon" align="center" src="{usbattleships.NAT}"alt=""/></div>
-					</span>
-				</a>
-				<!-- END usbattleships -->				
-
-				<!-- BEGIN uscarriers -->
-				<a href="#" class="wowstooltip">
-					<img class="gameicon" src="{uscarriers.ICON}"alt=""/>
-					<span>
-						<font color="#cece00" size="2em">{uscarriers.NAME}</font><br />
-						<div class="tool"><img class="gameicon" src="{CLASS4ICON}"alt=""/></div>
-						<div class="tool"><img class="gameicon" align="center" src="{uscarriers.NAT}"alt=""/></div>
-					</span>
-				</a>
-				<!-- END uscarrierss -->				
-
-				<!-- BEGIN gerdestroyers -->
-				<a href="#" class="wowstooltip">
-					<img class="gameicon" src="{gerdestroyers.ICON}"alt=""/>
-					<span>
-						<font color="#cece00" size="2em">{gerdestroyers.NAME}</font><br />
-						<div class="tool"><img class="gameicon" src="{CLASS1ICON}"alt=""/></div>
-						<div class="tool"><img class="gameicon" align="center" src="{gerdestroyers.NAT}"alt=""/></div>
-					</span>
-				</a>
-				<!-- END gerdestroyers -->
-
-				<!-- BEGIN gercruisers -->
-				<a href="#" class="wowstooltip">
-					<img class="gameicon" src="{gercruisers.ICON}"alt=""/>
-					<span>
-						<font color="#cece00" size="2em">{gercruisers.NAME}</font><br />
-						<div class="tool"><img class="gameicon" src="{CLASS2ICON}"alt=""/></div>
-						<div class="tool"><img class="gameicon" align="center" src="{gercruisers.NAT}"alt=""/></div>
-					</span>
-				</a>
-				<!-- END gercruisers -->
-
-				<!-- BEGIN gerbattleships -->
-				<a href="#" class="wowstooltip">
-					<img class="gameicon" src="{gerbattleships.ICON}"alt=""/>
-					<span>
-						<font color="#cece00" size="2em">{gerbattleships.NAME}</font><br />
-						<div class="tool"><img class="gameicon" src="{CLASS3ICON}"alt=""/></div>
-						<div class="tool"><img class="gameicon" align="center" src="{gerbattleships.NAT}"alt=""/></div>
-					</span>
-				</a>
-				<!-- END gerbattleships -->				
-
-				<!-- BEGIN gercarriers -->
-				<a href="#" class="wowstooltip">
-					<img class="gameicon" src="{gercarriers.ICON}"alt=""/>
-					<span>
-						<font color="#cece00" size="2em">{gercarriers.NAME}</font><br />
-						<div class="tool"><img class="gameicon" src="{CLASS4ICON}"alt=""/></div>
-						<div class="tool"><img class="gameicon" align="center" src="{gercarriers.NAT}"alt=""/></div>
-					</span>
-				</a>
-				<!-- END gercarrierss -->
-				<!-- BEGIN jpndestroyers -->
-				<a href="#" class="wowstooltip">
-					<img class="gameicon" src="{jpndestroyers.ICON}"alt=""/>
-					<span>
-						<font color="#cece00" size="2em">{jpndestroyers.NAME}</font><br />
-						<div class="tool"><img class="gameicon" src="{CLASS1ICON}"alt=""/></div>
-						<div class="tool"><img class="gameicon" align="center" src="{jpndestroyers.NAT}"alt=""/></div>
-
-					</span>
-				</a>
-				<!-- END jpndestroyers -->
-
-				<!-- BEGIN jpncruisers -->
-				<a href="#" class="wowstooltip">
-					<img class="gameicon" src="{jpncruisers.ICON}"alt=""/>
-					<span>
-						<font color="#cece00" size="2em">{jpncruisers.NAME}</font><br />
-						<div class="tool"><img class="gameicon" src="{CLASS2ICON}"alt=""/></div>
-						<div class="tool"><img class="gameicon" align="center" src="{jpncruisers.NAT}"alt=""/></div>
-					</span>
-				</a>
-				<!-- END jpncruisers -->
-
-				<!-- BEGIN jpnbattleships -->
-				<a href="#" class="wowstooltip">
-					<img class="gameicon" src="{jpnbattleships.ICON}"alt=""/>
-					<span>
-						<font color="#cece00" size="2em">{jpnbattleships.NAME}</font><br />
-						<div class="tool"><img class="gameicon" src="{CLASS3ICON}"alt=""/></div>
-						<div class="tool"><img class="gameicon" align="center" src="{jpnbattleships.NAT}"alt=""/></div>
-					</span>
-				</a>
-				<!-- END jpnbattleships -->				
-
-				<!-- BEGIN jpncarriers -->
-				<a href="#" class="wowstooltip">
-					<img class="gameicon" src="{jpncarriers.ICON}"alt=""/>
-					<span>
-						<font color="#cece00" size="2em">{jpncarriers.NAME}</font><br />
-						<div class="tool"><img class="gameicon" src="{CLASS4ICON}"alt=""/></div>
-						<div class="tool"><img class="gameicon" align="center" src="{jpncarriers.NAT}"alt=""/></div>
-					</span>
-				</a>
-				<!-- END jpncarrierss -->
-				
-				<!-- BEGIN udssrdestroyers -->
-				<a href="#" class="wowstooltip">
-					<img class="gameicon" src="{udssrdestroyers.ICON}"alt=""/>
-					<span>
-						<font color="#cece00" size="2em">{udssrdestroyers.NAME}</font><br />
-						<div class="tool"><img class="gameicon" src="{CLASS1ICON}"alt=""/></div>
-						<div class="tool"><img class="gameicon" align="center" src="{udssrdestroyers.NAT}"alt=""/></div>
-					</span>
-				</a>
-				<!-- END udssrdestroyers -->
-
-				<!-- BEGIN udssrcruisers -->
-				<a href="#" class="wowstooltip">
-					<img class="gameicon" src="{udssrcruisers.ICON}"alt=""/>
-					<span>
-						<font color="#cece00" size="2em">{udssrcruisers.NAME}</font><br />
-						<div class="tool"><img class="gameicon" src="{CLASS2ICON}"alt=""/></div>
-						<div class="tool"><img class="gameicon" align="center" src="{udssrcruisers.NAT}"alt=""/></div>
-					</span>
-				</a>
-				<!-- END udssrcruisers -->
-
-				<!-- BEGIN udssrbattleships -->
-				<a href="#" class="wowstooltip">
-					<img class="gameicon" src="{udssrbattleships.ICON}"alt=""/>
-					<span>
-						<font color="#cece00" size="2em">{udssrbattleships.NAME}</font><br />
-						<div class="tool"><img class="gameicon" src="{CLASS3ICON}"alt=""/></div>
-						<div class="tool"><img class="gameicon" align="center" src="{udssrbattleships.NAT}"alt=""/></div>
-					</span>
-				</a>
-				<!-- END udssrbattleships -->				
-
-				<!-- BEGIN udssrcarriers -->
-				<a href="#" class="wowstooltip">
-					<img class="gameicon" src="{udssrcarriers.ICON}"alt=""/>
-					<span>
-						<font color="#cece00" size="2em">{udssrcarriers.NAME}</font><br />
-						<div class="tool"><img class="gameicon" src="{CLASS4ICON}"alt=""/></div>
-						<div class="tool"><img class="gameicon" align="center" src="{udssrcarriers.NAT}"alt=""/></div>
-					</span>
-				</a>
-				<!-- END udssrcarrierss -->	
-				
-				<!-- BEGIN gbdestroyers -->
-				<a href="#" class="wowstooltip">
-					<img class="gameicon" src="{gbdestroyers.ICON}"alt=""/>
-					<span>
-						<font color="#cece00" size="2em">{gbdestroyers.NAME}</font><br />
-						<div class="tool"><img class="gameicon" src="{CLASS1ICON}"alt=""/></div>
-						<div class="tool"><img class="gameicon" align="center" src="{gbdestroyers.NAT}"alt=""/></div>
-					</span>
-				</a>
-				<!-- END gbdestroyers -->
-
-				<!-- BEGIN gbcruisers -->
-				<a href="#" class="wowstooltip">
-					<img class="gameicon" src="{gbcruisers.ICON}"alt=""/>
-					<span>
-						<font color="#cece00" size="2em">{gbcruisers.NAME}</font><br />
-						<div class="tool"><img class="gameicon" src="{CLASS2ICON}"alt=""/></div>
-						<div class="tool"><img class="gameicon" align="center" src="{gbcruisers.NAT}"alt=""/></div>
-					</span>
-				</a>
-				<!-- END gbcruisers -->
-
-				<!-- BEGIN gbbattleships -->
-				<a href="#" class="wowstooltip">
-					<img class="gameicon" src="{gbbattleships.ICON}"alt=""/>
-					<span>
-						<font color="#cece00" size="2em">{gbbattleships.NAME}</font><br />
-						<div class="tool"><img class="gameicon" src="{CLASS3ICON}"alt=""/></div>
-						<div class="tool"><img class="gameicon" align="center" src="{gbbattleships.NAT}"alt=""/></div>
-					</span>
-				</a>
-				<!-- END gbbattleships -->				
-
-				<!-- BEGIN gbcarriers -->
-				<a href="#" class="wowstooltip">
-					<img class="gameicon" src="{gbcarriers.ICON}"alt=""/>
-					<span>
-						<font color="#cece00" size="2em">{gbcarriers.NAME}</font><br />
-						<div class="tool"><img class="gameicon" src="{CLASS4ICON}"alt=""/></div>
-						<div class="tool"><img class="gameicon" align="center" src="{gbcarriers.NAT}"alt=""/></div>
-					</span>
-				</a>
-				<!-- END gbcarrierss -->				
-			</div>
-			<BR>
-		</div>
 	</div>
-	<div class="tableHeader">
-		<h2>{L_DKP_NAME}</h2>
-	</div>
-<input type="checkbox" onchange="window.location='{SID}&with_twinks='+ ((this.checked) ? 0 : 1)" name="with_twinks" value="1" <!-- IF not S_WITH_TWINK_DKP -->checked="checked"<!-- ENDIF -->/> {L_points_for_this_char}
-<br /><br />
-<table class="table fullwidth hptt colorswitch scrollable-x borderless">
-	{MEMBER_POINTS}
-</table>
 <br/>
-
-
-
-
 <div id='profile_information'>
 	<ul>
-		<!-- IF CUSTOM_FIELDS --><li><a href='#fragment-2-0'><span>{L_tab_customfields}</span></a></li><!-- ENDIF -->
-		<li><a href='#fragment-2-1'><span>{L_tab_raids}</span></a></li>
-		<li><a href='#fragment-2-2'><span>{L_tab_items}</span></a></li>
+		<li><a href='#fragment-2-0'><span>{GL_tab_fleet}</span></a></li>
+		<!-- IF CUSTOM_FIELDS --><li><a href='#fragment-2-1'><span>{L_tab_customfields}</span></a></li><!-- ENDIF -->
+		<li><a href='#fragment-2-2'><span>{L_tab_raids}</span></a></li>
+		<li><a href='#fragment-2-3'><span>{L_tab_items}</span></a></li>
 		<!-- IF not S_POINTS_DISABLED -->
-		<li><a href='#fragment-2-3'><span>{L_tab_adjustments}</span></a></li>
+		<li><a href='#fragment-2-4'><span>{L_tab_adjustments}</span></a></li>
 		<!-- ENDIF -->
-		<li><a href='#fragment-2-4'><span>{L_tab_attendance}</span></a></li>
+		<li><a href='#fragment-2-5'><span>{L_tab_attendance}</span></a></li>
 	</ul>
 
 	<!-- ALL PROFILE FIELDS TABLE -->
-	<!-- IF CUSTOM_FIELDS -->
+	
+	<!-- FLEET TABLE -->
 	<div id="fragment-2-0">
+		<fieldset class="settings mediumsettings">
+			<div id="wows-fleet-tab">
+				<div align="center" class="wows-fleet"><h1>{GL_uc_myfleet}</h1></div>
+				<div align="center" class="wows-ship_fleet">
+					<!-- BEGIN uspremiums -->
+					<a href="#" class="wowstooltip2">
+						<img class="gameicon" src="{uspremiums.ICON}"alt=""/>
+						<span>
+							<font size="2em">{uspremiums.NAME}</font><br />
+							<div class="tool"><img class="gameicon" src="{CLASS5ICON}"alt=""/></div>
+							<div class="tool"><img class="gameicon" align="center" src="{uspremiums.NAT}"alt=""/></div>
+						</span>
+					</a>
+					<!-- END uspremiums -->
+					<!-- BEGIN jpnpremiums -->
+						<a href="#" class="wowstooltip">
+							<img class="gameicon" src="{jpnpremiums.ICON}"alt=""/>
+							<span>
+							<strong>Name</strong><br/>
+							Daten
+							</span>
+						</a>
+					<!-- END jpnpremiums -->
+					<!-- BEGIN usdestroyers -->
+					<a href="#" class="wowstooltip">
+						<img class="gameicon" src="{usdestroyers.ICON}"alt=""/>
+						<span>
+							<font size="2em">{usdestroyers.NAME}</font><br />
+							<div class="tool"><img class="gameicon" src="{CLASS1ICON}"alt=""/></div>
+							<div class="tool"><img class="gameicon" align="center" src="{usdestroyers.NAT}"alt=""/></div>
+						</span>
+					</a>
+					<!-- END usdestroyers -->
+
+					<!-- BEGIN uscruisers -->
+					<a href="#" class="wowstooltip">
+						<img class="gameicon" src="{uscruisers.ICON}"alt=""/>
+						<span>
+							<font size="2em">{uscruisers.NAME}</font><br />
+							<div class="tool"><img class="gameicon" src="{CLASS2ICON}"alt=""/></div>
+							<div class="tool"><img class="gameicon" align="center" src="{uscruisers.NAT}"alt=""/></div>
+						</span>
+					</a>
+					<!-- END uscruisers -->
+
+					<!-- BEGIN usbattleships -->
+					<a href="#" class="wowstooltip">
+						<img class="gameicon" src="{usbattleships.ICON}"alt=""/>
+						<span>
+							<font size="2em">{usbattleships.NAME}</font><br />
+							<div class="tool"><img class="gameicon" src="{CLASS3ICON}"alt=""/></div>
+							<div class="tool"><img class="gameicon" align="center" src="{usbattleships.NAT}"alt=""/></div>
+						</span>
+					</a>
+					<!-- END usbattleships -->				
+
+					<!-- BEGIN uscarriers -->
+					<a href="#" class="wowstooltip">
+						<img class="gameicon" src="{uscarriers.ICON}"alt=""/>
+						<span>
+							<font size="2em">{uscarriers.NAME}</font><br />
+							<div class="tool"><img class="gameicon" src="{CLASS4ICON}"alt=""/></div>
+							<div class="tool"><img class="gameicon" align="center" src="{uscarriers.NAT}"alt=""/></div>
+						</span>
+					</a>
+					<!-- END uscarrierss -->				
+
+					<!-- BEGIN gerdestroyers -->
+					<a href="#" class="wowstooltip">
+						<img class="gameicon" src="{gerdestroyers.ICON}"alt=""/>
+						<span>
+							<font size="2em">{gerdestroyers.NAME}</font><br />
+							<div class="tool"><img class="gameicon" src="{CLASS1ICON}"alt=""/></div>
+							<div class="tool"><img class="gameicon" align="center" src="{gerdestroyers.NAT}"alt=""/></div>
+						</span>
+					</a>
+					<!-- END gerdestroyers -->
+
+					<!-- BEGIN gercruisers -->
+					<a href="#" class="wowstooltip">
+						<img class="gameicon" src="{gercruisers.ICON}"alt=""/>
+						<span>
+							<font size="2em">{gercruisers.NAME}</font><br />
+							<div class="tool"><img class="gameicon" src="{CLASS2ICON}"alt=""/></div>
+							<div class="tool"><img class="gameicon" align="center" src="{gercruisers.NAT}"alt=""/></div>
+						</span>
+					</a>
+					<!-- END gercruisers -->
+
+					<!-- BEGIN gerbattleships -->
+					<a href="#" class="wowstooltip">
+						<img class="gameicon" src="{gerbattleships.ICON}"alt=""/>
+						<span>
+							<font size="2em">{gerbattleships.NAME}</font><br />
+							<div class="tool"><img class="gameicon" src="{CLASS3ICON}"alt=""/></div>
+							<div class="tool"><img class="gameicon" align="center" src="{gerbattleships.NAT}"alt=""/></div>
+						</span>
+					</a>
+					<!-- END gerbattleships -->				
+
+					<!-- BEGIN gercarriers -->
+					<a href="#" class="wowstooltip">
+						<img class="gameicon" src="{gercarriers.ICON}"alt=""/>
+						<span>
+							<font size="2em">{gercarriers.NAME}</font><br />
+							<div class="tool"><img class="gameicon" src="{CLASS4ICON}"alt=""/></div>
+							<div class="tool"><img class="gameicon" align="center" src="{gercarriers.NAT}"alt=""/></div>
+						</span>
+					</a>
+					<!-- END gercarrierss -->
+					<!-- BEGIN jpndestroyers -->
+					<a href="#" class="wowstooltip">
+						<img class="gameicon" src="{jpndestroyers.ICON}"alt=""/>
+						<span>
+							<font size="2em">{jpndestroyers.NAME}</font><br />
+							<div class="tool"><img class="gameicon" src="{CLASS1ICON}"alt=""/></div>
+							<div class="tool"><img class="gameicon" align="center" src="{jpndestroyers.NAT}"alt=""/></div>
+
+						</span>
+					</a>
+					<!-- END jpndestroyers -->
+
+					<!-- BEGIN jpncruisers -->
+					<a href="#" class="wowstooltip">
+						<img class="gameicon" src="{jpncruisers.ICON}"alt=""/>
+						<span>
+							<font size="2em">{jpncruisers.NAME}</font><br />
+							<div class="tool"><img class="gameicon" src="{CLASS2ICON}"alt=""/></div>
+							<div class="tool"><img class="gameicon" align="center" src="{jpncruisers.NAT}"alt=""/></div>
+						</span>
+					</a>
+					<!-- END jpncruisers -->
+
+					<!-- BEGIN jpnbattleships -->
+					<a href="#" class="wowstooltip">
+						<img class="gameicon" src="{jpnbattleships.ICON}"alt=""/>
+						<span>
+							<font size="2em">{jpnbattleships.NAME}</font><br />
+							<div class="tool"><img class="gameicon" src="{CLASS3ICON}"alt=""/></div>
+							<div class="tool"><img class="gameicon" align="center" src="{jpnbattleships.NAT}"alt=""/></div>
+						</span>
+					</a>
+					<!-- END jpnbattleships -->				
+
+					<!-- BEGIN jpncarriers -->
+					<a href="#" class="wowstooltip">
+						<img class="gameicon" src="{jpncarriers.ICON}"alt=""/>
+						<span>
+							<font size="2em">{jpncarriers.NAME}</font><br />
+							<div class="tool"><img class="gameicon" src="{CLASS4ICON}"alt=""/></div>
+							<div class="tool"><img class="gameicon" align="center" src="{jpncarriers.NAT}"alt=""/></div>
+						</span>
+					</a>
+					<!-- END jpncarrierss -->
+					
+					<!-- BEGIN udssrdestroyers -->
+					<a href="#" class="wowstooltip">
+						<img class="gameicon" src="{udssrdestroyers.ICON}"alt=""/>
+						<span>
+							<font size="2em">{udssrdestroyers.NAME}</font><br />
+							<div class="tool"><img class="gameicon" src="{CLASS1ICON}"alt=""/></div>
+							<div class="tool"><img class="gameicon" align="center" src="{udssrdestroyers.NAT}"alt=""/></div>
+						</span>
+					</a>
+					<!-- END udssrdestroyers -->
+
+					<!-- BEGIN udssrcruisers -->
+					<a href="#" class="wowstooltip">
+						<img class="gameicon" src="{udssrcruisers.ICON}"alt=""/>
+						<span>
+							<font size="2em">{udssrcruisers.NAME}</font><br />
+							<div class="tool"><img class="gameicon" src="{CLASS2ICON}"alt=""/></div>
+							<div class="tool"><img class="gameicon" align="center" src="{udssrcruisers.NAT}"alt=""/></div>
+						</span>
+					</a>
+					<!-- END udssrcruisers -->
+
+					<!-- BEGIN udssrbattleships -->
+					<a href="#" class="wowstooltip">
+						<img class="gameicon" src="{udssrbattleships.ICON}"alt=""/>
+						<span>
+							<font size="2em">{udssrbattleships.NAME}</font><br />
+							<div class="tool"><img class="gameicon" src="{CLASS3ICON}"alt=""/></div>
+							<div class="tool"><img class="gameicon" align="center" src="{udssrbattleships.NAT}"alt=""/></div>
+						</span>
+					</a>
+					<!-- END udssrbattleships -->				
+
+					<!-- BEGIN udssrcarriers -->
+					<a href="#" class="wowstooltip">
+						<img class="gameicon" src="{udssrcarriers.ICON}"alt=""/>
+						<span>
+							<font size="2em">{udssrcarriers.NAME}</font><br />
+							<div class="tool"><img class="gameicon" src="{CLASS4ICON}"alt=""/></div>
+							<div class="tool"><img class="gameicon" align="center" src="{udssrcarriers.NAT}"alt=""/></div>
+						</span>
+					</a>
+					<!-- END udssrcarrierss -->	
+					
+					<!-- BEGIN gbdestroyers -->
+					<a href="#" class="wowstooltip">
+						<img class="gameicon" src="{gbdestroyers.ICON}"alt=""/>
+						<span>
+							<font size="2em">{gbdestroyers.NAME}</font><br />
+							<div class="tool"><img class="gameicon" src="{CLASS1ICON}"alt=""/></div>
+							<div class="tool"><img class="gameicon" align="center" src="{gbdestroyers.NAT}"alt=""/></div>
+						</span>
+					</a>
+					<!-- END gbdestroyers -->
+
+					<!-- BEGIN gbcruisers -->
+					<a href="#" class="wowstooltip">
+						<img class="gameicon" src="{gbcruisers.ICON}"alt=""/>
+						<span>
+							<font size="2em">{gbcruisers.NAME}</font><br />
+							<div class="tool"><img class="gameicon" src="{CLASS2ICON}"alt=""/></div>
+							<div class="tool"><img class="gameicon" align="center" src="{gbcruisers.NAT}"alt=""/></div>
+						</span>
+					</a>
+					<!-- END gbcruisers -->
+
+					<!-- BEGIN gbbattleships -->
+					<a href="#" class="wowstooltip">
+						<img class="gameicon" src="{gbbattleships.ICON}"alt=""/>
+						<span>
+							<font size="2em">{gbbattleships.NAME}</font><br />
+							<div class="tool"><img class="gameicon" src="{CLASS3ICON}"alt=""/></div>
+							<div class="tool"><img class="gameicon" align="center" src="{gbbattleships.NAT}"alt=""/></div>
+						</span>
+					</a>
+					<!-- END gbbattleships -->				
+
+					<!-- BEGIN gbcarriers -->
+					<a href="#" class="wowstooltip">
+						<img class="gameicon" src="{gbcarriers.ICON}"alt=""/>
+						<span>
+							<font size="2em">{gbcarriers.NAME}</font><br />
+							<div class="tool"><img class="gameicon" src="{CLASS4ICON}"alt=""/></div>
+							<div class="tool"><img class="gameicon" align="center" src="{gbcarriers.NAT}"alt=""/></div>
+						</span>
+					</a>
+					<!-- END gbcarrierss -->				
+				</div>
+			</div>
+		</fieldset>
+	</div>
+	
+	<!-- IF CUSTOM_FIELDS -->
+	<div id="fragment-2-1">
 		<fieldset class="settings mediumsettings">
 			<!-- BEGIN pfield_custom -->
 			<dl>
@@ -306,9 +302,9 @@
 		</fieldset>
 	</div>
 	<!-- ENDIF -->
-
+	
 	<!-- RAIDS TABLE -->
-	<div id="fragment-2-1">
+	<div id="fragment-2-2">
 		<div class="tableHeader">
 			<h2>{L_raid_attendance_history}</h2>
 		</div>
@@ -321,7 +317,7 @@
 	</div>
 
 	<!-- ITEMS TABLE -->
-	<div id="fragment-2-2">
+	<div id="fragment-2-3">
 		<div class="tableHeader">
 			<h2>{L_item_purchase_history}</h2>
 		</div>
@@ -335,7 +331,7 @@
 	
 	<!-- IF not S_POINTS_DISABLED -->
 	<!-- ADJUSTMENTS TABLE-->
-	<div id="fragment-2-3">
+	<div id="fragment-2-4">
 		<div class="tableHeader">
 			<h2>{L_individual_adjustment_history}</h2>
 		</div>
@@ -349,35 +345,48 @@
 	<!-- ENDIF -->
 
 	<!-- ATTENDANCE -->
-	<div id="fragment-2-4">
+	<div id="fragment-2-5">
 		<table class="table fullwidth hptt colorswitch scrollable-x">
 		{EVENT_ATT_OUT}
 		</table>
 	</div>
 </div>
-
+<div class="tableHeader">
+	<h2>{L_DKP_NAME}</h2>
+</div>
+<input type="checkbox" onchange="window.location='{SID}&with_twinks='+ ((this.checked) ? 0 : 1)" name="with_twinks" value="1" <!-- IF not S_WITH_TWINK_DKP -->checked="checked"<!-- ENDIF -->/> {L_points_for_this_char}
+<br /><br />
+<table class="table fullwidth hptt colorswitch scrollable-x borderless">
+	{MEMBER_POINTS}
+</table>
 
 <script>
 $(document).ready(function (){
-	var wID = $('.wargamingID').attr('id');
-	var $wREALM = $('.wargamingREALM').attr('id');
+	var wID = $('#wargamingID').data('wargamingid');
+	var wREALM = $('#wargamingREALM').data('wargamingrealm');
 	var $appID = 'de24bebff2c9d2ceebbc1cde9d0b6b1f';
 	var $achievement = $('#achievement');
 	var $aURL ='achievement/';
 	var $wURL = 'https://api.worldofwarships.';
 	var $wGAME = 'wows';
-	var $iconURL = 'http://api.worldofwarships.eu/static/1.8.3/wows/encyclopedia/achievements/icon_achievement_';
+	var $iconURL = '{ACHIEVEMENT_ICON_PATH}';
 	$.ajax({
 		type: 'GET',
-		url: $wURL + $wREALM +'/'+ $wGAME + '/account/achievements/?application_id='+ $appID +'&account_id='+wID,
+		url: $wURL + wREALM +'/'+ $wGAME + '/account/achievements/?application_id='+ $appID +'&account_id='+wID,
 		success: function(achievement) {
 			$.each(achievement.data[wID].battle, function (i,avalue){
 				$achievement.append(
-				'<div class="achievement-block"><div class="achievement" style="background-image: url('+$iconURL+i+'.png);"></div><div class="avalue">'+avalue+'</div></div>'
+				'<div class="achievement-block"><div class="achievement" ><img src="'+$iconURL+i+'.png" title="'+i+'"/></div><div class="avalue">'+avalue+'</div></div>'
 				);
 			});
 		}
 	});
+	$.ajax({
+		type: 'GET',
+		url: $wURL + wREALM +'/'+ $wGAME + '/account/info/?application_id='+ $appID +'&account_id='+wID,
+		success: function (data) {
+			$('#wargaming-lvl-tier').attr('src',"{LEVEL_ICON_PATH}/"+ data.data[wID].leveling_tier + ".png");
+		},
+	});
 });
-
 </script>

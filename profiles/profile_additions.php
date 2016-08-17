@@ -34,6 +34,9 @@
 		#wows-nation-flag img{
 			width:200px;
 		}
+		#wargaming-lvl-tier img{
+			width: 80px;
+		}
 		#wows-profil_main {
 			width:100%;
 			margin-top:30px;
@@ -55,87 +58,56 @@
 			width:48%;
 			float:left;
 		}
-		#wows-profil_premium {
+		#wows-profil-achievement {
 			margin:1%;
 			width:48%;
 			float:left;
 
 		}	
-		#wows-profil_fleet {
+		#wows-fleet-tab {
 			clear:both;
 			margin:1%;
 			width:98%;
 		}
-		#wows-profil_pic{
+		#wows-profil-pic{
 			clear:both;
 			width:100%;
 		}
 		.wows-chardata_picture img {
 			margin:1%;
 			max-width:700px;
-			}
-		.wows-achievement{
-			margin:1%;
-			width:98%;
-		}
-		.wows-achievement img{
-			width:10%;
 		}
 		.wows-ship_fleet img{
 			width:10%;
 		}
-		.wows-fleet {
+		.wows-profil-data-header {
 			margin-top:10px;
 		}
-		.wows-border{
-			border-color: #FF8450;
-			border:5px;
-		}
-		.toolleft {
-			margin:10px;
-			font-size:1em;
-			float:left;
-			width:100px;
-		}
-		.toolright {
-			margin:10px;
-			float:left;
-			width:200px;
-		}
-		.toolmid {
-			margin:10px;
-			font-size:1em;
-			float:left;
-			width:20px;
-		}
-		.tool {
-			width:200px;
+		.tool img{
+			height:auto;
+			width:30px;
 		}
 		a.wowstooltip {outline:none; }
 		a.wowstooltip strong {line-height:30px;}
-		a.wowstooltip:hover {text-decoration:none;} 
+		a.wowstooltip:hover {text-decoration:none;
+		} 
 		a.wowstooltip span {
 			z-index:10;display:none; padding:5px 5px;
-			margin-top:100px; margin-left:-297px;
-			width:380px;
+			margin-top:100px; margin-left:-130px;
+			width:100px;
 			line-height:16px;
 		}
 		a.wowstooltip:hover span{
+			font-color:434343;
 			display:inline; position:absolute; 
-			border:2px solid #cece00;  color:#EEE;
-			background:#000000;
+			border:1px solid #434343;  color:#434343;
+			background:#eee;
 		}
-		.callout {
-			z-index:20;
-			position:absolute;
-			border:0;
-			top:-14px;
-			left:120px;
-		}
+
 		a.wowstooltip span
 		{
 			border-radius:2px;        
-			box-shadow: 0px 0px 8px 4px #666;
+			box-shadow: 0px 0px 2px 1px #666;
 			/*opacity: 0.8;*/
 		}
 		a.wowstooltip2 {outline:none; }
@@ -143,39 +115,20 @@
 		a.wowstooltip2:hover {text-decoration:none;} 
 		a.wowstooltip2 span {
 			z-index:10;display:none; padding:5px 5px;
-			margin-top:100px; margin-left:-297px;
+			margin-top:100px; margin-left:-130px;
 			width:380px;
 			line-height:16px;
 		}
 		a.wowstooltip2:hover span{
+			font-color:434343;
 			display:inline; position:absolute; 
-			border:2px solid #e70000;  color:#EEE;
-			background:#000000;
+			border:2px solid #ffab34;  color:#ffab34;
+			background:#eee;
 		}
 		a.wowstooltip2 span
 		{
 			border-radius:2px;        
-			box-shadow: 0px 0px 8px 4px #666;
-			/*opacity: 0.8;*/
-		}
-		a.wowstooltip3 {outline:none; }
-		a.wowstooltip3 strong {line-height:30px;}
-		a.wowstooltip3:hover {text-decoration:none;} 
-		a.wowstooltip3 span {
-			z-index:10;display:none; padding:5px 5px;
-			margin-top:60px; margin-left:-115px;
-			width:150px;
-			line-height:16px;
-		}
-		a.wowstooltip3:hover span{
-			display:inline; position:absolute; 
-			border:2px solid #e70000;  color:#EEE;
-			background:#000000;
-		}
-		a.wowstooltip3 span
-		{
-			border-radius:2px;        
-			box-shadow: 0px 0px 8px 4px #666;
+			box-shadow: 0px 0px 2px 1px #666;
 			/*opacity: 0.8;*/
 		}
 .achievement-block {
@@ -211,37 +164,34 @@
 	font-size: .6875rem;
 	color: #000;
 }
+.non-display{
+	display:none;
+}
 	");
 
 	$wargamingID = $this->pdh->get('member', 'profile_field', array($this->url_id, 'wID'));
 	$wREALM = $this->pdh->get('member', 'profile_field', array($this->url_id, 'wrealm'));
-	$this->tpl->assign_vars(array(
-		'CHARDATA_NAME'			=> $chardata['name'],
-		'WARGAMING_ID'			=>	$wargamingID,
-		'WARGAMING_REALM'		=>	$wREALM,
-	));
-	
-	
-	//Flags
 	$nationflag = $this->pdh->get('member', 'profile_field', array($this->url_id, 'faction'));
-	$levelicon = $this->pdh->get('member', 'profile_field', array($this->url_id, 'level'));
-	$this->tpl->assign_vars(array(
-	'NATION'			=> $this->server_path."games/wows/profiles/nations/".$nationflag,
-	'PROFURL'			=> $this->server_path."games/wows/profiles/",
-	'LEVEL'				=> $this->server_path."games/wows/profiles/level/".$levelicon.".png",
-	'CLASS1ICON'		=> $this->server_path."games/wows/icons/classes/1_b.png",
-	'CLASS2ICON'		=> $this->server_path."games/wows/icons/classes/2_b.png",
-	'CLASS3ICON'		=> $this->server_path."games/wows/icons/classes/3_b.png",
-	'CLASS4ICON'		=> $this->server_path."games/wows/icons/classes/4_b.png",
-	'CLASS5ICON'		=> $this->server_path."games/wows/icons/classes/5_b.png",
-	));
-	
 	$usship = $this->server_path."games/wows/profiles/nations/us.png";
 	$jpnship = $this->server_path."games/wows/profiles/nations/jpn.png";
 	$gbship = $this->server_path."games/wows/profiles/nations/gb.png";
 	$udssrship = $this->server_path."games/wows/profiles/nations/udssr.png";
 	$gership = $this->server_path."games/wows/profiles/nations/ger.png";
 	
+	$this->tpl->assign_vars(array(
+		'CHARDATA_NAME'			=>	$chardata['name'],
+		'WARGAMING_ID'			=>	$wargamingID,
+		'WARGAMING_REALM'		=>	$wREALM,
+		'LEVEL_ICON_PATH'		=>	$this->server_path."games/wows/profiles/icons/level",
+		'ACHIEVEMENT_ICON_PATH'		=>	$this->server_path."games/wows/profiles/icons/achievement/icon_achievement_",
+		'NATION'				=> $this->server_path."games/wows/profiles/nations/".$nationflag,
+		'CLASS1ICON'			=> $this->server_path."games/wows/icons/classes/1_b.png",
+		'CLASS2ICON'			=> $this->server_path."games/wows/icons/classes/2_b.png",
+		'CLASS3ICON'			=> $this->server_path."games/wows/icons/classes/3_b.png",
+		'CLASS4ICON'			=> $this->server_path."games/wows/icons/classes/4_b.png",
+		'CLASS5ICON'			=> $this->server_path."games/wows/icons/classes/5_b.png",
+	));
+		
 	//usdestroyers
 	$usdestroyer = $this->pdh->get('member', 'profile_field', array($this->url_id, 'usdestroyer'));
 	$shipcount = count ($usdestroyer);
@@ -595,24 +545,6 @@
 					'ID'	=> $gbpremium[$i],
 					'NAME'	=> $gbpremiumname[$gbpremium[$i]],
 					)
-		);
-	}
-	
-	
-	//Achievements
-	for ($i=1;$i<18;$i++){
-		$achievalue = (int)$this->pdh->get('member', 'profile_field', array($this->url_id, 'achievements'.$i));
-		if ($achievalue > 0){
-			$achieicon = $this->server_path."games/wows/profiles/achievement/".$i.".png";
-		}else{
-			$achieicon = $this->server_path."games/wows/profiles/achievement/".$i."b.png";
-		}
-		$this->tpl->assign_block_vars(
-			'achievements', array(
-				'VALUE' => $achievalue,
-				'ICON'	=> $achieicon,
-				'NAME'	=> $this->game->glang('uc_achievement'.$i),
-				)
 		);
 	}
 ?>
