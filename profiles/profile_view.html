@@ -14,11 +14,17 @@
 				</table>
 			</div>
 			<div id="wows-profil-achievement">
-				<div align="center" class="wows-profil-data-header"><h2>{GL_uc_achievement}</h2></div>
-				<div id="achievement">
-
-				
+				<div align="center" class="wows-profil-data-header"><h2>{GL_uc_achievement}</h2></div>	
+		<!-- BEGIN achievements -->
+				<div id="{achievements.NAME2}" class="achievement-block">
+					<div class="achievement" >
+						<a href="#" >
+							<img src="{achievements.ICON}" title="{achievements.NAME}&#10{achievements.DESCRIPTION}"/>
+						</a>
+					</div>
+					<div id="{achievements.NAME2}_value" class="avalue">1</div>
 				</div>
+		<!-- END achievements -->
 			</div>
 		</div>
 		<div id="wows-profil-pic">
@@ -362,6 +368,7 @@
 
 <script>
 $(document).ready(function (){
+
 	var wID = $('#wargamingID').data('wargamingid');
 	var wREALM = $('#wargamingREALM').data('wargamingrealm');
 	var $appID = 'de24bebff2c9d2ceebbc1cde9d0b6b1f';
@@ -375,9 +382,8 @@ $(document).ready(function (){
 		url: $wURL + wREALM +'/'+ $wGAME + '/account/achievements/?application_id='+ $appID +'&account_id='+wID,
 		success: function(achievement) {
 			$.each(achievement.data[wID].battle, function (i,avalue){
-				$achievement.append(
-				'<div class="achievement-block"><div class="achievement" ><img src="'+$iconURL+i+'.png" title="'+i+'"/></div><div class="avalue">'+avalue+'</div></div>'
-				);
+				$('#'+i+'_value').html(avalue);
+				$('#'+i).css("display", "inline");
 			});
 		}
 	});

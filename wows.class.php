@@ -252,7 +252,7 @@ if(!class_exists('wows')) {
 					'options'		=> $this->gercruiser[$this->lang],
 					'sort'			=> 12,
 				),
-/*
+
 				'gerbattleship'	=> array(
 					'type'			=> 'multiselect',
 					'category'		=> 'fleet',
@@ -262,6 +262,7 @@ if(!class_exists('wows')) {
 					'options'		=> $this->gerbattleship[$this->lang],
 					'sort'			=> 13,
 				),
+/*
 				'gercarrier'	=> array(
 					'type'			=> 'multiselect',
 					'category'		=> 'fleet',

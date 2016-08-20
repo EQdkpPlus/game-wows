@@ -24,6 +24,7 @@
  include 'ship/gership.php';
  include 'ship/gbship.php';
  include 'ship/jpnship.php';
+ include 'data/achievement.php';
 	$this->jquery->Tab_header('char1_tabs');
 
 	// init infotooltip
@@ -137,6 +138,7 @@
 	width: 80px;
 	height: 80px;
 	margin: 0 20px 20px 0;
+	display: none;
 
 }
 .achievement{
@@ -190,8 +192,21 @@
 		'CLASS3ICON'			=> $this->server_path."games/wows/icons/classes/3_b.png",
 		'CLASS4ICON'			=> $this->server_path."games/wows/icons/classes/4_b.png",
 		'CLASS5ICON'			=> $this->server_path."games/wows/icons/classes/5_b.png",
+		'PROFILURL'				=> $this->server_path."games/wows/profiles/",
 	));
-		
+	
+	for ($i=1; $i<46; $i++){
+		$achievementicon = $this->server_path."games/wows/profiles/icons/achievement/icon_achievement_".$achievement[$i].".png";
+		$this->tpl->assign_block_vars(
+			'achievements', array(
+				'ICON'	=> $achievementicon,
+				'NAME'	=> $this->game->glang($achievement[$i]),
+				'DESCRIPTION'	=> $this->game->glang($achievement_description[$i]),
+				'NAME2'	=> 	$achievement[$i],
+			)
+		);
+	}
+	
 	//usdestroyers
 	$usdestroyer = $this->pdh->get('member', 'profile_field', array($this->url_id, 'usdestroyer'));
 	$shipcount = count ($usdestroyer);
