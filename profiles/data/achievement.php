@@ -21,8 +21,10 @@
 if ( !defined('EQDKP_INC') ){
 	header('HTTP/1.0 404 Not Found');exit;
 }
-	$achievement =  array(
 
+//achievement id = achievement_description id !!!!!
+
+	$achievement =  array(
 		1		=>		'RETRIBUTION',
 		2		=>		'FIGHTER',
 		3		=>		'ST_PARTICIPANT',
@@ -69,10 +71,8 @@ if ( !defined('EQDKP_INC') ){
 		44		=>		'AMAUTEUR',
 		45		=>		'SCIENCE_OF_WINNING_LUCKY',
 		46		=>		'WORKAHOLIC',
-		);
-		
+		);	
 		$achievement_description =  array(
-
 		1		=>		'RETRIBUTION_DES',
 		2		=>		'FIGHTER_DES',
 		3		=>		'ST_PARTICIPANT_DES',

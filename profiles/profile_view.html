@@ -9,14 +9,34 @@
 			<div align="center" id="wows-profil_data">
 				<div class="wows-profil-data-header"><h2>{GL_uc_profil}</h2></div>
 				<table height="200">
-					<tr><td><img id="wows-nation-flag" src="{NATION}.png"/></td></tr>
-					<tr><td><img id="wargaming-lvl-tier" class="gameicon" src=""/></td></tr>
+					<tr>
+						<td align="center">
+							<a href="#" class="wowstooltip2">
+							<img id="wows-nation-flag" src="{NATION}.png"/>
+							<span>
+								<font size="2em">{GL_uc_faction}</font>
+							</span>
+							</a>
+						</td>
+
+					</tr>
+					<tr>
+						<td align="center">
+							<a href="#" class="wowstooltip2">
+								<img id="wargaming-lvl-tier" class="gameicon" src="" alt="{GL_id_miss}"/>
+								<span>
+									<font size="2em">{GL_wargaming_level}</font><br /><br />
+									<font id="wargaming-lvl" size="5em"></font>
+								</span>
+							</a>
+						</td>
+					</tr>
 				</table>
 			</div>
 			<div id="wows-profil-achievement">
 				<div align="center" class="wows-profil-data-header"><h2>{GL_uc_achievement}</h2></div>	
 		<!-- BEGIN achievements -->
-				<div id="{achievements.NAME2}" class="achievement-block">
+				<div id="{achievements.NAME2}" class="achievement-block non-display">
 					<div class="achievement" >
 						<a href="#" >
 							<img src="{achievements.ICON}" title="{achievements.NAME}&#10{achievements.DESCRIPTION}"/>
@@ -53,25 +73,6 @@
 			<div id="wows-fleet-tab">
 				<div align="center" class="wows-fleet"><h1>{GL_uc_myfleet}</h1></div>
 				<div align="center" class="wows-ship_fleet">
-					<!-- BEGIN uspremiums -->
-					<a href="#" class="wowstooltip2">
-						<img class="gameicon" src="{uspremiums.ICON}"alt=""/>
-						<span>
-							<font size="2em">{uspremiums.NAME}</font><br />
-							<div class="tool"><img class="gameicon" src="{CLASS5ICON}"alt=""/></div>
-							<div class="tool"><img class="gameicon" align="center" src="{uspremiums.NAT}"alt=""/></div>
-						</span>
-					</a>
-					<!-- END uspremiums -->
-					<!-- BEGIN jpnpremiums -->
-						<a href="#" class="wowstooltip">
-							<img class="gameicon" src="{jpnpremiums.ICON}"alt=""/>
-							<span>
-							<strong>Name</strong><br/>
-							Daten
-							</span>
-						</a>
-					<!-- END jpnpremiums -->
 					<!-- BEGIN usdestroyers -->
 					<a href="#" class="wowstooltip">
 						<img class="gameicon" src="{usdestroyers.ICON}"alt=""/>
@@ -89,6 +90,7 @@
 						<span>
 							<font size="2em">{uscruisers.NAME}</font><br />
 							<div class="tool"><img class="gameicon" src="{CLASS2ICON}"alt=""/></div>
+							<div class="tool"><img class="gameicon" src="{uscruisers.PREMIUM}"alt=""/></div>
 							<div class="tool"><img class="gameicon" align="center" src="{uscruisers.NAT}"alt=""/></div>
 						</span>
 					</a>
@@ -158,7 +160,7 @@
 							<div class="tool"><img class="gameicon" align="center" src="{gercarriers.NAT}"alt=""/></div>
 						</span>
 					</a>
-					<!-- END gercarrierss -->
+					<!-- END gercarriers -->
 					<!-- BEGIN jpndestroyers -->
 					<a href="#" class="wowstooltip">
 						<img class="gameicon" src="{jpndestroyers.ICON}"alt=""/>
@@ -246,7 +248,7 @@
 							<div class="tool"><img class="gameicon" align="center" src="{udssrcarriers.NAT}"alt=""/></div>
 						</span>
 					</a>
-					<!-- END udssrcarrierss -->	
+					<!-- END udssrcarriers -->	
 					
 					<!-- BEGIN gbdestroyers -->
 					<a href="#" class="wowstooltip">
@@ -290,7 +292,7 @@
 							<div class="tool"><img class="gameicon" align="center" src="{gbcarriers.NAT}"alt=""/></div>
 						</span>
 					</a>
-					<!-- END gbcarrierss -->				
+					<!-- END gbcarriers -->				
 				</div>
 			</div>
 		</fieldset>
@@ -392,6 +394,7 @@ $(document).ready(function (){
 		url: $wURL + wREALM +'/'+ $wGAME + '/account/info/?application_id='+ $appID +'&account_id='+wID,
 		success: function (data) {
 			$('#wargaming-lvl-tier').attr('src',"{LEVEL_ICON_PATH}/"+ data.data[wID].leveling_tier + ".png");
+			$('#wargaming-lvl').html(data.data[wID].leveling_tier);
 		},
 	});
 });

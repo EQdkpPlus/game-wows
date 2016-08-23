@@ -31,6 +31,7 @@ if ( !defined('EQDKP_INC') ){
 		8		=>	'Fubuki',
 		9		=>	'Kagero',
 		10		=>	'Shimakaze',
+		11		=>	'Tachibana',
 		);
 
  	$jpncruisername =  array( // Namen i.o.
@@ -44,6 +45,7 @@ if ( !defined('EQDKP_INC') ){
 		8		=>	'Mogami',
 		9		=>	'Ibuki',
 		10		=>	'Khabarovsk',
+		11		=>	'Atago',
 		);
 
 	$jpnbattleshipname =  array( // Namen i.o.
@@ -55,6 +57,8 @@ if ( !defined('EQDKP_INC') ){
 		8		=>	'Amagi',
 		9		=>	'Izumo',
 		10		=>	'Yamato',
+		11		=>	'Mikasa',
+		12		=>	'Ishizuchi',
 		);
 
 	$jpncarriername =  array( // Namen i.o.
@@ -67,12 +71,11 @@ if ( !defined('EQDKP_INC') ){
 		10		=>	'Hakuryu',
 		);
 
-/*	$jpnpremiumname =  array( // Namen i.o.
-	// zweites premium fehlt Destroy II Tachibana
-		2		=>	'Mikasa',
-		4		=>	'Ishizuchi',
-		8		=>	'Atago',
+	$jpnpremiumname =  array( // Namen i.o.
+
+
+
 		);
 
-*/
+
  ?>

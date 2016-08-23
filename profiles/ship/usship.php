@@ -21,7 +21,7 @@
 if ( !defined('EQDKP_INC') ){
 	header('HTTP/1.0 404 Not Found');exit;
 }
-	$usdestroyername =  array( //Namen i.o.
+	$usdestroyername =  array(
 		2		=>	'Sampson',
 		3		=>	'Wickes',
 		4		=>	'Clemson',
@@ -33,7 +33,7 @@ if ( !defined('EQDKP_INC') ){
 		10		=>	'Gearing',
 		);
 
- 	$uscruisername =  array( // Namen i.o.
+ 	$uscruisername =  array(
 		1		=>	'Erie',
 		2		=>	'Chester',
 		3		=>	'St. Louis',
@@ -44,9 +44,12 @@ if ( !defined('EQDKP_INC') ){
 		8		=>	'New Orleans',
 		9		=>	'Baltimore',
 		10		=>	'Des Moines',
+		11		=>	'Marblehead',
+		12		=>	'Atlanta',
+		13		=>	'Indianapolis',
 		);
 
-	$usbattleshipname =  array( // Namen i.o.
+	$usbattleshipname =  array(
 		3		=>	'South Carolina',
 		4		=>	'Wyoming',
 		5		=>	'New York',
@@ -55,9 +58,11 @@ if ( !defined('EQDKP_INC') ){
 		8		=>	'North Carolina',
 		9		=>	'Iowa',
 		10		=>	'Montana',
+		11		=>	'Arizona',
+		12		=>	'Texas',
 		);
 
-	$uscarriername =  array( // Namen i.o.
+	$uscarriername =  array(
 		4		=>	'Langley',
 		5		=>	'Bogue',
 		6		=>	'Independence',
@@ -65,12 +70,6 @@ if ( !defined('EQDKP_INC') ){
 		8		=>	'Lexington',
 		9		=>	'Essex',
 		10		=>	'Midway',
+		11		=>	'Saipan' 
 		);
-
-/*	$uspremiumname =  array( // Namen i.o.
-		2		=>	'Albany',
-		7		=>	'Atlanta',
-		);
-
-*/
  ?>

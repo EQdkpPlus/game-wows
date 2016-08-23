@@ -19,12 +19,17 @@
  *	along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
  
+ 
+ 
+ //includes for tooltip
  include 'ship/usship.php';
  include 'ship/udssrship.php';
  include 'ship/gership.php';
  include 'ship/gbship.php';
  include 'ship/jpnship.php';
  include 'data/achievement.php';
+ 
+ 
 	$this->jquery->Tab_header('char1_tabs');
 
 	// init infotooltip
@@ -94,7 +99,7 @@
 		} 
 		a.wowstooltip span {
 			z-index:10;display:none; padding:5px 5px;
-			margin-top:100px; margin-left:-130px;
+			margin-top:120px; margin-left:-135px;
 			width:100px;
 			line-height:16px;
 		}
@@ -116,14 +121,14 @@
 		a.wowstooltip2:hover {text-decoration:none;} 
 		a.wowstooltip2 span {
 			z-index:10;display:none; padding:5px 5px;
-			margin-top:100px; margin-left:-130px;
-			width:380px;
+			margin-top:110px; margin-left:-115px;
+			width:100px;
 			line-height:16px;
 		}
 		a.wowstooltip2:hover span{
-			font-color:434343;
+			font-color:#434343;
 			display:inline; position:absolute; 
-			border:2px solid #ffab34;  color:#ffab34;
+			border:2px solid #434343;  color:#434343;
 			background:#eee;
 		}
 		a.wowstooltip2 span
@@ -132,43 +137,41 @@
 			box-shadow: 0px 0px 2px 1px #666;
 			/*opacity: 0.8;*/
 		}
-.achievement-block {
-	float: left;
-	position: relative;
-	width: 80px;
-	height: 80px;
-	margin: 0 20px 20px 0;
-	display: none;
-
-}
-.achievement{
-	position: relative;
-	z-index: 1;
-	width: 100%;
-	height: 0;
-	padding-bottom: 100%;
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: 50%;
-	align: center;
-}
-.avalue {
-	position: absolute;
-	z-index: 2;
-	left: 50%;
-	bottom: 0;
-	margin-left: -1em;
-	width: 2em;
-	background-color: #eee;
-	border: 1px solid #434343;
-	text-align: center;
-	font-size: 11px;
-	font-size: .6875rem;
-	color: #000;
-}
-.non-display{
-	display:none;
-}
+		.achievement-block {
+			float: left;
+			position: relative;
+			width: 80px;
+			height: 80px;
+			margin: 0 20px 20px 0;
+		}
+		.achievement{
+			position: relative;
+			z-index: 1;
+			width: 100%;
+			height: 0;
+			padding-bottom: 100%;
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: 50%;
+			align: center;
+		}
+		.avalue {
+			position: absolute;
+			z-index: 2;
+			left: 50%;
+			bottom: 0;
+			margin-left: -1em;
+			width: 2em;
+			background-color: #eee;
+			border: 1px solid #434343;
+			text-align: center;
+			font-size: 11px;
+			font-size: .6875rem;
+			color: #000;
+		}
+		.non-display{
+			display:none;
+		}
 	");
 
 	$wargamingID = $this->pdh->get('member', 'profile_field', array($this->url_id, 'wID'));
@@ -191,10 +194,9 @@
 		'CLASS2ICON'			=> $this->server_path."games/wows/icons/classes/2_b.png",
 		'CLASS3ICON'			=> $this->server_path."games/wows/icons/classes/3_b.png",
 		'CLASS4ICON'			=> $this->server_path."games/wows/icons/classes/4_b.png",
-		'CLASS5ICON'			=> $this->server_path."games/wows/icons/classes/5_b.png",
 		'PROFILURL'				=> $this->server_path."games/wows/profiles/",
 	));
-	
+//Achievements
 	for ($i=1; $i<46; $i++){
 		$achievementicon = $this->server_path."games/wows/profiles/icons/achievement/icon_achievement_".$achievement[$i].".png";
 		$this->tpl->assign_block_vars(
@@ -206,8 +208,7 @@
 			)
 		);
 	}
-	
-	//usdestroyers
+//usdestroyers
 	$usdestroyer = $this->pdh->get('member', 'profile_field', array($this->url_id, 'usdestroyer'));
 	$shipcount = count ($usdestroyer);
 	for ($i=0; $i<$shipcount; $i++){
@@ -217,12 +218,11 @@
 					'ICON'	=> $shipicon,
 					'NAT'	=> $usship,
 					'ID'	=> $usdestroyer[$i],
-					'NAME'	=> $usdestroyername[$usdestroyer[$i]],
+					'NAME'	=> $usdestroyername[$usdestroyer[$i]], // Name from usship.php
 			)
 		);	
 	}
-
-	//uscruisers
+//uscruisers
 	$uscruiser = $this->pdh->get('member', 'profile_field', array($this->url_id, 'uscruiser'));
 	$shipcount = count ($uscruiser);
 	for ($i=0; $i<=$shipcount-1; $i++){
@@ -236,7 +236,7 @@
 					)
 		);
 	}
-	//usbattleship
+//usbattleship
 	$usbattleship = $this->pdh->get('member', 'profile_field', array($this->url_id, 'usbattleship'));
 	$shipcount = count ($usbattleship);
 	for ($i=0; $i<=$shipcount-1; $i++){
@@ -249,8 +249,9 @@
 					'NAME'	=> $usbattleshipname[$usbattleship[$i]],
 					)
 		);
+
 	}
-	//uscarriers
+//uscarriers
 	$uscarrier = $this->pdh->get('member', 'profile_field', array($this->url_id, 'uscarrier'));
 	$shipcount = count ($uscarrier);
 	for ($i=0; $i<=$shipcount-1; $i++){
@@ -264,21 +265,7 @@
 					)
 		);
 	}
-	//uspremiums
-	$uspremium = $this->pdh->get('member', 'profile_field', array($this->url_id, 'uspremium'));
-	$shipcount = count ($uspremium);
-	for ($i=0; $i<=$shipcount-1; $i++){
-		$shipicon = $this->server_path."games/wows/profiles/ship/usa/premium/".$uspremium[$i].".png";
-		$this->tpl->assign_block_vars(
-			'uspremiums', array(
-					'ICON' => $shipicon,
-					'NAT'	=> $usship,
-					'ID'	=> $uspremium[$i],
-					'NAME'	=> $uspremiumname[$uspremium[$i]],
-					)
-		);
-	}
-		//jpndestroyers
+//jpndestroyers
 	$jpndestroyer = $this->pdh->get('member', 'profile_field', array($this->url_id, 'jpndestroyer'));
 	$shipcount = count ($jpndestroyer);
 	for ($i=0; $i<$shipcount; $i++){
@@ -292,8 +279,7 @@
 			)
 		);	
 	}
-
-	//jpncruisers
+//jpncruisers
 	$jpncruiser = $this->pdh->get('member', 'profile_field', array($this->url_id, 'jpncruiser'));
 	$shipcount = count ($jpncruiser);
 	for ($i=0; $i<=$shipcount-1; $i++){
@@ -307,7 +293,7 @@
 					)
 		);
 	}
-	//jpnbattleship
+//jpnbattleship
 	$jpnbattleship = $this->pdh->get('member', 'profile_field', array($this->url_id, 'jpnbattleship'));
 	$shipcount = count ($jpnbattleship);
 	for ($i=0; $i<=$shipcount-1; $i++){
@@ -321,7 +307,7 @@
 					)
 		);
 	}
-	//jpncarriers
+//jpncarriers
 	$jpncarrier = $this->pdh->get('member', 'profile_field', array($this->url_id, 'jpncarrier'));
 	$shipcount = count ($jpncarrier);
 	for ($i=0; $i<=$shipcount-1; $i++){
@@ -335,21 +321,7 @@
 					)
 		);
 	}
-	//jpnpremiums
-	$jpnpremium = $this->pdh->get('member', 'profile_field', array($this->url_id, 'jpnpremium'));
-	$shipcount = count ($jpnpremium);
-	for ($i=0; $i<=$shipcount-1; $i++){
-		$shipicon = $this->server_path."games/wows/profiles/ship/jpn/premium/".$jpnpremium[$i].".png";
-		$this->tpl->assign_block_vars(
-			'jpnpremiums', array(
-					'ICON' => $shipicon,
-					'NAT'	=> $jpnship,
-					'ID'	=> $jpnpremium[$i],
-					'NAME'	=> $jpnpremiumname[$jpnpremium[$i]],
-					)
-		);
-	}
-		//gerdestroyers
+//gerdestroyers
 	$gerdestroyer = $this->pdh->get('member', 'profile_field', array($this->url_id, 'gerdestroyer'));
 	$shipcount = count ($gerdestroyer);
 	for ($i=0; $i<$shipcount; $i++){
@@ -364,7 +336,7 @@
 		);	
 	}
 
-	//gercruisers
+//gercruisers
 	$gercruiser = $this->pdh->get('member', 'profile_field', array($this->url_id, 'gercruiser'));
 	$shipcount = count ($gercruiser);
 	for ($i=0; $i<=$shipcount-1; $i++){
@@ -378,7 +350,7 @@
 					)
 		);
 	}
-	//gerbattleship
+//gerbattleship
 	$gerbattleship = $this->pdh->get('member', 'profile_field', array($this->url_id, 'gerbattleship'));
 	$shipcount = count ($gerbattleship);
 	for ($i=0; $i<=$shipcount-1; $i++){
@@ -392,7 +364,7 @@
 					)
 		);
 	}
-	//gercarriers
+//gercarriers
 	$gercarrier = $this->pdh->get('member', 'profile_field', array($this->url_id, 'gercarrier'));
 	$shipcount = count ($gercarrier);
 	for ($i=0; $i<=$shipcount-1; $i++){
@@ -406,21 +378,7 @@
 					)
 		);
 	}
-	//gerpremiums
-	$gerpremium = $this->pdh->get('member', 'profile_field', array($this->url_id, 'gerpremium'));
-	$shipcount = count ($gerpremium);
-	for ($i=0; $i<=$shipcount-1; $i++){
-		$shipicon = $this->server_path."games/wows/profiles/ship/ger/premium/".$gerpremium[$i].".png";
-		$this->tpl->assign_block_vars(
-			'gerpremiums', array(
-					'ICON' => $shipicon,
-					'NAT'	=> $gership,
-					'ID'	=> $gerpremium[$i],
-					'NAME'	=> $gerpremiumname[$gerpremium[$i]],
-					)
-		);
-	}
-		//udssrdestroyers
+//udssrdestroyers
 	$udssrdestroyer = $this->pdh->get('member', 'profile_field', array($this->url_id, 'udssrdestroyer'));
 	$shipcount = count ($udssrdestroyer);
 	for ($i=0; $i<$shipcount; $i++){
@@ -435,7 +393,7 @@
 		);	
 	}
 
-	//udssrcruisers
+//udssrcruisers
 	$udssrcruiser = $this->pdh->get('member', 'profile_field', array($this->url_id, 'udssrcruiser'));
 	$shipcount = count ($udssrcruiser);
 	for ($i=0; $i<=$shipcount-1; $i++){
@@ -449,7 +407,7 @@
 					)
 		);
 	}
-	//udssrbattleship
+//udssrbattleship
 	$udssrbattleship = $this->pdh->get('member', 'profile_field', array($this->url_id, 'udssrbattleship'));
 	$shipcount = count ($udssrbattleship);
 	for ($i=0; $i<=$shipcount-1; $i++){
@@ -463,7 +421,7 @@
 					)
 		);
 	}
-	//udssrcarriers
+//udssrcarriers
 	$udssrcarrier = $this->pdh->get('member', 'profile_field', array($this->url_id, 'udssrcarrier'));
 	$shipcount = count ($udssrcarrier);
 	for ($i=0; $i<=$shipcount-1; $i++){
@@ -477,21 +435,7 @@
 					)
 		);
 	}
-	//udssrpremiums
-	$udssrpremium = $this->pdh->get('member', 'profile_field', array($this->url_id, 'udssrpremium'));
-	$shipcount = count ($udssrpremium);
-	for ($i=0; $i<=$shipcount-1; $i++){
-		$shipicon = $this->server_path."games/wows/profiles/ship/udssr/premium/".$udssrpremium[$i].".png";
-		$this->tpl->assign_block_vars(
-			'udssrpremiums', array(
-					'ICON' => $shipicon,
-					'NAT'	=> $udssrship,
-					'ID'	=> $udssrpremium[$i],
-					'NAME'	=> $udssrpremiumname[$udssrpremium[$i]],
-					)
-		);
-	}
-		//gbdestroyers
+//gbdestroyers
 	$gbdestroyer = $this->pdh->get('member', 'profile_field', array($this->url_id, 'gbdestroyer'));
 	$shipcount = count ($gbdestroyer);
 	for ($i=0; $i<$shipcount; $i++){
@@ -506,7 +450,7 @@
 		);	
 	}
 
-	//gbcruisers
+//gbcruisers
 	$gbcruiser = $this->pdh->get('member', 'profile_field', array($this->url_id, 'gbcruiser'));
 	$shipcount = count ($gbcruiser);
 	for ($i=0; $i<=$shipcount-1; $i++){
@@ -520,7 +464,7 @@
 					)
 		);
 	}
-	//gbbattleship
+//gbbattleship
 	$gbbattleship = $this->pdh->get('member', 'profile_field', array($this->url_id, 'gbbattleship'));
 	$shipcount = count ($gbbattleship);
 	for ($i=0; $i<=$shipcount-1; $i++){
@@ -534,7 +478,7 @@
 					)
 		);
 	}
-	//gbcarriers
+//gbcarriers
 	$gbcarrier = $this->pdh->get('member', 'profile_field', array($this->url_id, 'gbcarrier'));
 	$shipcount = count ($gbcarrier);
 	for ($i=0; $i<=$shipcount-1; $i++){
@@ -545,20 +489,6 @@
 					'NAT'	=> $gbship,
 					'ID'	=> $gbcarrier[$i],
 					'NAME'	=> $gbcarriername[$gbcarrier[$i]],
-					)
-		);
-	}
-	//gbpremiums
-	$gbpremium = $this->pdh->get('member', 'profile_field', array($this->url_id, 'gbpremium'));
-	$shipcount = count ($gbpremium);
-	for ($i=0; $i<=$shipcount-1; $i++){
-		$shipicon = $this->server_path."games/wows/profiles/ship/gb/premium/".$gbpremium[$i].".png";
-		$this->tpl->assign_block_vars(
-			'gbpremiums', array(
-					'ICON' => $shipicon,
-					'NAT'	=> $gbship,
-					'ID'	=> $gbpremium[$i],
-					'NAME'	=> $gbpremiumname[$gbpremium[$i]],
 					)
 		);
 	}

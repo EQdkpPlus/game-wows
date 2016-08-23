@@ -41,179 +41,11 @@ $german_array =  array(
 		2	=> 'Kreuzer',
 		3	=> 'Schlachtschiff',
 		4	=> 'Flugzeugträger',
-//		5	=> 'Premium',
 	),
 
-/* Schiffsnummer zusammengesetzt:   Rasse : Premium : Klasse : Stufe */
 
-	'ships' => array(
-		0			=> 'Wähle Schiff',
-	// Zerstörer
-		//US
-		10100		=>	'-',
-		10101		=>	'-',
-		10102		=>	'II Sampson',
-		10103		=>	'III Wickes',
-		10104		=>	'IV Clemson',
-		10105		=>	'V Nicholas',
-		10105		=>	'VI Farragut',
-		10107		=>	'VII Mahan',
-		10108		=>	'VIII Benson',
-		10109		=>	'IX Fletcher',
-		10110		=>	'X Gearing',
-		//Japan
-		20100		=>	'-',
-		20101		=>	'-',
-		20102		=>	'II Umikaze',
-		20103		=>	'III Wakatake',
-		20104		=>	'IV Isokaze',
-		20105		=>	'V Minekaze',
-		20106		=>	'VI Mutsuki',
-		20107		=>	'VII Hatsuharu',
-		20108		=>	'VIII Fubuki',
-		20109		=>	'IX Kagero',
-		20110		=>	'X Shimakaze',
-		
-		//Deutschland
-		
-		//GB
-		
-		//UDSSR
-		50101		=>	'',
-		50102		=>	'II Storoschewoi',
-		50103		=>	'III Derzki',
-		50104		=>	'IV Isjaslaw',
-		50105		=>	'V Gnewni',
-		50106		=>	'VI Ognewoi',
-		50107		=>	'VII Kiew',
-		50108		=>	'VIII Taschkent',
-		50109		=>	'IX Udaloi',
-		50110		=>	'X Khabarowsk',
-	
 
-		//PremiumSchiffe
-		51105		=>	'V Gremjaschtschi',
-		
-	//Kreuzer
-		//US
-		10200		=>	'-',
-		10201		=>	'I Erie',
-		10202		=>	'II Chester',
-		10203		=>	'III St. Louis',
-		10204		=>	'IV Phoenix',
-		10205		=>	'V Omaha',
-		10206		=>	'VI Cleveland',
-		10207		=>	'VII Pensacola',
-		10208		=>	'VIII New Orleans',
-		10209		=>	'IX Baltimore',
-		10210		=>	'X Des Moines',
-		//Japan
-		20200		=>	'-',
-		20201		=>	'I Katori',
-		20202		=>	'II Chikuma',
-		20203		=>	'III Tenryu',
-		20204		=>	'IV Kuma',
-		20205		=>	'V Furutaka',
-		20206		=>	'VI Aoba',
-		20207		=>	'VII Myoko',
-		20208		=>	'VIII Mogami',
-		20209		=>	'IX Ibuki',
-		20210		=>	'X Zao',
-		
-		//Deutschland
-		
-		//GB	
-		
-		//UDSSR
-		50201		=>	'I Orlan',
-		50202		=>	'II Nowik',
-		50203		=>	'III Bogatyr',
-		50204		=>	'IV Swietlana',
-		50205		=>	'V Kirow',
-		50206		=>	'VI Budjonny',
-		50207		=>	'VII Schtschors',
-		50208		=>	'VIII Tschapajew',
-		50209		=>	'IX DM. Donskoi',
-		50210		=>	'X Moskwa',
-		
-/*		
-		//PremiumSchiffe
-		11202		=>	'II Albany',
-		11207		=>	'VII Atlanta',
-		21208		=>	'VIII Katikami',
-		51203		=>	'III Aurora',
-		51205		=>	'V Murmansk',
-*/		
-	//Schlachtschiffe
-		//US
-		10300		=>	'-',
-		10301		=>	'-',
-		10302		=>	'-',
-		10303		=>	'III South Carolina',
-		10304		=>	'IV Wyoming',
-		10305		=>	'V New York',
-		10306		=>	'VI New Mexico',
-		10307		=>	'VII Colorado',
-		10308		=>	'VIII North Carolina',
-		10309		=>	'IX Iowa',
-		10310		=>	'X Montana',
-		//Japan
-		20300		=>	'-',
-		20301		=>	'-',
-		20302		=>	'-',
-		20303		=>	'III Kawachi',
-		20304		=>	'IV Myogi',
-		20305		=>	'V Kongo',
-		20306		=>	'VI Fuso',
-		20307		=>	'VII Nagato',
-		20308		=>	'VIII Amagi',
-		20309		=>	'IX Izumo',
-		20310		=>	'X Yamato',
-		
-		//Deutschland
-		
-		//GB	
-		
-		//UDSSR
-		
-		//PremiumSchiffe
-//		41306		=>	'VI Warspite',
-
-	//Flugzeugträger
-		//US
-		10400		=>	'-',
-		10401		=>	'-',
-		10402		=>	'-',
-		10403		=>	'-',
-		10404		=>	'IV Langley',
-		10405		=>	'V Bogue',
-		10406		=>	'VI Independence',
-		10407		=>	'VII Ranger',
-		10408		=>	'VIII Lexington',
-		10409		=>	'IX Essex',
-		10410		=>	'',
-		//Japan
-		20400		=>	'-',
-		20401		=>	'-',
-		20402		=>	'-',
-		20403		=>	'-',
-		20404		=>	'IV Hosho',
-		20405		=>	'V Zuiho',
-		20406		=>	'VI Ryujo',
-		20407		=>	'VII Shokaku',
-		20408		=>	'-',
-		20409		=>	'-',
-		20410		=>	'-',
-		//Deutschland
-		
-		//GB	
-		
-		//UDSSR
-		
-		//PremiumSchiffe
-	),
-
-//Auswahl Multiselect
+//Auswahl Multiselect für Flotte
 
 //USA
 	'usdestroyer' => array(
@@ -238,6 +70,9 @@ $german_array =  array(
 		8		=>	'VIII New Orleans',
 		9		=>	'IX Baltimore',
 		10		=>	'X Des Moines',
+		11		=>	'*V Marblehead*',
+		12		=>	'*VII Atlanta*',
+		13		=>	'*VII Indianapolis*',
 		),
 	'usbattleship'	=> array(
 		3		=>	'III South Carolina',
@@ -248,6 +83,8 @@ $german_array =  array(
 		8		=>	'VIII North Carolina',
 		9		=>	'IX Iowa',
 		10		=>	'X Montana',
+		11		=>	'*VI Arizona*',
+		12		=>	'*V Texas*',
 		),
 	'uscarrier'	=>array(
 		4		=>	'IV Langley',
@@ -257,13 +94,8 @@ $german_array =  array(
 		8		=>	'VIII Lexington',
 		9		=>	'IX Essex',
 		10		=>	'X Midway',
+		11		=>	'*VII Saipan*',
 		),
-
-/*	'uspremium'	=>array(
-		1		=>	'-',
-		),	
-		
-*/	
 
 //Japan	
 	'jpndestroyer'	=> array(
@@ -276,6 +108,7 @@ $german_array =  array(
 		8		=>	'VIII Fubuki',
 		9		=>	'IX Kagero',
 		10		=>	'X Shimakaze',
+		11		=>	'*II Tachibana*',
 		),
 	'jpncruiser'	=> array(
 		1		=>	'I Katori',
@@ -288,6 +121,7 @@ $german_array =  array(
 		8		=>	'VIII Mogami',
 		9		=>	'IX Ibuki',
 		10		=>	'X Zao',
+		11		=>	'*VIII Atago'
 		),
 	'jpnbattleship'	=>array(
 		3		=>	'III Kawachi',
@@ -298,6 +132,8 @@ $german_array =  array(
 		8		=>	'VIII Amagi',
 		9		=>	'IX Izumo',
 		10		=>	'X Yamato',
+		11		=>	'*II Mikasa*',
+		12		=>	'*IV Ishizuchi*',
 		),
 	'jpncarrier'	=>array(
 		4		=>	'IV Hosho',
@@ -308,10 +144,7 @@ $german_array =  array(
 		9		=>	'IX Taiho',
 		10		=>	'X Hakuryu',
 		),
-/*	'jpnpremium'	=>array(
-		1		=>	'-',
-		),
-*/
+
 // Deutschland	
 	'gerdestroyer' => array(
 		0		=>	'-----',
@@ -327,6 +160,7 @@ $german_array =  array(
 		8		=>	'VIII Hipper',
 		9		=>	'IX Roon',
 		10		=>	'X Hindenburg',
+		11		=>	'*II Emden*',
 		),
 	'gerbattleship'	=> array(
 		3		=>	'III Nassau',
@@ -337,38 +171,27 @@ $german_array =  array(
 		8		=>	'VIII Bismarck',
 		9		=>	'IX Friedrich der Große',
 		10		=>	'X Großer Kurfürst',
+		11		=>	'*VII Scharnhorst*',
+		12		=>	'*VIII Tirpitz*',
 
 		),
 	'gercarrier'	=>array(
 		0		=>	'-----',
 		),
 
-/*	'gerpremium'	=>array(
-		1		=>	'-',
-		),	
-		
-*/	
-
 //Briten
 	'gbdestroyer' => array(
-		0		=>	'-----',
+		11		=>	'*III Campbeltown*',
 		),
 	'gbcruiser' => array(
 		0		=>	'-----',
 		),
 	'gbbattleship'	=> array(
-		0		=>	'-----',
+		11		=>	'*VI Warspite*'
 		),
 	'gbcarrier'	=>array(
 		0		=>	'-----',
-		),
-
-/*	'gbpremium'	=>array(
-		1		=>	'-----',
 		),	
-		
-*/
-
 //Russland
 	'udssrdestroyer' => array(
 		2		=>	'II Storoschewoi',
@@ -392,6 +215,13 @@ $german_array =  array(
 		8		=>	'VIII Tschapajew',
 		9		=>	'IX DM. Donskoi',
 		10		=>	'X Moskwa',
+		11		=>	'*II Diana*',
+		12		=>	'*III Aurora*',
+		13		=>	'*V Murmansk*',
+		14		=>	'*V Krasni Krim*',
+		15		=>	'*VI Molotow*',
+		16		=>	'*VIII Kutusow*',
+
 		),
 	'udssrbattleship'	=> array(
 		0		=>	'-----',
@@ -400,11 +230,6 @@ $german_array =  array(
 		0		=>	'-----',
 		),
 
-/*	'udssrpremium'	=>array(
-		0		=>	'-----',
-		),	
-		
-*/
 	'lang' => array(
 		'wows'				=>	'World of Warships',
 		'uc_realm'			=>	'Realm',
@@ -416,36 +241,38 @@ $german_array =  array(
 		'uc_class'			=> 'Bevorzugte Schiffsklasse',
 		'uc_profil'			=> 'Profil',
 		'uc_achievement'	=> 'Erfolge',
+		'id_miss'			=> 'Wargamin ID und Realm angeben',
+		'wargaming_level'	=>	'Wehrpass-Stufe',
 		
 		'uc_us_destroyer'	=> 'US Zerstörer',
 		'uc_us_cruiser'		=> 'US Kreuzer',
 		'uc_us_battleship'	=> 'US Schlachtschiff',
 		'uc_us_carrier'		=> 'US Flugzeugträger',
-//		'uc_us_premium'		=> 'US Premiumschiffe',
+		'uc_us_premium'		=> 'US Premiumschiffe',
 		
 		'uc_jpn_destroyer'	=> 'JPN Zerstörer',
 		'uc_jpn_cruiser'	=> 'JPN Kreuzer',
 		'uc_jpn_battleship'	=> 'JPN Schlachtschiff',
 		'uc_jpn_carrier'	=> 'JPN Flugzeugträger',
-//		'uc_jpn_premium'	=> 'JPN Premiumschiffe',
+		'uc_jpn_premium'	=> 'JPN Premiumschiffe',
 		
 //		'uc_ger_destroyer'	=> 'GER Zerstörer',
 		'uc_ger_cruiser'	=> 'GER Kreuzer',
 		'uc_ger_battleship'	=> 'GER Schlachtschiff',
 //		'uc_ger_carrier'	=> 'GER Flugzeugträger',
-//		'uc_ger_premium'	=> 'GER Premiumschiffe',
+		'uc_ger_premium'	=> 'GER Premiumschiffe',
 		
-//		'uc_gb_destroyer'	=> 'GB Zerstörer',
+		'uc_gb_destroyer'	=> 'GB Zerstörer',
 //		'uc_gb_cruiser'		=> 'GB Kreuzer',
-//		'uc_gb_battleship'	=> 'GB Schlachtschiff',
+		'uc_gb_battleship'	=> 'GB Schlachtschiff',
 //		'uc_gb_carrier'		=> 'GB Flugzeugträger',
-//		'uc_gb_premium'		=> 'GB Premiumschiffe',
+		'uc_gb_premium'		=> 'GB Premiumschiffe',
 
 		'uc_udssr_destroyer'	=> 'UDSSR Zerstörer',
 		'uc_udssr_cruiser'		=> 'UDSSR Kreuzer',
 //		'uc_udssr_battleship'	=> 'UDSSR Schlachtschiff',
 //		'uc_udssr_carrier'		=> 'UDSSR Flugzeugträger',
-//		'uc_udssr_premium'		=> 'UDSSR Premiumschiffe',
+		'uc_udssr_premium'		=> 'UDSSR Premiumschiffe',
 
 
 //Achievement

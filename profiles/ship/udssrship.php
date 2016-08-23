@@ -44,6 +44,13 @@ if ( !defined('EQDKP_INC') ){
 		8		=>	'Tschapajew',
 		9		=>	'DM. Donskoi',
 		10		=>	'Moskwa',
+		11		=>	'Diana',
+		12		=>	'Aurora',
+		13		=>	'Murmansk',
+		14		=>	'Krasni Krim',
+		15		=>	'Molotow',
+		16		=>	'Kutusow',
+
 		);
 
 	$udssrbattleshipname =  array( // Namen i.o.
@@ -53,14 +60,4 @@ if ( !defined('EQDKP_INC') ){
 	$udssrcarriername =  array( // Namen i.o.
 
 		);
-
-/*	$udssrpremiumname =  array( // Namen i.o.
-		2		=>	'Diana',
-		3		=>	'Aurora',
-		5		=>	'Murmansk',
-		6		=>	'Molotow',
-		8		=>	'Kutusow',
-		);
-
-*/
  ?>

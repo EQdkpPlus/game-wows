@@ -26,7 +26,7 @@ if ( !defined('EQDKP_INC') ){
 if(!class_exists('wows')) {
 	class wows extends game_generic {
 		protected static $apiLevel	= 20;
-		public $version				= '0.5.8.1';
+		public $version				= '0.5.10.0';
 		protected $this_game		= 'wows';
 		protected $types			= array('factions','classes','roles');
 		protected $classes			= array();
@@ -62,17 +62,16 @@ if(!class_exists('wows')) {
 				),
 		);
 		public $default_roles = array( 
-			1 => array(1,2,3,4,5),
-			2 => array(1,2,3,4,5),
-			3 => array(1,2,3,4,5),
-			4 => array(1,2,3,4,5)
+			1 => array(1,2,3,4),
+			2 => array(1,2,3,4),
+			3 => array(1,2,3,4),
+			4 => array(1,2,3,4)
 		);
 		protected $class_colors = array(
 			1	=> '#770000',
 			2	=> '#007700',
 			3	=> '#000077',
 			4	=> '#770077',
-			5	=> '#777700',
 		);
 		protected $glang		= array();
 		protected $lang_file	= array();
@@ -81,36 +80,31 @@ if(!class_exists('wows')) {
 		
 		public function profilefields(){
 		
-		// Laden der Schiffsnamen aus der Sprachdatei für Dropdownmenü
+// Laden der Schiffsnamen aus der Sprachdatei für Dropdownmenü
 			$this->load_type('usdestroyer', array($this->lang));
 			$this->load_type('uscruiser', array($this->lang));
 			$this->load_type('usbattleship', array($this->lang));
 			$this->load_type('uscarrier', array($this->lang));
-			$this->load_type('uspremium', array($this->lang));
+
 			$this->load_type('jpndestroyer', array($this->lang));
 			$this->load_type('jpncruiser', array($this->lang));
 			$this->load_type('jpnbattleship', array($this->lang));
 			$this->load_type('jpncarrier', array($this->lang));
-			$this->load_type('jpnpremium', array($this->lang));
+
 			$this->load_type('gerdestroyer', array($this->lang));
 			$this->load_type('gercruiser', array($this->lang));
 			$this->load_type('gerbattleship', array($this->lang));
 			$this->load_type('gercarrier', array($this->lang));
-			$this->load_type('gerpremium', array($this->lang));
+
 			$this->load_type('gbdestroyer', array($this->lang));
 			$this->load_type('gbcruiser', array($this->lang));
 			$this->load_type('gbbattleship', array($this->lang));
 			$this->load_type('gbcarrier', array($this->lang));
-			$this->load_type('gbpremium', array($this->lang));
+
 			$this->load_type('udssrdestroyer', array($this->lang));
 			$this->load_type('udssrcruiser', array($this->lang));
 			$this->load_type('udssrbattleship', array($this->lang));
 			$this->load_type('udssrcarrier', array($this->lang));
-			$this->load_type('udssrpremium', array($this->lang));
-
-
-
-
 
 
 			$fields = array(
@@ -145,7 +139,7 @@ if(!class_exists('wows')) {
 					'lang'			=> 'uc_us_destroyer',
 					'undeletable'	=> true,
 					'visible'		=> true,
-					'options'		=> $this->usdestroyer[$this->lang],
+					'options'		=> $this->usdestroyer[$this->lang],  //Name aus german.php/english.php
 					'sort'			=> 1,
 				),
 				'uscruiser'	=> array(
@@ -175,16 +169,8 @@ if(!class_exists('wows')) {
 					'options'		=> $this->uscarrier[$this->lang],
 					'sort'			=> 4,
 				),
-/*				'uspremium'	=> array(
-					'type'			=> 'multiselect',
-					'category'		=> 'fleet',
-					'lang'			=> 'uc_us_premium',
-					'undeletable'	=> true,
-					'visible'		=> true,
-					'options'		=> $this->uspremium[$this->lang],
-					'sort'			=> 5,
-				),
-*/
+
+
 // Auswahl japanische Schiffe
 				'jpndestroyer'	=> array(
 					'type'			=> 'multiselect',
@@ -202,7 +188,7 @@ if(!class_exists('wows')) {
 					'undeletable'	=> true,
 					'visible'		=> true,
 					'options'		=> $this->jpncruiser[$this->lang],
-					'sort'			=> 7,
+					'sort'			=> 6,
 				),
 				'jpnbattleship'	=> array(
 					'type'			=> 'multiselect',
@@ -211,7 +197,7 @@ if(!class_exists('wows')) {
 					'undeletable'	=> true,
 					'visible'		=> true,
 					'options'		=> $this->jpnbattleship[$this->lang],
-					'sort'			=> 8,
+					'sort'			=> 7,
 				),
 				'jpncarrier'	=> array(
 					'type'			=> 'multiselect',
@@ -220,18 +206,9 @@ if(!class_exists('wows')) {
 					'undeletable'	=> true,
 					'visible'		=> true,
 					'options'		=> $this->jpncarrier[$this->lang],
-					'sort'			=> 9,
+					'sort'			=> 8,
 				),
-/*				'jpnpremium'	=> array(
-					'type'			=> 'multiselect',
-					'category'		=> 'fleet',
-					'lang'			=> 'uc_jpn_premium',
-					'undeletable'	=> true,
-					'visible'		=> true,
-					'options'		=> $this->jpnpremium[$this->lang],
-					'sort'			=> 10,
-				),
-*/
+
 // Auswahl deutsche Schiffe
 /*				'gerdestroyer'	=> array(
 					'type'			=> 'multiselect',
@@ -240,7 +217,7 @@ if(!class_exists('wows')) {
 					'undeletable'	=> true,
 					'visible'		=> true,
 					'options'		=> $this->gerdestroyer[$this->lang],
-					'sort'			=> 11,
+					'sort'			=> 9,
 				),
 */
 				'gercruiser'	=> array(
@@ -250,7 +227,7 @@ if(!class_exists('wows')) {
 					'undeletable'	=> true,
 					'visible'		=> true,
 					'options'		=> $this->gercruiser[$this->lang],
-					'sort'			=> 12,
+					'sort'			=> 10,
 				),
 
 				'gerbattleship'	=> array(
@@ -260,7 +237,7 @@ if(!class_exists('wows')) {
 					'undeletable'	=> true,
 					'visible'		=> true,
 					'options'		=> $this->gerbattleship[$this->lang],
-					'sort'			=> 13,
+					'sort'			=> 11,
 				),
 /*
 				'gercarrier'	=> array(
@@ -270,19 +247,12 @@ if(!class_exists('wows')) {
 					'undeletable'	=> true,
 					'visible'		=> true,
 					'options'		=> $this->gercarrier[$this->lang],
-					'sort'			=> 14,
-				),
-				'gerpremium'	=> array(
-					'type'			=> 'multiselect',
-					'category'		=> 'fleet',
-					'lang'			=> 'uc_ger_premium',
-					'undeletable'	=> true,
-					'visible'		=> true,
-					'options'		=> $this->gerpremium[$this->lang],
-					'sort'			=> 15,
+					'sort'			=> 12,
 				),
 */
-/* Auswahl britische Schiffe
+
+
+// Auswahl britische Schiffe
 				'gbdestroyer'	=> array(
 					'type'			=> 'multiselect',
 					'category'		=> 'fleet',
@@ -290,8 +260,9 @@ if(!class_exists('wows')) {
 					'undeletable'	=> true,
 					'visible'		=> true,
 					'options'		=> $this->gbdestroyer[$this->lang],
-					'sort'			=> 16,
+					'sort'			=> 13,
 				),
+/*
 				'gbcruiser'	=> array(
 					'type'			=> 'multiselect',
 					'category'		=> 'fleet',
@@ -299,8 +270,9 @@ if(!class_exists('wows')) {
 					'undeletable'	=> true,
 					'visible'		=> true,
 					'options'		=> $this->gbcruiser[$this->lang],
-					'sort'			=> 17,
+					'sort'			=> 14,
 				),
+*/
 				'gbbattleship'	=> array(
 					'type'			=> 'multiselect',
 					'category'		=> 'fleet',
@@ -308,8 +280,9 @@ if(!class_exists('wows')) {
 					'undeletable'	=> true,
 					'visible'		=> true,
 					'options'		=> $this->gbbattleship[$this->lang],
-					'sort'			=> 18,
+					'sort'			=> 15,
 				),
+/*
 				'gbcarrier'	=> array(
 					'type'			=> 'multiselect',
 					'category'		=> 'fleet',
@@ -317,18 +290,10 @@ if(!class_exists('wows')) {
 					'undeletable'	=> true,
 					'visible'		=> true,
 					'options'		=> $this->gbcarrier[$this->lang],
-					'sort'			=> 19,
-				),
-				'gbpremium'	=> array(
-					'type'			=> 'multiselect',
-					'category'		=> 'fleet',
-					'lang'			=> 'uc_gb_premium',
-					'undeletable'	=> true,
-					'visible'		=> true,
-					'options'		=> $this->gbpremium[$this->lang],
-					'sort'			=> 20,
+					'sort'			=> 16,
 				),
 */
+
 // Auswahl russische Schiffe
 				'udssrdestroyer'	=> array(
 					'type'			=> 'multiselect',
@@ -337,7 +302,7 @@ if(!class_exists('wows')) {
 					'undeletable'	=> true,
 					'visible'		=> true,
 					'options'		=> $this->udssrdestroyer[$this->lang],
-					'sort'			=> 21,
+					'sort'			=> 17,
 				),
 				'udssrcruiser'	=> array(
 					'type'			=> 'multiselect',
@@ -346,7 +311,7 @@ if(!class_exists('wows')) {
 					'undeletable'	=> true,
 					'visible'		=> true,
 					'options'		=> $this->udssrcruiser[$this->lang],
-					'sort'			=> 22,
+					'sort'			=> 18,
 				),
 /*				'udssrbattleship'	=> array(
 					'type'			=> 'multiselect',
@@ -355,7 +320,7 @@ if(!class_exists('wows')) {
 					'undeletable'	=> true,
 					'visible'		=> true,
 					'options'		=> $this->udssrbattleship[$this->lang],
-					'sort'			=> 23,
+					'sort'			=> 19,
 				),
 				'udssrcarrier'	=> array(
 					'type'			=> 'multiselect',
@@ -364,19 +329,9 @@ if(!class_exists('wows')) {
 					'undeletable'	=> true,
 					'visible'		=> true,
 					'options'		=> $this->udssrcarrier[$this->lang],
-					'sort'			=> 24,
-				),
-				'udssrpremium'	=> array(
-					'type'			=> 'multiselect',
-					'category'		=> 'fleet',
-					'lang'			=> 'uc_udssr_premium',
-					'undeletable'	=> true,
-					'visible'		=> true,
-					'options'		=> $this->udssrpremium[$this->lang],
-					'sort'			=> 25,
+					'sort'			=> 20,
 				),
 */
-
 			);
 			return $fields;
 		}

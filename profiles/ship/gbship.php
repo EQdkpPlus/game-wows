@@ -22,7 +22,7 @@ if ( !defined('EQDKP_INC') ){
 	header('HTTP/1.0 404 Not Found');exit;
 }
 	$gbdestroyername =  array( //Namen i.o.
-
+		11		=>	'Campbeltown',
 		);
 
  	$gbcruisername =  array( // Namen i.o.
@@ -30,17 +30,10 @@ if ( !defined('EQDKP_INC') ){
 		);
 
 	$gbbattleshipname =  array( // Namen i.o.
-
+		11		=>	'Warspite'
 		);
 
 	$gbcarriername =  array( // Namen i.o.
 
 		);
-
-/*	$gbpremiumname =  array( // Namen i.o.
-		3		=>	'Campbeltown',
-		6		=>	'Warspite',
-		);
-
-*/
  ?>

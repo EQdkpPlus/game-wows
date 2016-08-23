@@ -46,6 +46,7 @@ if ( !defined('EQDKP_INC') ){
 		8		=>	'Hipper',
 		9		=>	'Roon',
 		10		=>	'Hindenburg',
+		11		=>	'Emden',//
 		);
 
 	$gerbattleshipname =  array( // Namen i.o.
@@ -57,14 +58,11 @@ if ( !defined('EQDKP_INC') ){
 		8		=>	'Bismarck',
 		9		=>	'Friedrich der Große',
 		10		=>	'Großer Kurfürst',
+		11		=>	'Scharnhorst',//
+		12		=>	'Tirpitz',//
 		);
 
 	$gercarriername =  array( // Namen i.o.
 
 		);
-
-/*	$gerpremiumname =  array( // Namen i.o.
-		2		=>	'Emden',
-		);
-*/
  ?>
