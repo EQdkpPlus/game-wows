@@ -243,6 +243,12 @@ $german_array =  array(
 		'uc_achievement'	=> 'Erfolge',
 		'id_miss'			=> 'Wargamin ID und Realm angeben',
 		'wargaming_level'	=>	'Wehrpass-Stufe',
+		//Events
+		'event_1'				=>	'Zufallsgefecht',
+		'event_2'				=>	'Co-op Gefecht',
+		'event_3'				=>	'Gewertetes Gefecht',
+		'event_4'				=>	'Teamgefecht',
+		
 		
 		'uc_us_destroyer'	=> 'US Zerstörer',
 		'uc_us_cruiser'		=> 'US Kreuzer',

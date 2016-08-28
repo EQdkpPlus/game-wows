@@ -104,7 +104,7 @@
 			line-height:16px;
 		}
 		a.wowstooltip:hover span{
-			font-color:434343;
+			font-color:#434343;
 			display:inline; position:absolute; 
 			border:1px solid #434343;  color:#434343;
 			background:#eee;

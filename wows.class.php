@@ -68,10 +68,10 @@ if(!class_exists('wows')) {
 			4 => array(1,2,3,4)
 		);
 		protected $class_colors = array(
-			1	=> '#770000',
-			2	=> '#007700',
-			3	=> '#000077',
-			4	=> '#770077',
+			1	=> '#ffcb80',
+			2	=> '#ffcb80',
+			3	=> '#ffcb80',
+			4	=> '#ffcb80',
 		);
 		protected $glang		= array();
 		protected $lang_file	= array();
@@ -337,7 +337,18 @@ if(!class_exists('wows')) {
 		}
 		
 		public function install($install=false){
-			return array();
+			
+			$arrEventIDs = array();
+
+			// Legion events
+			$arrEventIDs[] = $this->game->addEvent($this->glang('event_1'), 0, "1.png");
+			$arrEventIDs[] = $this->game->addEvent($this->glang('event_2'), 0, "2.png");
+			$arrEventIDs[] = $this->game->addEvent($this->glang('event_3'), 0, "3.png");
+			$arrEventIDs[] = $this->game->addEvent($this->glang('event_4'), 0, "4.png");
+			
+			
+			//Links
+			$this->game->addLink('Wargaming', 'http://worldofwarships.eu/de/content/game/');
 		}
 
 		protected function load_filters($langs){
