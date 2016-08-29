@@ -31,7 +31,7 @@ if(!class_exists('wows')) {
 		protected $types			= array('factions','classes','roles');
 		protected $classes			= array();
 		protected $races			= array();
-		public $langs				= array('german');
+		public $langs				= array('german','english');
 
 		protected $class_dependencies = array(
 			array(
