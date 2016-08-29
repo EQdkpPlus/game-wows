@@ -104,10 +104,10 @@
 			line-height:16px;
 		}
 		a.wowstooltip:hover span{
-			font-color:#434343;
+			font-color:#ffcb80;
 			display:inline; position:absolute; 
-			border:1px solid #434343;  color:#434343;
-			background:#eee;
+			border:1px solid #52575a;  color:#ffcb80;
+			background:#303b41;
 		}
 
 		a.wowstooltip span
@@ -126,10 +126,10 @@
 			line-height:16px;
 		}
 		a.wowstooltip2:hover span{
-			font-color:#434343;
+			font-color:#ffcb80;
 			display:inline; position:absolute; 
-			border:2px solid #434343;  color:#434343;
-			background:#eee;
+			border:2px solid #52575a;  color:#ffcb80;
+			background:#303b41;
 		}
 		a.wowstooltip2 span
 		{
@@ -190,10 +190,10 @@
 		'LEVEL_ICON_PATH'		=>	$this->server_path."games/wows/profiles/icons/level",
 		'ACHIEVEMENT_ICON_PATH'		=>	$this->server_path."games/wows/profiles/icons/achievement/icon_achievement_",
 		'NATION'				=> $this->server_path."games/wows/profiles/nations/".$nationflag,
-		'CLASS1ICON'			=> $this->server_path."games/wows/icons/classes/1_b.png",
-		'CLASS2ICON'			=> $this->server_path."games/wows/icons/classes/2_b.png",
-		'CLASS3ICON'			=> $this->server_path."games/wows/icons/classes/3_b.png",
-		'CLASS4ICON'			=> $this->server_path."games/wows/icons/classes/4_b.png",
+		'CLASS1ICON'			=> $this->server_path."games/wows/icons/classes/1.svg",
+		'CLASS2ICON'			=> $this->server_path."games/wows/icons/classes/2.svg",
+		'CLASS3ICON'			=> $this->server_path."games/wows/icons/classes/3.svg",
+		'CLASS4ICON'			=> $this->server_path."games/wows/icons/classes/4.svg",
 		'PROFILURL'				=> $this->server_path."games/wows/profiles/",
 	));
 //Achievements
