@@ -350,7 +350,9 @@ if(!class_exists('wows')) {
 			//Links
 			$this->game->addLink('Wargaming', 'http://worldofwarships.eu/de/content/game/');
 		}
-
+		public function uninstall(){
+			$this->game->removeLink("Wargaming");
+		}
 		protected function load_filters($langs){
 			return array();
 		}
