@@ -346,12 +346,14 @@ if(!class_exists('wows')) {
 			$arrEventIDs[] = $this->game->addEvent($this->glang('event_3'), 0, "3.png");
 			$arrEventIDs[] = $this->game->addEvent($this->glang('event_4'), 0, "4.png");
 			
-			
+			https://eqdkp-plus.eu/wiki/World_of_Warships
 			//Links
 			$this->game->addLink('Wargaming', 'http://worldofwarships.eu/de/content/game/');
+			$this->game->addLink('Wiki Account ID', 'https://eqdkp-plus.eu/wiki/World_of_Warships');
 		}
 		public function uninstall(){
 			$this->game->removeLink("Wargaming");
+			$this->game->removeLink("Wiki Account ID");
 		}
 		protected function load_filters($langs){
 			return array();
