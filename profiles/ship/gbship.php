@@ -26,7 +26,16 @@ if ( !defined('EQDKP_INC') ){
 		);
 
  	$gbcruisername =  array( // Namen i.o.
-
+		1		=>	'Black Swan',
+		2		=>	'Weymouth',
+		3		=>	'Caledon',
+		4		=>	'Danae',
+		5		=>	'Emerald',
+		6		=>	'Leander',
+		7		=>	'Fiji',
+		8		=>	'Edinburgh',
+		9		=>	'Neptune',
+		10		=>	'Minotaur',
 		);
 
 	$gbbattleshipname =  array( // Namen i.o.

@@ -27,7 +27,7 @@ $german_array =  array(
 		'us'	=> 'Vereinigte Staaten',	
 		'jpn'	=> 'Japan',					
 		'ger'	=> 'Deutschland',			
-		'gb'	=> 'Groß Britanien',			
+		'gb'	=> 'Vereintes Königreich',			
 		'udssr'	=> 'Sowjetunion',
 	),
 	'roles' => array(
@@ -111,7 +111,7 @@ $german_array =  array(
 		11		=>	'*II Tachibana*',
 		),
 	'jpncruiser'	=> array(
-		1		=>	'I Katori',
+		1		=>	'I Hashidate',
 		2		=>	'II Chikuma',
 		3		=>	'III Tenryu',
 		4		=>	'IV Kuma',
@@ -184,7 +184,16 @@ $german_array =  array(
 		11		=>	'*III Campbeltown*',
 		),
 	'gbcruiser' => array(
-		0		=>	'-----',
+		1		=>	'I Black Swan',
+		2		=>	'II Weymouth',
+		3		=>	'III Caledon',
+		4		=>	'IV Danae',
+		5		=>	'V Emerald',
+		6		=>	'VI Leander',
+		7		=>	'VII Fiji',
+		8		=>	'VIII Edinburgh',
+		9		=>	'IX Neptune',
+		10		=>	'X Minotaur',
 		),
 	'gbbattleship'	=> array(
 		11		=>	'*VI Warspite*'
@@ -269,7 +278,7 @@ $german_array =  array(
 		'uc_ger_premium'	=> 'GER Premiumschiffe',
 		
 		'uc_gb_destroyer'	=> 'GB Zerstörer',
-//		'uc_gb_cruiser'		=> 'GB Kreuzer',
+		'uc_gb_cruiser'		=> 'GB Kreuzer',
 		'uc_gb_battleship'	=> 'GB Schlachtschiff',
 //		'uc_gb_carrier'		=> 'GB Flugzeugträger',
 		'uc_gb_premium'		=> 'GB Premiumschiffe',
@@ -328,6 +337,16 @@ $german_array =  array(
 		'FIREPROOF'		=>	'Feuerfest !',	
 		'AMAUTEUR'		=>	'Amateur !',	
 		'SCIENCE_OF_WINNING_LUCKY'		=>	'Marinekriegsführung: Glückstreffer !',
+		'BD2016_RUN_FOREST'	=>	'Lauf! Admiral! Lauf!',
+		'BD2016_KING_OF_PARTY'	=>	'König der Party',
+		'BD2016_WRONG_SOW'	=>	'Ein Schuss ins Blaue',
+		'BD2016_MANNERS'	=>	'Manieren machen uns zu Menschen', 
+		'BD2016_SNATCH'		=>	'Große Rolle', 
+		'BD2016_PARTY_ANIMAL'	=>	'Mittelpunkt der Party',
+		'BD2016_RISE_OF_THE_MACHINES'	=>	'Aufstand der Maschinen',
+		'BD2016_FESTIV_SOUP'	=>	'Festliche Suppe',
+		'BD2016_FIRESHOW'	=>	'Feuershow',
+		'BD2016_PARTY_CHECK_IN'	=>	'Kolonnenspringer',
 
 // Achievement Tooltip-Descrition		
 		'RETRIBUTION_DES'		=>	'Zerstören Sie ein gegnerisches Schiff, nachdem Ihr Schiff zerstört wurde.',
@@ -376,6 +395,16 @@ $german_array =  array(
 		'FIREPROOF_DES'		=>	'Erhalten Sie Schaden durch Brände, der 40% der Ausgangs-TP Ihres Schiffes übersteigt und überleben Sie das Gefecht.',	
 		'AMAUTEUR_DES'		=>	'Gewinnen Sie 10 Zufallsgefechte.',	
 		'SCIENCE_OF_WINNING_LUCKY_DES'		=>	'Zerstören Sie ein gegnerisches Schiff, indem Sie dessen Munitionsbunker zur Detonation bringen.',
+		'BD2016_RUN_FOREST'	=>	'Geschafft',
+		'BD2016_KING_OF_PARTY'	=>	'Geschafft',
+		'BD2016_WRONG_SOW'	=>	'Geschafft',
+		'BD2016_MANNERS'	=>	'Geschafft',
+		'BD2016_SNATCH'		=>	'Geschafft',
+		'BD2016_PARTY_ANIMAL'	=>	'Geschafft',
+		'BD2016_RISE_OF_THE_MACHINES'	=>	'Geschafft',
+		'BD2016_FESTIV_SOUP'	=>	'Geschafft',
+		'BD2016_FIRESHOW'	=>	'Geschafft',
+		'BD2016_PARTY_CHECK_IN'	=>	'Geschafft',
 	),
 );
 

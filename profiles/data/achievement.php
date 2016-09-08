@@ -71,6 +71,16 @@ if ( !defined('EQDKP_INC') ){
 		44		=>		'AMAUTEUR',
 		45		=>		'SCIENCE_OF_WINNING_LUCKY',
 		46		=>		'WORKAHOLIC',
+		47		=>		'BD2016_RUN_FOREST',
+		48		=>		'BD2016_KING_OF_PARTY',
+		49		=>		'BD2016_WRONG_SOW',
+		50		=>		'BD2016_MANNERS',
+		51		=>		'BD2016_SNATCH',
+		52		=>		'BD2016_PARTY_ANIMAL',
+		53		=>		'BD2016_RISE_OF_THE_MACHINES',
+		54		=>		'BD2016_FESTIV_SOUP',
+		55		=>		'BD2016_FIRESHOW',
+		56		=>		'BD2016_PARTY_CHECK_IN',
 		);	
 		$achievement_description =  array(
 		1		=>		'RETRIBUTION_DES',
@@ -119,5 +129,15 @@ if ( !defined('EQDKP_INC') ){
 		44		=>		'AMAUTEUR_DES',
 		45		=>		'SCIENCE_OF_WINNING_LUCKY_DES',
 		46		=>		'WORKAHOLIC_DES',
+		47		=>		'BD2016_RUN_FOREST_DES',
+		48		=>		'BD2016_KING_OF_PARTY_DES',
+		49		=>		'BD2016_WRONG_SOW_DES',
+		50		=>		'BD2016_MANNERS_DES',
+		51		=>		'BD2016_SNATCH_DES',
+		52		=>		'BD2016_PARTY_ANIMAL_DES',
+		53		=>		'BD2016_RISE_OF_THE_MACHINES_DES',
+		54		=>		'BD2016_FESTIV_SOUP_DES',
+		55		=>		'BD2016_FIRESHOW_DES',
+		56		=>		'BD2016_PARTY_CHECK_IN_DES',
 		);
  ?>

@@ -26,7 +26,7 @@ if ( !defined('EQDKP_INC') ){
 if(!class_exists('wows')) {
 	class wows extends game_generic {
 		protected static $apiLevel	= 20;
-		public $version				= '0.5.10.0';
+		public $version				= '0.5.11.0';
 		protected $this_game		= 'wows';
 		protected $types			= array('factions','classes','roles');
 		protected $classes			= array();
@@ -262,7 +262,7 @@ if(!class_exists('wows')) {
 					'options'		=> $this->gbdestroyer[$this->lang],
 					'sort'			=> 13,
 				),
-/*
+
 				'gbcruiser'	=> array(
 					'type'			=> 'multiselect',
 					'category'		=> 'fleet',
@@ -272,7 +272,7 @@ if(!class_exists('wows')) {
 					'options'		=> $this->gbcruiser[$this->lang],
 					'sort'			=> 14,
 				),
-*/
+
 				'gbbattleship'	=> array(
 					'type'			=> 'multiselect',
 					'category'		=> 'fleet',

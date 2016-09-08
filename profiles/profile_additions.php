@@ -197,7 +197,7 @@
 		'PROFILURL'				=> $this->server_path."games/wows/profiles/",
 	));
 //Achievements
-	for ($i=1; $i<46; $i++){
+	for ($i=1; $i<56; $i++){
 		$achievementicon = $this->server_path."games/wows/profiles/icons/achievement/icon_achievement_".$achievement[$i].".png";
 		$this->tpl->assign_block_vars(
 			'achievements', array(
